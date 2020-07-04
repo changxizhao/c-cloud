@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/c-cloud.iml" filepath="$PROJECT_DIR$/c-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c-common/c-common.iml" filepath="$PROJECT_DIR$/c-common/c-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c-controller/c-controller.iml" filepath="$PROJECT_DIR$/c-controller/c-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c-core/c-core.iml" filepath="$PROJECT_DIR$/c-core/c-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c-manager/c-manager.iml" filepath="$PROJECT_DIR$/c-manager/c-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c-ui/c-ui.iml" filepath="$PROJECT_DIR$/c-ui/c-ui.iml" />
+    </modules>
+  </component>
+</project>

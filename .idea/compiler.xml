@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="c-manager" />
+        <module name="c-core" />
+        <module name="c-controller" />
+        <module name="c-ui" />
+        <module name="c-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="c-cloud" target="1.8" />
+      <module name="c-common" target="1.8" />
+      <module name="c-controller" target="1.8" />
+      <module name="c-core" target="1.8" />
+      <module name="c-manager" target="1.8" />
+      <module name="c-ui" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="c-cloud" options="-parameters" />
+      <module name="c-common" options="-parameters" />
+      <module name="c-controller" options="-parameters" />
+      <module name="c-core" options="-parameters" />
+      <module name="c-manager" options="-parameters" />
+      <module name="c-ui" options="-parameters" />
+    </option>
+  </component>
+</project>
