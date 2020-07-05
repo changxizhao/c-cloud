@@ -6,14 +6,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.15.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.chang</groupId>
     <artifactId>c-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>c-cloud</name>
     <packaging>pom</packaging>
-    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -78,6 +76,19 @@
         </dependency>
 
     </dependencies>
+
+    <!--<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <target>${java.version}</target>
+                    <source>${java.version}</source>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>-->
 
     <modules>
         <module>c-common</module>

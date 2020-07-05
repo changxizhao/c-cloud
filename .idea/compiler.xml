@@ -24,7 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="c-cloud" options="-parameters" />
+      <module name="c-cloud" options="" />
       <module name="c-common" options="-parameters" />
       <module name="c-controller" options="-parameters" />
       <module name="c-core" options="-parameters" />

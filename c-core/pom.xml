@@ -6,12 +6,10 @@
         <groupId>com.chang</groupId>
         <artifactId>c-cloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.chang</groupId>
+
     <artifactId>c-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>c-core</name>
 
     <dependencies>
         <dependency>
