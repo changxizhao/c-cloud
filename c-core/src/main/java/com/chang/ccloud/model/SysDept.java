@@ -92,4 +92,19 @@ public class SysDept {
     public void setOperateIp(String operateIp) {
         this.operateIp = operateIp == null ? null : operateIp.trim();
     }
+
+    public SysDept() {
+    }
+
+    public SysDept(Long id, String name, Long parentId, String level, Integer seq, String remark, String operator, Date operateTime, String operateIp) {
+        this.id = id;
+        this.name = name;
+        this.parentId = parentId;
+        this.level = level;
+        this.seq = seq;
+        this.remark = remark;
+        this.operator = operator;
+        this.operateTime = operateTime;
+        this.operateIp = operateIp;
+    }
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chang.ccloud.dao.SysRoleAclMapper" >
+  <resultMap id="BaseResultMap" type="com.chang.ccloud.model.SysRoleAcl" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="rold_id" property="roldId" jdbcType="BIGINT" />
+    <result column="acl_id" property="aclId" jdbcType="BIGINT" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
+    <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, rold_id, acl_id, operator, operate_time, operate_ip
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_role_acl
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sys_role_acl
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.chang.ccloud.model.SysRoleAcl" >
+    insert into sys_role_acl (id, rold_id, acl_id, 
+      operator, operate_time, operate_ip
+      )
+    values (#{id,jdbcType=BIGINT}, #{roldId,jdbcType=BIGINT}, #{aclId,jdbcType=BIGINT}, 
+      #{operator,jdbcType=VARCHAR}, #{operateTime,jdbcType=TIMESTAMP}, #{operateIp,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.chang.ccloud.model.SysRoleAcl" >
+    insert into sys_role_acl
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="roldId != null" >
+        rold_id,
+      </if>
+      <if test="aclId != null" >
+        acl_id,
+      </if>
+      <if test="operator != null" >
+        operator,
+      </if>
+      <if test="operateTime != null" >
+        operate_time,
+      </if>
+      <if test="operateIp != null" >
+        operate_ip,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="roldId != null" >
+        #{roldId,jdbcType=BIGINT},
+      </if>
+      <if test="aclId != null" >
+        #{aclId,jdbcType=BIGINT},
+      </if>
+      <if test="operator != null" >
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operateTime != null" >
+        #{operateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operateIp != null" >
+        #{operateIp,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chang.ccloud.model.SysRoleAcl" >
+    update sys_role_acl
+    <set >
+      <if test="roldId != null" >
+        rold_id = #{roldId,jdbcType=BIGINT},
+      </if>
+      <if test="aclId != null" >
+        acl_id = #{aclId,jdbcType=BIGINT},
+      </if>
+      <if test="operator != null" >
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operateTime != null" >
+        operate_time = #{operateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operateIp != null" >
+        operate_ip = #{operateIp,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chang.ccloud.model.SysRoleAcl" >
+    update sys_role_acl
+    set rold_id = #{roldId,jdbcType=BIGINT},
+      acl_id = #{aclId,jdbcType=BIGINT},
+      operator = #{operator,jdbcType=VARCHAR},
+      operate_time = #{operateTime,jdbcType=TIMESTAMP},
+      operate_ip = #{operateIp,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
