@@ -2,6 +2,7 @@ package com.chang.ccloud.dao;
 
 
 import com.chang.ccloud.model.SysDept;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,4 +20,10 @@ public interface SysDeptMapper {
     int updateByPrimaryKey(SysDept record);
 
     List<SysDept> selectAllDepts();
+
+    List<SysDept> selectChildDeptByLevel(@Param("level") String level);
+
+    void batchUpdateDeptLevel(@Param("deptList") List<SysDept> deptList);
+
+    int checkDeptExist(@Param("parentId") Long parentId, @Param("name") String name, @Param("id") Long id);
 }

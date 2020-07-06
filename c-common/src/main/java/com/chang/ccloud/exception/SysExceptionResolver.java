@@ -4,8 +4,8 @@ import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.constants.HttpRequestStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 全局异常捕获
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * @Date 2020/7/4 16:44
  */
 
-@ControllerAdvice
+@RestControllerAdvice
 public class SysExceptionResolver {
 
     private final Logger logger = LoggerFactory.getLogger(SysExceptionResolver.class);

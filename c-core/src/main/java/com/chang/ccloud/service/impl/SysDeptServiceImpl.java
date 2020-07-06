@@ -8,9 +8,14 @@ import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.common.utils.DateUtil;
 import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.validator.BeanValidator;
+import com.google.common.base.Preconditions;
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @Author changxizhao
@@ -27,7 +32,7 @@ public class SysDeptServiceImpl implements SysDeptService {
     private SysDeptMapper sysDeptMapper;
 
     @Override
-    public void save(DeptBO deptBO) throws InstantiationException, IllegalAccessException {
+    public void addDept(DeptBO deptBO) {
         BeanValidator.checkObject(deptBO);
         if(deptService.checkDeptExist(deptBO.getParentId(), deptBO.getName(), deptBO.getId())) {
             throw new ParamsException("部门已存在");
@@ -46,6 +51,49 @@ public class SysDeptServiceImpl implements SysDeptService {
         sysDeptMapper.insertSelective(sysDept);
     }
 
+    @Override
+    public void updateDept(DeptBO deptBO) {
+        BeanValidator.checkObject(deptBO);
+        if(deptService.checkDeptExist(deptBO.getParentId(), deptBO.getName(), deptBO.getId())) {
+            throw new ParamsException("部门已存在");
+        }
+        // 校验部门是否存在
+        SysDept before = sysDeptMapper.selectByPrimaryKey(deptBO.getId());
+        Preconditions.checkNotNull(before, "不存在此部门");
+
+        SysDept after = new SysDept();
+        BeanUtils.copyProperties(deptBO, after);
+        String parentLevel = deptService.getDeptLevel(deptBO.getParentId());
+        String level = DeptLevelUtil.getLevel(parentLevel, deptBO.getParentId());
+        after.setLevel(level);
+        after.setOperateTime(DateUtil.getNowDate());
+        after.setOperator("admin"); // TODO
+        after.setOperateIp("127.0.0.1"); // TODO
+        updateDeptWithChild(before, after);
+    }
+
+    @Transactional
+    public void updateDeptWithChild(SysDept before, SysDept after) {
+        String oldLevelPrefix = before.getLevel();
+        String newLevelPrefix = after.getLevel();
+
+        //如果部门级别不一致，则更新子部门
+        if(!after.getLevel().equals(before.getLevel())) {
+            List<SysDept> deptList = sysDeptMapper.selectChildDeptByLevel(before.getLevel());
+            if(CollectionUtils.isNotEmpty(deptList)) {
+                for (SysDept dept : deptList) {
+                    String level = dept.getLevel();
+                    if(level.indexOf(oldLevelPrefix) == 0) {
+                        level = newLevelPrefix + level.substring(oldLevelPrefix.length());
+                        dept.setLevel(level);
+                    }
+                }
+                sysDeptMapper.batchUpdateDeptLevel(deptList);
+            }
+        }
+        sysDeptMapper.updateByPrimaryKeySelective(after);
+    }
+
     /**
      * 校验部门是否存在
      * @param: parentId
@@ -57,8 +105,7 @@ public class SysDeptServiceImpl implements SysDeptService {
      */
     @Override
     public boolean checkDeptExist(Long parentId, String deptName, Long deptId) {
-        // TODO
-        return true;
+        return sysDeptMapper.checkDeptExist(parentId, deptName, deptId) > 0;
     }
 
     /**

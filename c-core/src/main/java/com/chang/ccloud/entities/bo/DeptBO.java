@@ -18,7 +18,7 @@ public class DeptBO {
     @NotBlank(message = "部门名称不能为空")
     private String name;
 
-    private Long parentId;
+    private Long parentId = 0L;
 
     @NotNull(message = "展示顺序不能为空")
     private Integer seq;

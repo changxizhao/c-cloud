@@ -144,4 +144,29 @@
     <include refid="Base_Column_List" />
     from sys_dept
   </select>
+
+  <select id="selectChildDeptByLevel" parameterType="com.chang.ccloud.model.SysDept" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_dept
+    where level like #{level} || '.%'
+  </select>
+
+  <update id="batchUpdateDeptLevel" parameterType="map" >
+    <foreach collection="deptList" item="dept" separator=";">
+      update sys_dept set level = #{dept.level} where id = #{dept.id}
+    </foreach>
+  </update>
+
+  <select id="checkDeptExist" parameterType="map" resultType="java.lang.Integer">
+    select count(1)
+    from sys_dept
+    where name = #{name}
+    <if test="parentId != null">
+      and parent_id = #{parentId}
+    </if>
+    <if test="id != null">
+        and id != #{id}
+    </if>
+  </select>
 </mapper>

@@ -26,3 +26,4 @@ mybatis:
   type-aliases-package: com.chang.ccloud.dao
   mapper-locations: classpath:mapper/mapper/*.xml
   config-location: classpath:mapper/mybatis-config.xml
+

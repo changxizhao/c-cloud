@@ -7,12 +7,12 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 /**
- * 系统全局配置
+ * 系统全局配置 -- 未开启
  * @Author changxizhao
  * @Date 2020/7/4 19:37
  * @Description
  */
-@Configuration
+//@Configuration
 public class SysConfig extends WebMvcConfigurationSupport {
 
     @Autowired

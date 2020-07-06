@@ -1,6 +1,5 @@
 package com.chang.ccloud.service;
 
-import com.chang.ccloud.common.Result;
 import com.chang.ccloud.entities.bo.DeptBO;
 
 /**
@@ -10,7 +9,9 @@ import com.chang.ccloud.entities.bo.DeptBO;
  */
 public interface SysDeptService {
 
-    void save(DeptBO deptBO) throws InstantiationException, IllegalAccessException;
+    void addDept(DeptBO deptBO);
+
+    void updateDept(DeptBO deptBO);
 
     boolean checkDeptExist(Long parentId, String deptName, Long deptId);
 
