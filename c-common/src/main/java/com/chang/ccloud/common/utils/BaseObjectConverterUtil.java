@@ -1,4 +1,4 @@
-package com.chang.ccloud.utils;
+package com.chang.ccloud.common.utils;
 
 import java.lang.reflect.Field;
 
@@ -9,21 +9,6 @@ import java.lang.reflect.Field;
  * @Description
  */
 public class BaseObjectConverterUtil {
-
-//    public static void main(String[] args) {
-//
-//        DeptBO deptBO = new DeptBO(1L,"人事部",12L,1,"备注");
-//        try {
-//            Dept o = copyProperties(deptBO, Dept.class);
-//            System.out.println(o.toString());
-//
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        } catch (InstantiationException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
 
     /**
      * 具有相同属性的不同类相互转化，适用于基础类型的属性，复杂属性不处理
@@ -57,4 +42,3 @@ public class BaseObjectConverterUtil {
     }
 
 }
-

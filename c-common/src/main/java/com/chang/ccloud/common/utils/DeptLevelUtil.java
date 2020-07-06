@@ -1,4 +1,4 @@
-package com.chang.ccloud.utils;
+package com.chang.ccloud.common.utils;
 
 import org.apache.commons.lang3.StringUtils;
 

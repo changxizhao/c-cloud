@@ -1,6 +1,6 @@
 package com.chang.ccloud.service.impl;
 
-import com.chang.ccloud.common.util.JsonConvertUtil;
+import com.chang.ccloud.common.utils.JsonConvertUtil;
 import com.chang.ccloud.dao.SysUserMapper;
 import com.chang.ccloud.model.SysUser;
 import com.chang.ccloud.service.SysUserService;

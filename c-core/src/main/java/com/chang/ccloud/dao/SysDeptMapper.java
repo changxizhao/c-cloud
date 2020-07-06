@@ -3,6 +3,8 @@ package com.chang.ccloud.dao;
 
 import com.chang.ccloud.model.SysDept;
 
+import java.util.List;
+
 public interface SysDeptMapper {
     int deleteByPrimaryKey(Long id);
 
@@ -15,4 +17,6 @@ public interface SysDeptMapper {
     int updateByPrimaryKeySelective(SysDept record);
 
     int updateByPrimaryKey(SysDept record);
+
+    List<SysDept> selectAllDepts();
 }

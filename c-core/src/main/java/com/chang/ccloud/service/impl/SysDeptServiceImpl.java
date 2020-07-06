@@ -1,15 +1,14 @@
 package com.chang.ccloud.service.impl;
 
-import com.chang.ccloud.common.Result;
 import com.chang.ccloud.dao.SysDeptMapper;
 import com.chang.ccloud.entities.bo.DeptBO;
 import com.chang.ccloud.exception.ParamsException;
 import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysDeptService;
-import com.chang.ccloud.utils.BaseObjectConverterUtil;
-import com.chang.ccloud.utils.DateUtil;
-import com.chang.ccloud.utils.DeptLevelUtil;
+import com.chang.ccloud.common.utils.DateUtil;
+import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.validator.BeanValidator;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +32,9 @@ public class SysDeptServiceImpl implements SysDeptService {
         if(deptService.checkDeptExist(deptBO.getParentId(), deptBO.getName(), deptBO.getId())) {
             throw new ParamsException("部门已存在");
         }
-        SysDept sysDept = BaseObjectConverterUtil.copyProperties(deptBO, SysDept.class);
+
+        SysDept sysDept = new SysDept();
+        BeanUtils.copyProperties(deptBO,sysDept);
         // 设置部门level字段
         String parentLevel = deptService.getDeptLevel(deptBO.getParentId());
         String level = DeptLevelUtil.getLevel(parentLevel, deptBO.getParentId());

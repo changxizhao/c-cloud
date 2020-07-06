@@ -1,4 +1,4 @@
-package com.chang.ccloud.common.util;
+package com.chang.ccloud.common.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.type.TypeReference;
