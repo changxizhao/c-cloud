@@ -3,7 +3,7 @@ package com.chang.ccloud.service.impl;
 import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.dao.SysDeptMapper;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
-import com.chang.ccloud.model.SysDept;
+import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
 import com.chang.ccloud.service.SysTreeService;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Lists;
@@ -12,9 +12,7 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author changxizhao
@@ -29,16 +27,16 @@ public class SysTreeServiceImpl implements SysTreeService {
 
     @Override
     public List<DeptLevelDTO> deptTree() {
-        List<SysDept> deptList = deptMapper.selectAllDepts();
+        List<DeptLevelDTO> deptList = deptMapper.selectAllDepts();
 
-        List<DeptLevelDTO> dtoList = Lists.newArrayList();
-
-        // 将所有的部门数据封装成dtolist
-        for (SysDept dept : deptList) {
-            DeptLevelDTO dto = DeptLevelDTO.adept(dept);
-            dtoList.add(dto);
-        }
-        return deptListToTree(dtoList);
+//        List<DeptLevelDTO> dtoList = Lists.newArrayList();
+//
+//        // 将所有的部门数据封装成dtolist
+//        for (SysDept dept : deptList) {
+//            DeptLevelDTO dto = DeptLevelDTO.adept(dept);
+//            dtoList.add(dto);
+//        }
+        return deptListToTree(deptList);
     }
 
     // 把dtoList转成树形列表
@@ -97,5 +95,27 @@ public class SysTreeServiceImpl implements SysTreeService {
             return o1.getSeq() - o2.getSeq();
         }
     };
+
+
+    @Override
+    public List<DeptTreeViewDTO> toTreeView(List<DeptLevelDTO> list) {
+
+        if(CollectionUtils.isEmpty(list)) {
+            return Lists.newArrayList();
+        }
+
+        List<DeptTreeViewDTO> result = new ArrayList<>();
+
+        for (DeptLevelDTO dto : list) {
+
+            DeptTreeViewDTO treeViewDTO = new DeptTreeViewDTO();
+            treeViewDTO.setText(dto.getName());
+            treeViewDTO.setHref("#"+dto.getName());
+            treeViewDTO.setTags(Arrays.asList(dto.getId().toString()));
+            treeViewDTO.setNodes(toTreeView(dto.getDeptList()));
+            result.add(treeViewDTO);
+        }
+        return result;
+    }
 
 }

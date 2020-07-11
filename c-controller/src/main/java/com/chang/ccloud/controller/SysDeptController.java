@@ -3,6 +3,7 @@ package com.chang.ccloud.controller;
 import com.chang.ccloud.common.Result;
 import com.chang.ccloud.entities.bo.DeptBO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
+import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
 import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.service.SysTreeService;
 import io.swagger.annotations.Api;
@@ -49,7 +50,8 @@ public class SysDeptController {
     @GetMapping("/tree")
     public Result deptTree() {
         List<DeptLevelDTO> dtoList = treeService.deptTree();
-        return Result.success(dtoList);
+        List<DeptTreeViewDTO> deptTreeViewDTOS = treeService.toTreeView(dtoList);
+        return Result.success(deptTreeViewDTOS);
     }
 
 }

@@ -1,6 +1,7 @@
 package com.chang.ccloud.service;
 
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
+import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
 
 import java.util.List;
 
@@ -11,6 +12,8 @@ import java.util.List;
  */
 public interface SysTreeService {
 
-    public List<DeptLevelDTO> deptTree();
+    List<DeptLevelDTO> deptTree();
+
+    List<DeptTreeViewDTO> toTreeView(List<DeptLevelDTO> list);
 
 }

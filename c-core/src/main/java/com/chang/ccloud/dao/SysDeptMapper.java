@@ -1,6 +1,7 @@
 package com.chang.ccloud.dao;
 
 
+import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.model.SysDept;
 import org.apache.ibatis.annotations.Param;
 
@@ -19,7 +20,8 @@ public interface SysDeptMapper {
 
     int updateByPrimaryKey(SysDept record);
 
-    List<SysDept> selectAllDepts();
+//    List<SysDept> selectAllDepts();
+    List<DeptLevelDTO> selectAllDepts();
 
     List<SysDept> selectChildDeptByLevel(@Param("level") String level);
 

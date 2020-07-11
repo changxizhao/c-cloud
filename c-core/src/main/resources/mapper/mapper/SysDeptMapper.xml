@@ -12,6 +12,18 @@
     <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
     <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="DeptLevelDTOMap" type="com.chang.ccloud.entities.dto.DeptLevelDTO" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="parent_id" property="parentId" jdbcType="BIGINT" />
+    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="seq" property="seq" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
+    <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Base_Column_List" >
     id, name, parent_id, level, seq, remark, operator, operate_time, operate_ip
   </sql>
@@ -139,7 +151,13 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
 
-  <select id="selectAllDepts" resultMap="BaseResultMap">
+  <!--<select id="selectAllDepts" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_dept
+  </select>-->
+
+  <select id="selectAllDepts" resultMap="DeptLevelDTOMap">
     select
     <include refid="Base_Column_List" />
     from sys_dept
