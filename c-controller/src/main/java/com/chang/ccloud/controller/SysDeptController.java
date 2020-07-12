@@ -1,18 +1,19 @@
 package com.chang.ccloud.controller;
 
 import com.chang.ccloud.common.Result;
+import com.chang.ccloud.common.TableInfo;
+import com.chang.ccloud.common.utils.JsonConvertUtil;
 import com.chang.ccloud.entities.bo.DeptBO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
 import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.service.SysTreeService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -52,6 +53,18 @@ public class SysDeptController {
         List<DeptLevelDTO> dtoList = treeService.deptTree();
         List<DeptTreeViewDTO> deptTreeViewDTOS = treeService.toTreeView(dtoList);
         return Result.success(deptTreeViewDTOS);
+    }
+
+    @ApiOperation(value = "获取部门列表")
+    @GetMapping("/table")
+    public TableInfo deptTable(@RequestParam int pageNumber, int pageSize) {
+//        List<DeptLevelDTO> dtoList = treeService.deptTree();
+//        return Result.success(dtoList);
+        PageHelper.startPage(pageNumber,pageSize);
+        List<DeptLevelDTO> dtoList = treeService.deptTree();
+        PageInfo<DeptLevelDTO> page=new PageInfo<>(dtoList);
+
+        return TableInfo.tableInfo(page);
     }
 
 }

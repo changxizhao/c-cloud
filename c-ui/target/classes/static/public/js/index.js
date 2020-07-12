@@ -50,15 +50,15 @@ var vm = new Vue({
 		getUser: function(){
             $.getJSON("/getUserData?_"+$.now(), function(r){
             /*$.getJSON("sys/user/info?_"+$.now(), function(r){*/
-				vm.user = r.user;
+				vm.user = r.dept;
 			});
 		},
 		updatePassword: function(){
 			layer.open({
 				type: 1,
-				skin: 'layui-layer-molv',
+				skin: 'layui-layer-lan',
 				title: "修改密码",
-				area: ['550px', '270px'],
+				area: ['550px', '300px'],
 				shadeClose: false,
 				content: jQuery("#passwordLayer"),
 				btn: ['修改','取消'],

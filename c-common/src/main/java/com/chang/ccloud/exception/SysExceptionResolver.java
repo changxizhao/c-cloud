@@ -34,7 +34,7 @@ public class SysExceptionResolver {
     public Result exceptionHandler(Exception e) {
 
 //        String url = request.getRequestURL().toString();
-//        logger.info("请求地址：{}", url);
+        logger.info("请求出错：{}-{}", e.toString(),e.getMessage());
 
         return Result.fail("system error");
 

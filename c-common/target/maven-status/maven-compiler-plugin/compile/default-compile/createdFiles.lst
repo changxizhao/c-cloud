@@ -1,8 +1,0 @@
-com\chang\ccloud\common\Result.class
-com\chang\ccloud\exception\ParamsException.class
-com\chang\ccloud\common\constants\HttpRequestStatus.class
-com\chang\ccloud\common\util\JsonConvertUtil.class
-com\chang\ccloud\validator\BeanValidator.class
-com\chang\ccloud\exception\PermissionException.class
-com\chang\ccloud\exception\SysExceptionResolver.class
-com\chang\ccloud\interceptor\HttpInterceptor.class
