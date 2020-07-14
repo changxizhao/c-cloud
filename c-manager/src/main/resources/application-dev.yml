@@ -27,3 +27,10 @@ mybatis:
   mapper-locations: classpath:mapper/mapper/*.xml
   config-location: classpath:mapper/mybatis-config.xml
 
+
+logging:
+  level:
+    com:
+      chang:
+        ccloud:
+          dao: debug

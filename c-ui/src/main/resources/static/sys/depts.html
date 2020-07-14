@@ -5,8 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>部门管理</title>
-    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.css">
+    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="../public/css/main.css">
+
+    <style>
+        .table tbody tr td{
+            vertical-align: middle;
+        }
+
+        .layui-layer-btn .layui-layer-btn1{
+            border-color: #E6E3E6;
+            background: #c9c5c5 !important;
+            color: black;
+        }
+        .layui-layer-btn .layui-layer-btn0 {
+            border-color: #4898d5;
+            background: #5cb85c !important;
+            color: #fff;
+        }
+
+        .must-input {
+            color: red;
+        }
+
+        .chooseDept {
+            cursor: pointer;
+        }
+
+        .select-parent-dept {
+            border: 1px solid #D6D6D6;
+            display: none;
+            margin-top: 5px;
+            width: 300px;
+            height: 400px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: absolute;
+            z-index: 999;
+        }
+    </style>
 
 </head>
 <body>
@@ -27,18 +66,54 @@
 </div>
 
 <div id="dept-table-toolbar">
-    <button class="btn btn-success " type="button" onclick="saveDept()">
-        <i class="fa fa-plus">新增</i>
-    </button>
+    <button class="btn btn-success " type="button" onclick="saveDept()"><i class="fa fa-plus"> 新增</i></button>
+    <button class="btn btn-danger " type="button" onclick="delDepts()"><i class="fa fa-remove"> 删除</i></button>
+</div>
 
-    <button class="btn btn-danger " type="button" onclick="delDepts()"><i class="fa fa-remove">删除</i></button>
+<div id="add-dept" style="display: none;">
+    <form class="form-horizontal" id="add-dept-form">
+        <div class="form-group">
+            <div class="form-group">
+                <input type="text" class="form-control" style="display: none;"  readonly="readonly" name="id" id="id" />
+                <div class="col-sm-2 control-label"><label class="must-input">* </label>部门名称：</div>
+                <div class="col-sm-10">
+                    <input type="text" required class="form-control" name="name" id="name" placeholder="部门名称"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label"> 上级部门：</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" style="display: none;"  readonly="readonly" name="parentId" id="parentId" />
+                    <input type="text" class="form-control chooseDept"  readonly="readonly" onclick="chooseDept()" name="parentName" id="parentName" placeholder="点击选择上级部门"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label"><label class="must-input">* </label>显示顺序：</div>
+                <div class="col-sm-10">
+                    <input type="text" required class="form-control" name="seq" id="seq" placeholder="显示顺序"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">备    注：</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="remark" id="remark" placeholder="备注"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="select-parent-dept-tree" style="display: none;">
+    <div id="select-parent-dept" class=""></div>
 </div>
 
 
 <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/webjars/bootstrap-treeview/1.2.0/dist/bootstrap-treeview.min.js"></script>
 <script src="/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.js"></script>
 <script src="/webjars/bootstrap-table/1.10.1/src/locale/bootstrap-table-zh-CN.js"></script>
+<script src="/webjars/layer/3.0.3/src/layer.js"></script>
 <script src="../public/js/sys/deptTree.js"></script>
 <script src="../public/js/sys/dept.js"></script>
 </body>

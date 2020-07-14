@@ -2,6 +2,7 @@ package com.chang.ccloud.service;
 
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
+import com.chang.ccloud.model.SysDept;
 
 import java.util.List;
 

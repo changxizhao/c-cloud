@@ -10,6 +10,7 @@ import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.validator.BeanValidator;
 import com.google.common.base.Preconditions;
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,10 @@ public class SysDeptServiceImpl implements SysDeptService {
         BeanValidator.checkObject(deptBO);
         if(deptService.checkDeptExist(deptBO.getParentId(), deptBO.getName(), deptBO.getId())) {
             throw new ParamsException("部门已存在");
+        }
+
+        if(deptBO.getParentId() == null) {
+            deptBO.setParentId(0L);
         }
 
         SysDept sysDept = new SysDept();
@@ -119,8 +124,19 @@ public class SysDeptServiceImpl implements SysDeptService {
     public String getDeptLevel(Long id) {
         SysDept sysDept = sysDeptMapper.selectByPrimaryKey(id);
         if(sysDept == null) {
-            return null;
+            return "";
         }
         return sysDept.getLevel();
+    }
+
+    @Override
+    public List<SysDept> selectDeptTable(Long id, String level) {
+//        String level = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), id);
+        return sysDeptMapper.selectDeptTable(id, level);
+    }
+
+    @Override
+    public SysDept selectDeptById(Long id) {
+        return sysDeptMapper.selectByPrimaryKey(id);
     }
 }

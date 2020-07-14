@@ -4,6 +4,7 @@ import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.dao.SysDeptMapper;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
+import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysTreeService;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Lists;

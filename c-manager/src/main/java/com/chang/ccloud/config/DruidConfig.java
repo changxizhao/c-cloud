@@ -5,6 +5,8 @@ import com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatPropertie
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import com.alibaba.druid.util.Utils;
+import com.alibaba.druid.wall.WallConfig;
+import com.alibaba.druid.wall.WallFilter;
 import com.chang.ccloud.properties.DruidProperty;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,7 +21,9 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.servlet.*;
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,7 +40,11 @@ public class DruidConfig {
     @Bean(name = "dataSource")
     public DataSource dataSource(DruidProperty druidProperty){
         DruidDataSource druidDataSource = DataSourceBuilder.create().type(DruidDataSource.class).build();
-        return druidProperty.init(druidDataSource);
+        DataSource dataSource = druidProperty.init(druidDataSource);
+        List<com.alibaba.druid.filter.Filter> filterList = new ArrayList<>();
+        filterList.add(wallFilter());
+        druidDataSource.setProxyFilters(filterList);
+        return dataSource;
     }
 
     @Bean
@@ -117,6 +125,21 @@ public class DruidConfig {
         DataSourceTransactionManager manager = new DataSourceTransactionManager();
         manager.setDataSource(dataSource);
         return manager;
+    }
+
+    @Bean
+    public WallFilter wallFilter() {
+        WallFilter wallFilter = new WallFilter();
+        wallFilter.setConfig(wallConfig());
+        return wallFilter;
+    }
+
+    // 设置允许执行多条语句
+    @Bean
+    public WallConfig wallConfig() {
+        WallConfig wallConfig = new WallConfig();
+        wallConfig.setMultiStatementAllow(true);
+        return wallConfig;
     }
 
 }

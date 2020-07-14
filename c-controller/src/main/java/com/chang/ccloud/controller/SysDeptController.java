@@ -2,16 +2,20 @@ package com.chang.ccloud.controller;
 
 import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.TableInfo;
+import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.common.utils.JsonConvertUtil;
 import com.chang.ccloud.entities.bo.DeptBO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
+import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.service.SysTreeService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +31,8 @@ import java.util.List;
 @RequestMapping("/sys/dept")
 public class SysDeptController {
 
+    private static Logger log = LoggerFactory.getLogger(SysDeptController.class);
+
     @Autowired
     private SysDeptService deptService;
 
@@ -36,6 +42,7 @@ public class SysDeptController {
     @ApiOperation(value = "新建部门")
     @PostMapping("/add")
     public Result addDept(DeptBO deptBO){
+        log.info("新建部门 上级部门id = {}", deptBO.getParentId());
         deptService.addDept(deptBO);
         return Result.success();
     }
@@ -57,13 +64,13 @@ public class SysDeptController {
 
     @ApiOperation(value = "获取部门列表")
     @GetMapping("/table")
-    public TableInfo deptTable(@RequestParam int pageNumber, int pageSize) {
-//        List<DeptLevelDTO> dtoList = treeService.deptTree();
-//        return Result.success(dtoList);
+    public TableInfo deptTable(@RequestParam int pageNumber, @RequestParam int pageSize, @RequestParam Long level) {
+        log.info("查询部门列表入参 {}，{}，{}", pageNumber, pageSize, level);
+        SysDept sysDept = deptService.selectDeptById(level);
+        String selectLevel = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), level);
         PageHelper.startPage(pageNumber,pageSize);
-        List<DeptLevelDTO> dtoList = treeService.deptTree();
-        PageInfo<DeptLevelDTO> page=new PageInfo<>(dtoList);
-
+        List<SysDept> deptList = deptService.selectDeptTable(level, selectLevel);
+        PageInfo<SysDept> page=new PageInfo<>(deptList);
         return TableInfo.tableInfo(page);
     }
 

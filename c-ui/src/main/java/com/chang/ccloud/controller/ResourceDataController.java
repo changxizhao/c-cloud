@@ -31,7 +31,6 @@ public class ResourceDataController {
     public String getUserInfo(){
         try {
             String result = IOUtils.toString(userInfo.getInputStream(), Charset.forName("UTF-8"));
-            log.info("user info list : {}",result);
             return result;
         } catch (IOException e) {
             log.error("",e);
@@ -43,7 +42,6 @@ public class ResourceDataController {
     public String getMenuList(){
         try {
             String result = IOUtils.toString(menuList.getInputStream(), Charset.forName("UTF-8"));
-            log.info("user info list : {}",result);
             return result;
         } catch (IOException e) {
             log.error("",e);

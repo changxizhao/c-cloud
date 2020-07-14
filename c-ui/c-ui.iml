@@ -41,6 +41,7 @@
     <orderEntry type="library" name="Maven: org.webjars.bower:layer:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.webjars.bower:bootstrap-table:1.10.1" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:zTree:3.5.28" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars:bootstrapvalidator:0.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.15.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.15.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.15.RELEASE" level="project" />

@@ -28,4 +28,6 @@ public interface SysDeptMapper {
     void batchUpdateDeptLevel(@Param("deptList") List<SysDept> deptList);
 
     int checkDeptExist(@Param("parentId") Long parentId, @Param("name") String name, @Param("id") Long id);
+
+    List<SysDept> selectDeptTable(@Param("id") Long id, @Param("level") String level);
 }
