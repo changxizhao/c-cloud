@@ -173,17 +173,8 @@
     from sys_dept
   </select>
 
-  <select id="selectChildDeptByLevel" parameterType="com.chang.ccloud.model.SysDept" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from sys_dept
-    where level like #{level} || '.%'
-  </select>
-
-  <update id="batchUpdateDeptLevel" parameterType="map" >
-    <foreach collection="deptList" item="dept" separator=";">
-      update sys_dept set `level` = #{dept.level} where id = #{dept.id}
-    </foreach>
+  <update id="updateDeptLevel" parameterType="com.chang.ccloud.model.SysDept" >
+      update sys_dept set `level` = #{level} where id = #{id}
   </update>
 
   <select id="checkDeptExist" parameterType="map" resultType="java.lang.Integer">
@@ -200,15 +191,6 @@
 
 
   <select id="selectDeptTable" parameterType="com.chang.ccloud.model.SysDept" resultMap="DeptTableMap">
-    <!--select
-    <include refid="Base_Column_List" />
-    from sys_dept where 1=1
-    <if test="id != null and id == 0">
-      and parent_id = #{id}
-    </if>
-    <if test="id != null and id != 0">
-      and (id = #{id} or level = #{level})
-    </if>-->
     select d.id,d.name,d.seq,pd.name as parent_name,d.parent_id,d.level,d.remark
     from sys_dept d
     left join sys_dept pd on d.parent_id = pd.id
@@ -217,7 +199,18 @@
       and d.parent_id = #{id}
     </if>
     <if test="id != null and id != 0">
-      and (d.id = #{id} or d.level = #{level})
+      and (d.id = #{id} or d.level like CONCAT('',#{level},'%'))
+    </if>
+    order by d.id, d.seq asc
+
+  </select>
+
+  <select id="selectChildDeptByLevel" parameterType="com.chang.ccloud.model.SysDept" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_dept where 1=1
+    <if test="level != null and level != ''">
+      and level like CONCAT('',#{level},'%')
     </if>
 
   </select>

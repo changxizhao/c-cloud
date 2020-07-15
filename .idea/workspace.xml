@@ -5,49 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad934de-f9de-4f63-a093-dae2f523131f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrapvalidator_0_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/DeptTableVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/entities/vo/DeptTableVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/SysDeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/SysDeptController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysTreeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysTreeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysTreeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysTreeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysDeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysDeptMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/dao/SysDeptMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/dao/SysDeptMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/SysDeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/SysDeptService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysDeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysDeptServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/mapper/mapper/SysDeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/mapper/mapper/SysDeptMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/c-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/c-manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/target/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/c-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/c-ui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/java/com/chang/ccloud/controller/ResourceDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/java/com/chang/ccloud/controller/ResourceDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/com/chang/ccloud/controller/ResourceDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/com/chang/ccloud/controller/ResourceDataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/dept.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/dept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/deptTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/deptTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/sys/depts.html" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/sys/depts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/sys/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/sys/users.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,15 +65,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="64" column="60" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
+            <state relative-caret-position="435">
+              <caret line="144" column="29" lean-forward="true" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
               <folding>
-                <element signature="e#102#108#0" expanded="true" />
-                <element signature="e#108#114#0" expanded="true" />
-                <element signature="e#114#120#0" expanded="true" />
+                <element signature="e#95#101#0" expanded="true" />
+                <element signature="e#101#107#0" expanded="true" />
+                <element signature="e#107#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="98" column="84" selection-start-line="98" selection-start-column="78" selection-end-line="98" selection-end-column="84" />
+            <state relative-caret-position="222">
+              <caret line="68" column="69" lean-forward="true" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -130,19 +95,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1621">
-              <caret line="76" column="41" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="71" column="80" selection-start-line="71" selection-start-column="80" selection-end-line="71" selection-end-column="80" />
+            <state relative-caret-position="209">
+              <caret line="70" column="102" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,8 +109,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="92" column="43" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="43" />
+            <state relative-caret-position="409">
+              <caret line="96" column="49" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="49" />
+              <folding>
+                <element signature="e#4563#4564#0" expanded="true" />
+                <element signature="e#4626#4627#0" expanded="true" />
+                <element signature="e#4729#4730#0" expanded="true" />
+                <element signature="e#4788#4789#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -162,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysDeptMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="184" column="48" selection-start-line="184" selection-start-column="43" selection-end-line="184" selection-end-column="48" />
+            <state relative-caret-position="243">
+              <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
             </state>
           </provider>
         </entry>
@@ -171,16 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/DeptTableVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
-              <folding>
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#808#809#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1056#1057#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -188,7 +163,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="480">
               <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -209,12 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>collapse</find>
-      <find>updatePassword</find>
-      <find>skin</find>
-      <find>layui-layer-molv</find>
-      <find>selectAllDepts</find>
-      <find>chk-select-silent</find>
       <find>expandibleTree</find>
       <find>table</find>
       <find>username</find>
@@ -234,11 +203,17 @@
       <find>getLevel</find>
       <find>selectDeptsByLevel</find>
       <find>insertSelective</find>
-      <find>DeptTableMap</find>
       <find>columns</find>
       <find>setMultiStatementAllow</find>
       <find>Filter</find>
       <find>selectDeptTable</find>
+      <find>update</find>
+      <find>c</find>
+      <find>DeptTableVO</find>
+      <find>DeptTableMap</find>
+      <find>selectChildDeptByLevel</find>
+      <find>请选择一条记录</find>
+      <find>layer.alert('请选择一条记录');</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -286,18 +261,18 @@
         <option value="$PROJECT_DIR$/c-manager/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysTreeService.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysTreeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/bo/DeptBO.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java" />
-        <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java" />
-        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" />
-        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/DeptTableVO.java" />
         <option value="$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java" />
+        <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysDeptMapper.xml" />
+        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" />
+        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" />
       </list>
     </option>
   </component>
@@ -349,9 +324,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="12" />
-    <option name="y" value="514" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="542" />
+    <option name="y" value="24" />
     <option name="width" value="1400" />
     <option name="height" value="968" />
   </component>
@@ -361,6 +336,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -368,12 +344,175 @@
               <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chang" type="462c0819:PsiDirectoryNode" />
+              <item name="ccloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chang" type="462c0819:PsiDirectoryNode" />
+              <item name="ccloud" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chang" type="462c0819:PsiDirectoryNode" />
+              <item name="ccloud" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,7 +589,8 @@
       <workItem from="1594432377925" duration="19400000" />
       <workItem from="1594512501335" duration="26648000" />
       <workItem from="1594643464399" duration="4820000" />
-      <workItem from="1594688318782" duration="28872000" />
+      <workItem from="1594688318782" duration="29042000" />
+      <workItem from="1594814707244" duration="4645000" />
     </task>
     <task id="LOCAL-00001" summary="权限管理系统：创建；环境配置；核心文件；工具类">
       <created>1593876626472</created>
@@ -508,16 +648,24 @@
       <option name="project" value="LOCAL" />
       <updated>1594564141234</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="权限管理系统：新增部门">
+      <created>1594737016628</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1594737016628</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128301000" />
+    <option name="totallyTimeSpent" value="133116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23175965" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23175965" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -527,7 +675,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.53452116" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" visible="true" weight="0.29955456" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946353" visible="true" weight="0.3429844" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -551,7 +699,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.19313304" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3299356" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23175965" />
@@ -564,7 +712,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.53452116" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" visible="true" weight="0.32962137" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" visible="true" weight="0.3429844" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -588,7 +736,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.19313304" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3299356" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +791,8 @@
     <MESSAGE value="权限管理系统：整合bootstrap框架" />
     <MESSAGE value="权限管理系统：前端显示组织结构树" />
     <MESSAGE value="权限管理系统：部门管理页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：部门管理页面" />
+    <MESSAGE value="权限管理系统：新增部门" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：新增部门" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -662,16 +811,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="27" column="70" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -736,17 +875,6 @@
             <element signature="e#80422#80685#2" expanded="true" />
             <element signature="e#110844#111040#2" expanded="true" />
             <element signature="e#111086#111283#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="109" selection-start-line="19" selection-start-column="106" selection-end-line="19" selection-end-column="109" />
-          <folding>
-            <element signature="n#style#0;n#code#0;n#div#1;n#div#6;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -976,17 +1104,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/bower/bootstrap-table/1.10.1/bootstrap-table-1.10.1.jar!/META-INF/resources/webjars/bootstrap-table/1.10.1/src/bootstrap-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="177">
+          <caret line="609" column="28" selection-start-line="609" selection-start-column="21" selection-end-line="609" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java">
+    <entry file="file://$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/properties/DruidProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        <state relative-caret-position="233">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="109" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#code#0;n#div#1;n#div#6;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -995,8 +1141,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="361">
+          <caret line="72" column="38" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -1004,30 +1150,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/bower/bootstrap-table/1.10.1/bootstrap-table-1.10.1.jar!/META-INF/resources/webjars/bootstrap-table/1.10.1/src/bootstrap-table.js">
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/DeptTableVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="609" column="28" selection-start-line="609" selection-start-column="21" selection-end-line="609" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1621">
-          <caret line="76" column="41" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="98" column="84" selection-start-line="98" selection-start-column="78" selection-end-line="98" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1042,44 +1168,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js">
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="64" column="60" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
-          <folding>
-            <element signature="e#102#108#0" expanded="true" />
-            <element signature="e#108#114#0" expanded="true" />
-            <element signature="e#114#120#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="363">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/DeptTableVO.java">
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/properties/DruidProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+        <state relative-caret-position="435">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1088,24 +1187,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysDeptMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="184" column="48" selection-start-line="184" selection-start-column="43" selection-end-line="184" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="92" column="43" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="43" />
+        <state relative-caret-position="243">
+          <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="71" column="80" selection-start-line="71" selection-start-column="80" selection-end-line="71" selection-end-column="80" />
+        <state relative-caret-position="209">
+          <caret line="70" column="102" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1392">
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="96" column="49" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="49" />
+          <folding>
+            <element signature="e#4563#4564#0" expanded="true" />
+            <element signature="e#4626#4627#0" expanded="true" />
+            <element signature="e#4729#4730#0" expanded="true" />
+            <element signature="e#4788#4789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="68" column="69" lean-forward="true" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="144" column="29" lean-forward="true" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
+          <folding>
+            <element signature="e#95#101#0" expanded="true" />
+            <element signature="e#101#107#0" expanded="true" />
+            <element signature="e#107#113#0" expanded="true" />
           </folding>
         </state>
       </provider>

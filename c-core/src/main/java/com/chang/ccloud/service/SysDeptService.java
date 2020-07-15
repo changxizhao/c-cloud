@@ -1,6 +1,7 @@
 package com.chang.ccloud.service;
 
 import com.chang.ccloud.entities.bo.DeptBO;
+import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.model.SysDept;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public interface SysDeptService {
 
     String getDeptLevel(Long id);
 
-    List<SysDept> selectDeptTable(Long id, String level);
+    List<DeptTableVO> selectDeptTable(Long id, String level);
 
     SysDept selectDeptById(Long id);
 }

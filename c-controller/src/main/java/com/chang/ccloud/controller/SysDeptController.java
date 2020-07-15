@@ -7,6 +7,7 @@ import com.chang.ccloud.common.utils.JsonConvertUtil;
 import com.chang.ccloud.entities.bo.DeptBO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
+import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.service.SysTreeService;
@@ -69,8 +70,8 @@ public class SysDeptController {
         SysDept sysDept = deptService.selectDeptById(level);
         String selectLevel = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), level);
         PageHelper.startPage(pageNumber,pageSize);
-        List<SysDept> deptList = deptService.selectDeptTable(level, selectLevel);
-        PageInfo<SysDept> page=new PageInfo<>(deptList);
+        List<DeptTableVO> deptList = deptService.selectDeptTable(level, selectLevel);
+        PageInfo<DeptTableVO> page=new PageInfo<>(deptList);
         return TableInfo.tableInfo(page);
     }
 

@@ -2,6 +2,7 @@ package com.chang.ccloud.service.impl;
 
 import com.chang.ccloud.dao.SysDeptMapper;
 import com.chang.ccloud.entities.bo.DeptBO;
+import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.exception.ParamsException;
 import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysDeptService;
@@ -84,7 +85,8 @@ public class SysDeptServiceImpl implements SysDeptService {
 
         //如果部门级别不一致，则更新子部门
         if(!after.getLevel().equals(before.getLevel())) {
-            List<SysDept> deptList = sysDeptMapper.selectChildDeptByLevel(before.getLevel());
+            String selectLevel = DeptLevelUtil.getLevel(before.getLevel(), before.getId());
+            List<SysDept> deptList = sysDeptMapper.selectChildDeptByLevel(selectLevel);
             if(CollectionUtils.isNotEmpty(deptList)) {
                 for (SysDept dept : deptList) {
                     String level = dept.getLevel();
@@ -92,8 +94,8 @@ public class SysDeptServiceImpl implements SysDeptService {
                         level = newLevelPrefix + level.substring(oldLevelPrefix.length());
                         dept.setLevel(level);
                     }
+                    sysDeptMapper.updateDeptLevel(dept);
                 }
-                sysDeptMapper.batchUpdateDeptLevel(deptList);
             }
         }
         sysDeptMapper.updateByPrimaryKeySelective(after);
@@ -130,8 +132,7 @@ public class SysDeptServiceImpl implements SysDeptService {
     }
 
     @Override
-    public List<SysDept> selectDeptTable(Long id, String level) {
-//        String level = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), id);
+    public List<DeptTableVO> selectDeptTable(Long id, String level) {
         return sysDeptMapper.selectDeptTable(id, level);
     }
 

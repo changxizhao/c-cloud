@@ -4,11 +4,10 @@ Dept = $(function(){
     window.operateEvents = {
         'click #editDept': function (e, value, row, index) { // 编辑部门
             editDept(row);
-            //$("#upload").modal('show');
         },
 
-        'click #deleteDept': function (e, value, row, index) {
-            alert("删除部门 ：" + row.name);
+        'click #deleteDept': function (e, value, row, index) { // 删除部门
+            layer.alert("删除部门 ：" + row.name);
             //$("#upload").modal('show');
         }
     };
@@ -96,7 +95,7 @@ function saveDept() {
                     layer.close(index);
                     $('#dept-detail-table').bootstrapTable('refresh');
                 }else {
-                    alert(data.msg);
+                    layer.alert(data.msg);
                 }
             },'json');
         }
@@ -129,10 +128,21 @@ function editDept(row) {
                     layer.close(index);
                     $('#dept-detail-table').bootstrapTable('refresh');
                 }else {
-                    alert(data.msg);
+                    layer.alert(data.msg);
                 }
             },'json');
         }
     });
+}
+
+function batchDeleteDepts() {
+    var idList = $('#dept-detail-table').bootstrapTable("getAllSelections");
+    if(idList.length <= 0) {
+        layer.alert("请至少选择一条数据");
+        return false;
+    }
+
+    var msg = JSON.stringify( idList );
+    layer.alert(msg);
 }
 

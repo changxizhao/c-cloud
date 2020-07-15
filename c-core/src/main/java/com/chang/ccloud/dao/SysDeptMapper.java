@@ -2,6 +2,7 @@ package com.chang.ccloud.dao;
 
 
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
+import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.model.SysDept;
 import org.apache.ibatis.annotations.Param;
 
@@ -25,9 +26,11 @@ public interface SysDeptMapper {
 
     List<SysDept> selectChildDeptByLevel(@Param("level") String level);
 
-    void batchUpdateDeptLevel(@Param("deptList") List<SysDept> deptList);
+    void updateDeptLevel(SysDept sysDept);
 
     int checkDeptExist(@Param("parentId") Long parentId, @Param("name") String name, @Param("id") Long id);
 
-    List<SysDept> selectDeptTable(@Param("id") Long id, @Param("level") String level);
+    List<DeptTableVO> selectDeptTable(@Param("id") Long id, @Param("level") String level);
+
+//    List<SysDept> selectChildDeptByLevel(@Param("id") Long id, @Param("level") String level);
 }
