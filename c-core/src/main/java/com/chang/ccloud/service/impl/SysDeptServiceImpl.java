@@ -1,7 +1,7 @@
 package com.chang.ccloud.service.impl;
 
 import com.chang.ccloud.dao.SysDeptMapper;
-import com.chang.ccloud.entities.bo.DeptBO;
+import com.chang.ccloud.entities.vo.DeptRequestVO;
 import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.exception.ParamsException;
 import com.chang.ccloud.model.SysDept;
@@ -11,7 +11,6 @@ import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.validator.BeanValidator;
 import com.google.common.base.Preconditions;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,21 +33,21 @@ public class SysDeptServiceImpl implements SysDeptService {
     private SysDeptMapper sysDeptMapper;
 
     @Override
-    public void addDept(DeptBO deptBO) {
-        BeanValidator.checkObject(deptBO);
-        if(deptService.checkDeptExist(deptBO.getParentId(), deptBO.getName(), deptBO.getId())) {
+    public void addDept(DeptRequestVO deptRequestVO) {
+        BeanValidator.checkObject(deptRequestVO);
+        if(deptService.checkDeptExist(deptRequestVO.getParentId(), deptRequestVO.getName(), deptRequestVO.getId())) {
             throw new ParamsException("部门已存在");
         }
 
-        if(deptBO.getParentId() == null) {
-            deptBO.setParentId(0L);
+        if(deptRequestVO.getParentId() == null) {
+            deptRequestVO.setParentId(0L);
         }
 
         SysDept sysDept = new SysDept();
-        BeanUtils.copyProperties(deptBO,sysDept);
+        BeanUtils.copyProperties(deptRequestVO,sysDept);
         // 设置部门level字段
-        String parentLevel = deptService.getDeptLevel(deptBO.getParentId());
-        String level = DeptLevelUtil.getLevel(parentLevel, deptBO.getParentId());
+        String parentLevel = deptService.getDeptLevel(deptRequestVO.getParentId());
+        String level = DeptLevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
         sysDept.setLevel(level);
         sysDept.setOperator("admin"); // TODO
         sysDept.setOperateIp("127.0.0.1"); // TODO
@@ -58,19 +57,19 @@ public class SysDeptServiceImpl implements SysDeptService {
     }
 
     @Override
-    public void updateDept(DeptBO deptBO) {
-        BeanValidator.checkObject(deptBO);
-        if(deptService.checkDeptExist(deptBO.getParentId(), deptBO.getName(), deptBO.getId())) {
+    public void updateDept(DeptRequestVO deptRequestVO) {
+        BeanValidator.checkObject(deptRequestVO);
+        if(deptService.checkDeptExist(deptRequestVO.getParentId(), deptRequestVO.getName(), deptRequestVO.getId())) {
             throw new ParamsException("部门已存在");
         }
         // 校验部门是否存在
-        SysDept before = sysDeptMapper.selectByPrimaryKey(deptBO.getId());
+        SysDept before = sysDeptMapper.selectByPrimaryKey(deptRequestVO.getId());
         Preconditions.checkNotNull(before, "不存在此部门");
 
         SysDept after = new SysDept();
-        BeanUtils.copyProperties(deptBO, after);
-        String parentLevel = deptService.getDeptLevel(deptBO.getParentId());
-        String level = DeptLevelUtil.getLevel(parentLevel, deptBO.getParentId());
+        BeanUtils.copyProperties(deptRequestVO, after);
+        String parentLevel = deptService.getDeptLevel(deptRequestVO.getParentId());
+        String level = DeptLevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
         after.setLevel(level);
         after.setOperateTime(DateUtil.getNowDate());
         after.setOperator("admin"); // TODO

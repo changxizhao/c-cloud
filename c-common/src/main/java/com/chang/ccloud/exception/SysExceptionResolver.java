@@ -19,6 +19,11 @@ public class SysExceptionResolver {
 
     private final Logger logger = LoggerFactory.getLogger(SysExceptionResolver.class);
 
+    @ExceptionHandler(LoginException.class)
+    public Result loginExceptionHandler(LoginException e) {
+        return Result.fail(HttpRequestStatus.FAIL.getCode(),e.getMessage());
+    }
+
     @ExceptionHandler(PermissionException.class)
     public Result permissionExceptionHandler(PermissionException e) {
         return Result.fail(HttpRequestStatus.UNAUTHORIZATION.getCode(),"无权限");
@@ -36,7 +41,7 @@ public class SysExceptionResolver {
 //        String url = request.getRequestURL().toString();
         logger.info("请求出错：{}-{}", e.toString(),e.getMessage());
 
-        return Result.fail("system error");
+        return Result.fail(e.getMessage());
 
     }
 }

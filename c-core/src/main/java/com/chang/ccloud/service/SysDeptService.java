@@ -1,6 +1,6 @@
 package com.chang.ccloud.service;
 
-import com.chang.ccloud.entities.bo.DeptBO;
+import com.chang.ccloud.entities.vo.DeptRequestVO;
 import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.model.SysDept;
 
@@ -13,9 +13,9 @@ import java.util.List;
  */
 public interface SysDeptService {
 
-    void addDept(DeptBO deptBO);
+    void addDept(DeptRequestVO deptRequestVO);
 
-    void updateDept(DeptBO deptBO);
+    void updateDept(DeptRequestVO deptRequestVO);
 
     boolean checkDeptExist(Long parentId, String deptName, Long deptId);
 

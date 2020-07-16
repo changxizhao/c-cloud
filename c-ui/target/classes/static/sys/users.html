@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>用户管理</title>
     <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="../public/css/main.css">
 
 </head>
 <body>
@@ -16,17 +18,20 @@
             <label for="input-select-node" class="sr-only">Search Tree:</label>
             <input type="input" class="form-control" id="input-select-node" placeholder="输入部门名称进行搜索..." value="">
         </div>
-        <div id="treeview5" class=""></div>
+        <div id="DeptTreeVew" class=""></div>
     </div>
 
-    <!--<div class="col-xs-10" style="height: 100px; background: #0C0C0C;">
+    <div class="col-xs-10">
         <table id="user-detail-table"></table>
-    </div>-->
+    </div>
 </div>
 
 
 <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
 <script src="/webjars/bootstrap-treeview/1.2.0/dist/bootstrap-treeview.min.js"></script>
+<script src="/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.js"></script>
+<script src="/webjars/bootstrap-table/1.10.1/src/locale/bootstrap-table-zh-CN.js"></script>
+<script src="/webjars/layer/3.0.3/src/layer.js"></script>
 <script src="../public/js/sys/deptTree.js"></script>
 <script src="../public/js/sys/users.js"></script>
 </body>

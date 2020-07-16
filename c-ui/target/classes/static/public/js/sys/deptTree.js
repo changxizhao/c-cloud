@@ -24,9 +24,9 @@ Tree = $(function () {
             showBorder: false,
             data: defaultData,
             onNodeSelected: function(event, node) {
-                if(mark == 1){
+                if(mark == 1){ // 如果mark=1，则为部门管理
                     reloadDeptTable(node.tags);
-                }else {
+                }else if(mark == 0) { // 用户管理
                     alert("用户管理：" + node.tags);
                 }
 
@@ -47,7 +47,7 @@ Tree = $(function () {
 });
 
 function chooseDept() {
-    initParentTree();
+    initParentTree('select-parent-dept', 1);
     layer.open({
         type: 1,
         skin: 'layui-layer-lan',
@@ -62,8 +62,8 @@ function chooseDept() {
     });
 }
 
-var initParentTree = function() {
-    $('#select-parent-dept').treeview({
+var initParentTree = function(domId, mark) {
+    $('#' + domId).treeview({
         color: "#000000",
         expandIcon: 'glyphicon glyphicon-chevron-right',
         collapseIcon: 'glyphicon glyphicon-chevron-down',
@@ -71,11 +71,14 @@ var initParentTree = function() {
         showBorder: false,
         data: Tree.deptTreeData,
         onNodeSelected: function (event, node) {
-
             var deptName = node.text;
             var deptId = node.tags;
-            $("#parentName").val(deptName);
-            $("#parentId").val(deptId.toString());
+            if(mark == 1) { // 部门管理
+                $("#parentName").val(deptName);
+                $("#parentId").val(deptId.toString());
+            }else if(mark == 0) { // 用户管理
+
+            }
             layer.close(layer.index);
         }
     });

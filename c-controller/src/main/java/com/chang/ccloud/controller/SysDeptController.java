@@ -3,8 +3,7 @@ package com.chang.ccloud.controller;
 import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.TableInfo;
 import com.chang.ccloud.common.utils.DeptLevelUtil;
-import com.chang.ccloud.common.utils.JsonConvertUtil;
-import com.chang.ccloud.entities.bo.DeptBO;
+import com.chang.ccloud.entities.vo.DeptRequestVO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
 import com.chang.ccloud.entities.vo.DeptTableVO;
@@ -42,16 +41,16 @@ public class SysDeptController {
 
     @ApiOperation(value = "新建部门")
     @PostMapping("/add")
-    public Result addDept(DeptBO deptBO){
-        log.info("新建部门 上级部门id = {}", deptBO.getParentId());
-        deptService.addDept(deptBO);
+    public Result addDept(DeptRequestVO deptRequestVO){
+        log.info("新建部门 上级部门id = {}", deptRequestVO.getParentId());
+        deptService.addDept(deptRequestVO);
         return Result.success();
     }
 
     @ApiOperation(value = "更新部门")
     @PostMapping("/update")
-    public Result updateDept(DeptBO deptBO){
-        deptService.updateDept(deptBO);
+    public Result updateDept(DeptRequestVO deptRequestVO){
+        deptService.updateDept(deptRequestVO);
         return Result.success();
     }
 

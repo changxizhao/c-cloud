@@ -1,6 +1,7 @@
 package com.chang.ccloud.service;
 
 
+import com.chang.ccloud.entities.vo.UserRequestVO;
 import com.chang.ccloud.model.SysUser;
 
 /**
@@ -9,6 +10,10 @@ import com.chang.ccloud.model.SysUser;
  * @Description
  */
 public interface SysUserService {
+
+    void addUser(UserRequestVO userRequestVO);
+
+    void updateUser(UserRequestVO userRequestVO);
 
     SysUser findUserByUsername(Long id);
 }

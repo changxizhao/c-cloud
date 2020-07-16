@@ -24,12 +24,8 @@ function initDeptTable(level) {
 
 // 刷新部门列表
 function reloadDeptTable(level) {
-    // alert("level = " + level);
-    var queryParams = {"pageNumber":1, "pageSize":10, "level": level.toString()};
-    console.log("query = " + level.toString());
-    $.get("/sys/dept/table",queryParams,function (data) {
-        $("#dept-detail-table").bootstrapTable('load',data);
-    })
+    $("#dept-detail-table").bootstrapTable('destroy');
+    initDeptTable(level.toString());
 }
 
 // 获取部门列表参数
