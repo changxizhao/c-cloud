@@ -27,7 +27,8 @@ Tree = $(function () {
                 if(mark == 1){ // 如果mark=1，则为部门管理
                     reloadDeptTable(node.tags);
                 }else if(mark == 0) { // 用户管理
-                    alert("用户管理：" + node.tags);
+                    //alert("用户管理：" + node.tags);
+                    reloadUserTable(node.tags);
                 }
 
             }
@@ -46,6 +47,7 @@ Tree = $(function () {
     });
 });
 
+// 部门管理：选择上级部门
 function chooseDept() {
     initParentTree('select-parent-dept', 1);
     layer.open({
@@ -55,6 +57,22 @@ function chooseDept() {
         area: ['300px', '550px'],
         shadeClose: false,
         content: jQuery("#select-parent-dept-tree"),
+        btn: ['取消'],
+        btn1: function (index) {
+            layer.close(index);
+        }
+    });
+}
+
+var chooseUserDept = function() {
+    initParentTree('select-user-dept', 0);
+    layer.open({
+        type: 1,
+        skin: 'layui-layer-lan',
+        title: "选择所属部门",
+        area: ['300px', '550px'],
+        shadeClose: false,
+        content: jQuery("#select-user-dept-tree"),
         btn: ['取消'],
         btn1: function (index) {
             layer.close(index);
@@ -77,7 +95,8 @@ var initParentTree = function(domId, mark) {
                 $("#parentName").val(deptName);
                 $("#parentId").val(deptId.toString());
             }else if(mark == 0) { // 用户管理
-
+                $("#deptId").val(deptId);
+                $("#deptName").val(deptName);
             }
             layer.close(layer.index);
         }

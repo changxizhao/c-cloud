@@ -190,16 +190,19 @@
   </select>
 
 
-  <select id="selectDeptTable" parameterType="com.chang.ccloud.model.SysDept" resultMap="DeptTableMap">
+  <select id="selectDeptTable" parameterType="com.chang.ccloud.entities.vo.DeptTableVO" resultMap="DeptTableMap">
     select d.id,d.name,d.seq,pd.name as parent_name,d.parent_id,d.level,d.remark
     from sys_dept d
     left join sys_dept pd on d.parent_id = pd.id
     where 1=1
-    <if test="id != null and id == 0">
+    <!--<if test="id != null and id == 0">
       and d.parent_id = #{id}
-    </if>
-    <if test="id != null and id != 0">
+    </if>-->
+    <if test="id != null">
       and (d.id = #{id} or d.level like CONCAT('',#{level},'%'))
+    </if>
+    <if test="name != null and name != ''">
+      and d.name like CONCAT('%',#{name},'%')
     </if>
     order by d.id, d.seq asc
 

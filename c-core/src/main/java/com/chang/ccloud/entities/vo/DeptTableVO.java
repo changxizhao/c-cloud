@@ -1,11 +1,13 @@
 package com.chang.ccloud.entities.vo;
 
+import com.chang.ccloud.entities.BaseTableInfo;
+
 /**
  * @Author changxizhao
  * @Date 2020/7/14 16:58
  * @Description
  */
-public class DeptTableVO {
+public class DeptTableVO extends BaseTableInfo {
 
     private Long id;
 
@@ -18,6 +20,8 @@ public class DeptTableVO {
     private Integer seq;
 
     private String remark;
+
+    private String level;
 
     public Long getId() {
         return id;
@@ -65,6 +69,14 @@ public class DeptTableVO {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }
 

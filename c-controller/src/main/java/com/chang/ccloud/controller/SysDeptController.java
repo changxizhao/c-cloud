@@ -64,12 +64,13 @@ public class SysDeptController {
 
     @ApiOperation(value = "获取部门列表")
     @GetMapping("/table")
-    public TableInfo deptTable(@RequestParam int pageNumber, @RequestParam int pageSize, @RequestParam Long level) {
-        log.info("查询部门列表入参 {}，{}，{}", pageNumber, pageSize, level);
-        SysDept sysDept = deptService.selectDeptById(level);
-        String selectLevel = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), level);
-        PageHelper.startPage(pageNumber,pageSize);
-        List<DeptTableVO> deptList = deptService.selectDeptTable(level, selectLevel);
+    public TableInfo deptTable(DeptTableVO deptTableVO) {
+        log.info("查询部门列表入参 {}，{}，{}", deptTableVO.getPageNumber(), deptTableVO.getPageSize(), deptTableVO.getId());
+        SysDept sysDept = deptService.selectDeptById(deptTableVO.getId());
+        String selectLevel = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), deptTableVO.getId());
+        deptTableVO.setLevel(selectLevel);
+        PageHelper.startPage(deptTableVO.getPageNumber(),deptTableVO.getPageSize());
+        List<DeptTableVO> deptList = deptService.selectDeptTable(deptTableVO);
         PageInfo<DeptTableVO> page=new PageInfo<>(deptList);
         return TableInfo.tableInfo(page);
     }

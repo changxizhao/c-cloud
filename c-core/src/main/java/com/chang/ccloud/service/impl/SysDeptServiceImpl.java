@@ -131,8 +131,8 @@ public class SysDeptServiceImpl implements SysDeptService {
     }
 
     @Override
-    public List<DeptTableVO> selectDeptTable(Long id, String level) {
-        return sysDeptMapper.selectDeptTable(id, level);
+    public List<DeptTableVO> selectDeptTable(DeptTableVO deptTableVO) {
+        return sysDeptMapper.selectDeptTable(deptTableVO);
     }
 
     @Override

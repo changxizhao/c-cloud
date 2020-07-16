@@ -30,7 +30,7 @@ public interface SysDeptMapper {
 
     int checkDeptExist(@Param("parentId") Long parentId, @Param("name") String name, @Param("id") Long id);
 
-    List<DeptTableVO> selectDeptTable(@Param("id") Long id, @Param("level") String level);
+    List<DeptTableVO> selectDeptTable(DeptTableVO deptTableVO);
 
 //    List<SysDept> selectChildDeptByLevel(@Param("id") Long id, @Param("level") String level);
 }

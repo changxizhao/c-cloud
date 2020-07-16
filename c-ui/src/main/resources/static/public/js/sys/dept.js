@@ -24,12 +24,27 @@ function initDeptTable(level) {
 
 // 刷新部门列表
 function reloadDeptTable(level) {
+    if(level == null || level == '' || level == undefined) {
+        level = '0';
+    }
     $("#dept-detail-table").bootstrapTable('destroy');
     initDeptTable(level.toString());
 }
 
+// 根据查询条件查询部门列表
+function reloadSelectDeptTable(level) {
+    if(level == null || level == '' || level == undefined) {
+        level = '0';
+    }
+
+    $("#dept-detail-table").bootstrapTable('destroy');
+    var opt = getTableOption(level, $("#select-dept-name").val());
+    $('#dept-detail-table').bootstrapTable(opt);
+    $('#dept-detail-table').bootstrapTable('hideColumn', 'parentId');
+}
+
 // 获取部门列表参数
-var getTableOption = function (level) {
+var getTableOption = function (level, name) {
 
     var option = {
         classes:'table table-hover table-no-bordered',
@@ -37,16 +52,17 @@ var getTableOption = function (level) {
         pagination: true,	//显示分页条
         datatype: 'json',
         sidePagination: 'server',//服务器端分页
-        showRefresh: true,  //显示刷新按钮
+        //showRefresh: true,  //显示刷新按钮
         search: false,
-        toolbar: '#dept-table-toolbar',
+        //toolbar: '#dept-table-toolbar',
         striped : true,     //设置为true会有隔行变色效果
         //idField: 'menuId',
         queryParams: function () {
             var param = {
                 pageNumber : this.pageNumber,
                 pageSize : this.pageSize,
-                level : level
+                id : level,
+                name: name
             };
             return param;
         },
@@ -79,7 +95,7 @@ function saveDept() {
         type: 1,
         skin: 'layui-layer-lan',
         title: "新增部门",
-        area: ['550px', '350px'],
+        area: ['550px', '450px'],
         shadeClose: false,
         content: jQuery("#add-dept"),
         btn: ['确定','取消'],
@@ -112,7 +128,7 @@ function editDept(row) {
         type: 1,
         skin: 'layui-layer-lan',
         title: "新增部门",
-        area: ['550px', '350px'],
+        area: ['550px', '450px'],
         shadeClose: false,
         content: jQuery("#add-dept"),
         btn: ['确定','取消'],

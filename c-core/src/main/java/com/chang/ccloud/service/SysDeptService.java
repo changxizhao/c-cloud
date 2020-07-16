@@ -21,7 +21,7 @@ public interface SysDeptService {
 
     String getDeptLevel(Long id);
 
-    List<DeptTableVO> selectDeptTable(Long id, String level);
+    List<DeptTableVO> selectDeptTable(DeptTableVO deptTableVO);
 
     SysDept selectDeptById(Long id);
 }

@@ -6,8 +6,10 @@ import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.common.utils.JsonConvertUtil;
 import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.entities.vo.UserRequestVO;
+import com.chang.ccloud.entities.vo.UserTableVO;
 import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.model.SysUser;
+import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.service.SysUserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -17,10 +19,7 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,6 +38,9 @@ public class SysUserController {
     @Autowired
     private SysUserService userService;
 
+    @Autowired
+    private SysDeptService deptService;
+
     @ApiOperation(value = "新增用户")
     @PostMapping("/add")
     public Result addUser(UserRequestVO userRequestVO){
@@ -56,12 +58,17 @@ public class SysUserController {
     }
 
     @ApiOperation(value = "获取用户列表")
-    @PostMapping("/table")
-    public TableInfo userList(@RequestParam int pageNumber, @RequestParam int pageSize){
-        log.info("查询用户列表入参 {}，{}，{}", pageNumber, pageSize);
-        PageHelper.startPage(pageNumber,pageSize);
-        List<SysUser> usersList = Lists.newArrayList();
-        PageInfo<SysUser> page=new PageInfo<>(usersList);
+    @GetMapping("/table")
+    public TableInfo userList(UserTableVO userTableVO){
+        log.info("查询用户列表入参 {}，{}", userTableVO.getPageNumber(), userTableVO.getPageSize());
+
+        SysDept sysDept = deptService.selectDeptById(userTableVO.getDeptId());
+        String selectLevel = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), userTableVO.getDeptId());
+        userTableVO.setDeptLevel(selectLevel);
+
+        PageHelper.startPage(userTableVO.getPageNumber(),userTableVO.getPageSize());
+        List<UserTableVO> usersList = userService.selectUserTable(userTableVO);
+        PageInfo<UserTableVO> page=new PageInfo<>(usersList);
         return TableInfo.tableInfo(page);
     }
 }

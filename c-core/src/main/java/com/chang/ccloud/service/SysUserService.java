@@ -2,7 +2,10 @@ package com.chang.ccloud.service;
 
 
 import com.chang.ccloud.entities.vo.UserRequestVO;
+import com.chang.ccloud.entities.vo.UserTableVO;
 import com.chang.ccloud.model.SysUser;
+
+import java.util.List;
 
 /**
  * @Author changxizhao
@@ -16,4 +19,6 @@ public interface SysUserService {
     void updateUser(UserRequestVO userRequestVO);
 
     SysUser findUserByUsername(Long id);
+
+    List<UserTableVO> selectUserTable(UserTableVO userTableVO);
 }
