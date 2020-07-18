@@ -102,9 +102,9 @@ function saveDept() {
         btn1: function (index) {
             $.post("/sys/dept/add",$("#add-dept-form").serialize(),function (data) {
                 if(data.code == 200){
-                    //$('#add-dept')[0].reset();
                     Tree.initTree('treeview5',1);
                     layer.close(index);
+                    $('#add-dept-form')[0].reset();
                     $('#dept-detail-table').bootstrapTable('refresh');
                 }else {
                     layer.alert(data.msg);
@@ -127,7 +127,7 @@ function editDept(row) {
     layer.open({
         type: 1,
         skin: 'layui-layer-lan',
-        title: "新增部门",
+        title: "编辑部门",
         area: ['550px', '450px'],
         shadeClose: false,
         content: jQuery("#add-dept"),
@@ -138,6 +138,7 @@ function editDept(row) {
                     //$('#add-dept')[0].reset();
                     Tree.initTree('treeview5',1);
                     layer.close(index);
+                    $('#add-dept-form')[0].reset();
                     $('#dept-detail-table').bootstrapTable('refresh');
                 }else {
                     layer.alert(data.msg);

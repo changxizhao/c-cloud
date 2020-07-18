@@ -75,3 +75,10 @@ function doTask(id, msg, url){
         });
     });
 }
+
+var formReset = function (formId) {
+    var input = $('#' + formId).find("input");
+    $.each(input, function (i, item) {
+        item.value = '';
+    })
+}

@@ -121,6 +121,7 @@ var saveUser = function() {
             $.post("/sys/user/add",$("#add-user-form").serialize(),function (data) {
                 if(data.code == 200){
                     layer.close(index);
+                    $('#add-user-form')[0].reset();
                     $('#user-detail-table').bootstrapTable('refresh');
                 }else {
                     layer.alert(data.msg);
