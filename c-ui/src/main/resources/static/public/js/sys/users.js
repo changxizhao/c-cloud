@@ -112,7 +112,7 @@ var saveUser = function() {
     layer.open({
         type: 1,
         skin: 'layui-layer-lan',
-        title: "新增部门",
+        title: "新增用户",
         area: ['550px', '700px'],
         shadeClose: false,
         content: jQuery("#add-user"),
@@ -143,12 +143,15 @@ var editUser = function(row) {
     $("#deptId").val(row.deptId);
     $("#deptName").val(row.deptName);
 
+    $("input[name='sex'][value="+row.sex+"]").attr("checked",true);
+    $("input[name='status'][value="+row.status+"]").attr("checked",true);
+
     $("#remark").val(row.remark);
 
     layer.open({
         type: 1,
         skin: 'layui-layer-lan',
-        title: "新增部门",
+        title: "编辑用户",
         area: ['550px', '700px'],
         shadeClose: false,
         content: jQuery("#add-user"),
