@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad934de-f9de-4f63-a093-dae2f523131f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/dept.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/dept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,15 +60,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1080">
@@ -97,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="69" column="51" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="51" />
+            <state relative-caret-position="1656">
+              <caret line="69" column="51" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -131,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/users.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
+            <state relative-caret-position="2904">
+              <caret line="121" column="64" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="64" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -154,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+            <state relative-caret-position="144">
+              <caret line="138" column="37" lean-forward="true" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="37" />
               <folding>
                 <element signature="e#95#101#0" expanded="true" />
                 <element signature="e#101#107#0" expanded="true" />
@@ -166,15 +152,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="2544">
               <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
-              <folding>
-                <element signature="e#95#101#0" expanded="true" />
-                <element signature="e#101#107#0" expanded="true" />
-                <element signature="e#107#113#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -279,8 +269,8 @@
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/common.js" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" />
-        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" />
+        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js" />
       </list>
     </option>
   </component>
@@ -526,7 +516,8 @@
       <workItem from="1594891374389" duration="14928000" />
       <workItem from="1594994787094" duration="1743000" />
       <workItem from="1595035948567" duration="102000" />
-      <workItem from="1595077781078" duration="1816000" />
+      <workItem from="1595077781078" duration="3124000" />
+      <workItem from="1595120863471" duration="206000" />
     </task>
     <task id="LOCAL-00001" summary="权限管理系统：创建；环境配置；核心文件；工具类">
       <created>1593876626472</created>
@@ -612,17 +603,30 @@
       <option name="project" value="LOCAL" />
       <updated>1594909409664</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="权限管理系统：新增用户/部门后清空form，添加favicon.ico">
+      <created>1595081158356</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1595081158356</updated>
+    </task>
+    <task id="LOCAL-00014" summary="权限管理系统：用户编辑时性别、状态选中赋值">
+      <created>1595081707477</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1595081707477</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171767000" />
+    <option name="totallyTimeSpent" value="173075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27682403" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2805794" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -632,7 +636,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.53452116" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946353" visible="true" weight="0.43095767" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" weight="0.43095767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48218262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -640,12 +644,12 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946353" weight="0.24721603" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005365" side_tool="true" weight="0.4521158" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50107294" side_tool="true" weight="0.40979955" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.31737193" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.7271715" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32962137" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49946353" weight="0.35746104" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="15" sideWeight="0.49892703" visible="true" weight="0.38418707" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.43986636" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -659,7 +663,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3299356" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27682403" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27682403" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -669,7 +673,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.53452116" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" visible="true" weight="0.22383073" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" weight="0.43095767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48218262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -677,12 +681,12 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946353" weight="0.24721603" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005365" side_tool="true" weight="0.4521158" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50107294" side_tool="true" weight="0.40979955" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.31737193" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.7271715" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32962137" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49946353" weight="0.35746104" />
+      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49892703" visible="true" weight="0.22939867" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.43986636" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -752,7 +756,9 @@
     <MESSAGE value="权限管理系统：修改部门" />
     <MESSAGE value="权限管理系统：新增用户、修改用户接口，修复部门列表刷新分页失败问题" />
     <MESSAGE value="权限管理系统：用户增改查页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：用户增改查页面" />
+    <MESSAGE value="权限管理系统：新增用户/部门后清空form，添加favicon.ico" />
+    <MESSAGE value="权限管理系统：用户编辑时性别、状态选中赋值" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：用户编辑时性别、状态选中赋值" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1192,30 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
-          <folding>
-            <element signature="e#95#101#0" expanded="true" />
-            <element signature="e#101#107#0" expanded="true" />
-            <element signature="e#107#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1230,6 +1212,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
+          <folding>
+            <element signature="e#95#101#0" expanded="true" />
+            <element signature="e#101#107#0" expanded="true" />
+            <element signature="e#107#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="121" column="64" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
           <folding>
             <element signature="e#95#101#0" expanded="true" />
             <element signature="e#101#107#0" expanded="true" />
