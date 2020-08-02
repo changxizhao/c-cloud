@@ -10,6 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @Author changxizhao
  * @Date 2020/7/16 12:27
@@ -22,7 +24,7 @@ public class UserServiceImpl implements UserService {
     private SysUserMapper userMapper;
 
     @Override
-    public void login(String username, String password) {
+    public SysUser login(String username, String password) {
         if(StringUtils.isBlank(username)) {
             throw new LoginException("用户名不能为空");
         }
@@ -37,5 +39,6 @@ public class UserServiceImpl implements UserService {
         if(sysUser.getStatus() != 1) {
             throw new LoginException("此账号已冻结，请联系系统管理员");
         }
+        return sysUser;
     }
 }

@@ -75,7 +75,7 @@ public class DruidConfig {
 
     // 去掉监控台底部的广告
     @Bean
-    public FilterRegistrationBean removeDruidAdFilterRegistrationBean(DruidStatProperties properties) {
+    public FilterRegistrationBean<Filter> removeDruidAdFilterRegistrationBean(DruidStatProperties properties) {
         /**
          * 获取监控页面参数
          */
@@ -91,8 +91,10 @@ public class DruidConfig {
          */
         Filter filter = new Filter() {
             @Override
-            public void init(FilterConfig filterConfig) throws ServletException {
+            public void init(javax.servlet.FilterConfig filterConfig) throws ServletException {
+
             }
+
             @Override
             public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
                 chain.doFilter(request, response);
@@ -113,8 +115,10 @@ public class DruidConfig {
             public void destroy() {
             }
         };
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+        FilterRegistrationBean<Filter> registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(filter);
+        registrationBean.setName("druidPageFilter");
+        registrationBean.setOrder(0);
         registrationBean.addUrlPatterns(commonJsPattern);
         return registrationBean;
     }

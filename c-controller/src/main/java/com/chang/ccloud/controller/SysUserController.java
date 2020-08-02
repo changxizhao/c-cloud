@@ -4,23 +4,19 @@ import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.TableInfo;
 import com.chang.ccloud.common.utils.DeptLevelUtil;
 import com.chang.ccloud.common.utils.JsonConvertUtil;
-import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.entities.vo.UserRequestVO;
 import com.chang.ccloud.entities.vo.UserTableVO;
 import com.chang.ccloud.model.SysDept;
-import com.chang.ccloud.model.SysUser;
 import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.service.SysUserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.google.common.collect.Lists;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 /**
@@ -30,7 +26,7 @@ import java.util.List;
  */
 @Api(tags = "系统用户相关接口")
 @RestController
-@RequestMapping("/sys/user")
+@RequestMapping("/api/sys/user")
 public class SysUserController {
 
     private static Logger log = LoggerFactory.getLogger(SysUserController.class);

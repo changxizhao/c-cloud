@@ -5,6 +5,8 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.chang.ccloud.exception.ParamsException;
 import org.apache.commons.collections4.MapUtils;
+import org.apache.commons.lang3.StringUtils;
+
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -71,7 +73,12 @@ public class BeanValidator {
     public static void checkObject(Object object) throws ParamsException {
         Map<String, String> map = validateObject(object);
         if(MapUtils.isNotEmpty(map)) {
-            throw new ParamsException(map.toString());
+            List<String> msgList = new ArrayList<>();
+            for (String key : map.keySet()) {
+                msgList.add(map.get(key));
+            }
+            String msg = StringUtils.join(msgList, ",");
+            throw new ParamsException(msg);
         }
     }
 }

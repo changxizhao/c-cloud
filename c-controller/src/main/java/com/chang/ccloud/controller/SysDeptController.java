@@ -18,7 +18,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 /**
@@ -28,7 +27,7 @@ import java.util.List;
  */
 @Api(tags = "部门相关接口")
 @RestController
-@RequestMapping("/sys/dept")
+@RequestMapping("/api/sys/dept")
 public class SysDeptController {
 
     private static Logger log = LoggerFactory.getLogger(SysDeptController.class);

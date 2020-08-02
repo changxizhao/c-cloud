@@ -4,6 +4,7 @@ import com.chang.ccloud.dao.SysDeptMapper;
 import com.chang.ccloud.entities.vo.DeptRequestVO;
 import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.exception.ParamsException;
+import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.common.utils.DateUtil;
@@ -49,7 +50,7 @@ public class SysDeptServiceImpl implements SysDeptService {
         String parentLevel = deptService.getDeptLevel(deptRequestVO.getParentId());
         String level = DeptLevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
         sysDept.setLevel(level);
-        sysDept.setOperator("admin"); // TODO
+        sysDept.setOperator(RequestHolder.getCurrentUser().getUsername());
         sysDept.setOperateIp("127.0.0.1"); // TODO
         sysDept.setOperateTime(DateUtil.getNowDate());
 
@@ -72,7 +73,7 @@ public class SysDeptServiceImpl implements SysDeptService {
         String level = DeptLevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
         after.setLevel(level);
         after.setOperateTime(DateUtil.getNowDate());
-        after.setOperator("admin"); // TODO
+        after.setOperator(RequestHolder.getCurrentUser().getUsername());
         after.setOperateIp("127.0.0.1"); // TODO
         updateDeptWithChild(before, after);
     }

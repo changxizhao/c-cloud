@@ -8,6 +8,7 @@ import com.chang.ccloud.dao.SysUserMapper;
 import com.chang.ccloud.entities.vo.UserRequestVO;
 import com.chang.ccloud.entities.vo.UserTableVO;
 import com.chang.ccloud.exception.ParamsException;
+import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysUser;
 import com.chang.ccloud.service.SysUserService;
 import com.chang.ccloud.validator.BeanValidator;
@@ -44,7 +45,7 @@ public class SysUserServiceImpl implements SysUserService {
         SysUser sysUser = new SysUser();
         BeanUtils.copyProperties(userRequestVO, sysUser);
         sysUser.setPassword(password);
-        sysUser.setOperator("admin"); // TODO
+        sysUser.setOperator(RequestHolder.getCurrentUser().getUsername());
         sysUser.setOperateIp("127.0.0.1"); // TODO
         sysUser.setOperateTime(DateUtil.getNowDate());
         // TODO 发送邮件通知用户
@@ -67,7 +68,7 @@ public class SysUserServiceImpl implements SysUserService {
         SysUser after = new SysUser();
         BeanUtils.copyProperties(userRequestVO, after);
         after.setId(userRequestVO.getId());
-        after.setOperator("admin"); // TODO
+        after.setOperator(RequestHolder.getCurrentUser().getUsername());
         after.setOperateIp("127.0.0.1"); // TODO
         after.setOperateTime(DateUtil.getNowDate());
         sysUserMapper.updateByPrimaryKeySelective(after);

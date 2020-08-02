@@ -44,7 +44,7 @@ var getUsersTableOption = function (deptId, username, nickname) {
 
     var option = {
         classes:'table table-hover table-no-bordered',
-        url: '/sys/user/table',
+        url: '/api/sys/user/table',
         pagination: true,	//显示分页条
         datatype: 'json',
         sidePagination: 'server',//服务器端分页
@@ -118,7 +118,7 @@ var saveUser = function() {
         content: jQuery("#add-user"),
         btn: ['确定','取消'],
         btn1: function (index) {
-            $.post("/sys/user/add",$("#add-user-form").serialize(),function (data) {
+            $.post("/api/sys/user/add",$("#add-user-form").serialize(),function (data) {
                 if(data.code == 200){
                     layer.close(index);
                     $('#add-user-form')[0].reset();
@@ -157,7 +157,7 @@ var editUser = function(row) {
         content: jQuery("#add-user"),
         btn: ['确定','取消'],
         btn1: function (index) {
-            $.post("/sys/user/update",$("#add-user-form").serialize(),function (data) {
+            $.post("/api/sys/user/update",$("#add-user-form").serialize(),function (data) {
                 if(data.code == 200){
                     //$('#add-dept')[0].reset();
                     Tree.initTree('treeview5',1);

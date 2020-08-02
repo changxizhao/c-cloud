@@ -1,5 +1,7 @@
 package com.chang.ccloud.service;
 
+import com.chang.ccloud.model.SysUser;
+
 /**
  * @Author changxizhao
  * @Date 2020/7/16 12:19
@@ -7,6 +9,6 @@ package com.chang.ccloud.service;
  */
 public interface UserService {
 
-    void login(String username, String password);
+    SysUser login(String username, String password);
 
 }

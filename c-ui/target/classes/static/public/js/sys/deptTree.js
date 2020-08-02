@@ -5,7 +5,7 @@ Tree = $(function () {
     Tree.deptTreeData;
 
     Tree.initTree = function(treeId,mark) {
-        $.getJSON("/sys/dept/tree?_" + $.now(), function (r) {
+        $.getJSON("/api/sys/dept/tree?_" + $.now(), function (r) {
             //setDeptTreeView(r.data);
             Tree.deptTreeData = r.data;
             $selectableTree = initSelectableTree(treeId, r.data, mark);

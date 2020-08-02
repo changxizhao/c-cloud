@@ -48,7 +48,7 @@ var getTableOption = function (level, name) {
 
     var option = {
         classes:'table table-hover table-no-bordered',
-        url: '/sys/dept/table',
+        url: '/api/sys/dept/table',
         pagination: true,	//显示分页条
         datatype: 'json',
         sidePagination: 'server',//服务器端分页
@@ -100,7 +100,7 @@ function saveDept() {
         content: jQuery("#add-dept"),
         btn: ['确定','取消'],
         btn1: function (index) {
-            $.post("/sys/dept/add",$("#add-dept-form").serialize(),function (data) {
+            $.post("/api/sys/dept/add",$("#add-dept-form").serialize(),function (data) {
                 if(data.code == 200){
                     Tree.initTree('treeview5',1);
                     layer.close(index);
@@ -133,7 +133,7 @@ function editDept(row) {
         content: jQuery("#add-dept"),
         btn: ['确定','取消'],
         btn1: function (index) {
-            $.post("/sys/dept/update",$("#add-dept-form").serialize(),function (data) {
+            $.post("/api/sys/dept/update",$("#add-dept-form").serialize(),function (data) {
                 if(data.code == 200){
                     //$('#add-dept')[0].reset();
                     Tree.initTree('treeview5',1);
