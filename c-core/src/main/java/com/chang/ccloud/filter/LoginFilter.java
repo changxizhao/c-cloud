@@ -1,14 +1,9 @@
 package com.chang.ccloud.filter;
 
-import com.chang.ccloud.common.Result;
-import com.chang.ccloud.common.constants.HttpRequestStatus;
-import com.chang.ccloud.common.utils.JsonConvertUtil;
 import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysUser;
-import com.fasterxml.jackson.core.type.TypeReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +20,7 @@ public class LoginFilter implements Filter {
     private static Logger log = LoggerFactory.getLogger(LoginFilter.class);
 
     @Override
-    public void init(javax.servlet.FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) throws ServletException {
 
     }
 
