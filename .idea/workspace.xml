@@ -5,58 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad934de-f9de-4f63-a093-dae2f523131f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-common/src/main/java/com/chang/ccloud/common/utils/MapConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-common/src/main/java/com/chang/ccloud/utils/HttpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/filter/ApiFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/holder/RequestHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/FilterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c-ui/src/main/java/com/chang/ccloud/filter/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-common/target/c-common-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-common/target/classes/com/chang/ccloud/common/constants/HttpConstants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-common/target/classes/com/chang/ccloud/common/utils/MapConvertUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-common/target/classes/com/chang/ccloud/utils/HttpUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-common/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-controller/target/c-controller-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-controller/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-controller/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-controller/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-core/target/c-core-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/filter/ApiFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/holder/RequestHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/interceptor/HttpInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/c-manager.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/c-manager.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/FilterConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-manager/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-ui/target/c-ui-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-ui/target/classes/com/chang/ccloud/filter/LoginFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-ui/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-ui/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c-ui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-cloud.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-common/c-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-common/c-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-common/src/main/java/com/chang/ccloud/interceptor/HttpInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/interceptor/HttpInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-common/src/main/java/com/chang/ccloud/validator/BeanValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-common/src/main/java/com/chang/ccloud/validator/BeanValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-common/target/classes/com/chang/ccloud/interceptor/HttpInterceptor.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/c-common/target/classes/com/chang/ccloud/validator/BeanValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-common/target/classes/com/chang/ccloud/validator/BeanValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-controller/c-controller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/c-controller.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/SysDeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/SysDeptController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/SysUserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/user/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/c-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/c-core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-core/target/classes/META-INF/c-core.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysDeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysDeptServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysUserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/c-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/c-manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/DruidConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-manager/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-manager/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/target/classes/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-manager/target/classes/com/chang/ccloud/config/DruidConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/c-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/c-ui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/dept.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/dept.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/deptTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/deptTree.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -169,8 +166,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/FilterConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-253">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="312">
+              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1001,7 +998,7 @@
       <workItem from="1595642927500" duration="3457000" />
       <workItem from="1595725100998" duration="902000" />
       <workItem from="1596255134772" duration="26889000" />
-      <workItem from="1596333142447" duration="777000" />
+      <workItem from="1596333142447" duration="1212000" />
     </task>
     <task id="LOCAL-00001" summary="权限管理系统：创建；环境配置；核心文件；工具类">
       <created>1593876626472</created>
@@ -1108,7 +1105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595121088926</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="权限管理系统：登录拦截以及获取当前登录用户信息">
+      <created>1596334117192</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1596334117193</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1144,12 +1148,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216849000" />
+    <option name="totallyTimeSpent" value="217284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23283261" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23283261" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1159,7 +1163,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.53452116" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892703" visible="true" weight="0.3674833" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892703" weight="0.47772828" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.19376393" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1167,12 +1171,12 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946353" weight="0.41648108" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50107294" side_tool="true" weight="0.2806236" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50160944" side_tool="true" weight="0.54565704" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.38752785" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.7271715" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32962137" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49892703" weight="0.46436524" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="15" sideWeight="0.49839056" visible="true" weight="0.54565704" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.43986636" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1180,7 +1184,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.30203864" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.25751072" />
+      <window_info anchor="right" id="Database" order="6" weight="0.25751072" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3299356" />
@@ -1281,7 +1285,8 @@
     <MESSAGE value="权限管理系统：用户增改查页面" />
     <MESSAGE value="权限管理系统：新增用户/部门后清空form，添加favicon.ico" />
     <MESSAGE value="权限管理系统：用户编辑时性别、状态选中赋值" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：用户编辑时性别、状态选中赋值" />
+    <MESSAGE value="权限管理系统：登录拦截以及获取当前登录用户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：登录拦截以及获取当前登录用户信息" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1724,8 +1729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/c-manager/src/main/java/com/chang/ccloud/config/FilterConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="312">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
