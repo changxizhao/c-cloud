@@ -1,9 +1,6 @@
 package com.chang.ccloud.service.impl;
 
-import com.chang.ccloud.common.utils.DateUtil;
-import com.chang.ccloud.common.utils.JsonConvertUtil;
-import com.chang.ccloud.common.utils.MD5Util;
-import com.chang.ccloud.common.utils.PasswordUtil;
+import com.chang.ccloud.common.utils.*;
 import com.chang.ccloud.dao.SysUserMapper;
 import com.chang.ccloud.entities.vo.UserRequestVO;
 import com.chang.ccloud.entities.vo.UserTableVO;
@@ -46,7 +43,7 @@ public class SysUserServiceImpl implements SysUserService {
         BeanUtils.copyProperties(userRequestVO, sysUser);
         sysUser.setPassword(password);
         sysUser.setOperator(RequestHolder.getCurrentUser().getUsername());
-        sysUser.setOperateIp("127.0.0.1"); // TODO
+        sysUser.setOperateIp(IpUtil.getUserIP(RequestHolder.getCurrentRequest()));
         sysUser.setOperateTime(DateUtil.getNowDate());
         // TODO 发送邮件通知用户
         sysUserMapper.insertSelective(sysUser);
@@ -69,7 +66,7 @@ public class SysUserServiceImpl implements SysUserService {
         BeanUtils.copyProperties(userRequestVO, after);
         after.setId(userRequestVO.getId());
         after.setOperator(RequestHolder.getCurrentUser().getUsername());
-        after.setOperateIp("127.0.0.1"); // TODO
+        after.setOperateIp(IpUtil.getUserIP(RequestHolder.getCurrentRequest()));
         after.setOperateTime(DateUtil.getNowDate());
         sysUserMapper.updateByPrimaryKeySelective(after);
     }
