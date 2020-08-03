@@ -24,10 +24,10 @@
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
             </a>
-            <div style="float:left;color:#fff;padding:15px 10px;">欢迎 </div>
+            <div style="float:left;color:#fff;padding:15px 10px;">欢迎 {{user.nickname}}</div>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li><a href="javascript:;" @click="updatePassword"><i class="fa fa-lock"></i> &nbsp;修改密码</a></li>
+                    <li><a href="javascript:;" @click="updatePassword"><i class="fa fa-lock"></i> &nbsp;个人中心</a></li>
                     <li><a href="/user/logout"><i class="fa fa-sign-out"></i> &nbsp;退出系统</a></li>
                 </ul>
             </div>
@@ -45,8 +45,8 @@
     <div class="content-wrapper">
         <section class="content-header">
             <ol class="breadcrumb" id="nav_title" style="position:static;float:none;">
-                <li class="active"><i class="fa fa-home"
-                                      style="font-size:20px;position:relative;top:2px;left:-3px;"></i> &nbsp; 首页
+                <li class="active">
+                    <i class="fa fa-home" style="font-size:20px;position:relative;top:2px;left:-3px;"></i> &nbsp; 首页
                 </li>
                 <li class="active">{{navTitle}}</li>
             </ol>
@@ -64,8 +64,8 @@
         <form class="form-horizontal">
             <div class="form-group">
                 <div class="form-group">
-                    <div class="col-sm-2 control-label">账号</div>
-                    <span class="label label-success" style="vertical-align: bottom;"></span>
+                    <div class="col-sm-2 control-label">账号: </div>
+                    <span class="label label-success" style="vertical-align: bottom;">{{user.username}}</span>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-2 control-label">原密码</div>

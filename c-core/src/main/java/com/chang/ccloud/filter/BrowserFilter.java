@@ -42,7 +42,6 @@ public class BrowserFilter implements Filter {
         }
 
         String userAgent = request.getHeader("User-Agent");
-        log.info("userAgent = {}", userAgent);
         if (StringUtil.isEmpty(userAgent)) {
             chain.doFilter(request, response);
             return;

@@ -1,5 +1,6 @@
 package com.chang.ccloud.service.impl;
 
+import com.chang.ccloud.common.model.Email;
 import com.chang.ccloud.common.utils.*;
 import com.chang.ccloud.dao.SysUserMapper;
 import com.chang.ccloud.entities.vo.UserRequestVO;
@@ -14,8 +15,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
+import javax.mail.internet.MimeMessage;
 import java.util.List;
 
 /**

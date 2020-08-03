@@ -1,37 +1,29 @@
 package com.chang.ccloud.controller.user;
 
 import com.chang.ccloud.common.Result;
+import com.chang.ccloud.entities.vo.UserVO;
+import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysUser;
-import com.chang.ccloud.service.UserService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.beans.BeanUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * @Author changxizhao
- * @Date 2020/7/16 10:26
+ * @Date 2020/8/3 11:42
  * @Description
  */
-@Api(tags = "用户相关接口")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
-
-    @ApiOperation(value = "用户登录")
-    @PostMapping("/login")
-    public Result login(String username, String password, HttpServletRequest request) {
-        SysUser sysUser = userService.login(username, password);
-        request.getSession().setAttribute("user", sysUser);
-        request.setAttribute("username", sysUser.getUsername());
-        return Result.success(sysUser);
+    @GetMapping("/current")
+    public Result getCurrent() {
+        SysUser currentUser = RequestHolder.getCurrentUser();
+        UserVO userVO = new UserVO();
+        BeanUtils.copyProperties(currentUser, userVO);
+        return Result.success(userVO);
     }
 
 }

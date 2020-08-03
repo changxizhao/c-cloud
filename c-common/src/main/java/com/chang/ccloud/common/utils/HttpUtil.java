@@ -1,4 +1,4 @@
-package com.chang.ccloud.utils;
+package com.chang.ccloud.common.utils;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -9,7 +9,6 @@ import java.nio.charset.Charset;
 import java.util.*;
 import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.constants.HttpConstants;
-import com.chang.ccloud.common.utils.JsonConvertUtil;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.http.*;
 import org.apache.http.client.config.RequestConfig;

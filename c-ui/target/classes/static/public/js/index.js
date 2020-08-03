@@ -48,9 +48,9 @@ var vm = new Vue({
 			});
 		},
 		getUser: function(){
-            $.getJSON("/getUserData?_"+$.now(), function(r){
+            $.getJSON("/api/user/current?_"+$.now(), function(r){
             /*$.getJSON("sys/user/info?_"+$.now(), function(r){*/
-				vm.user = r.dept;
+				vm.user = r.data;
 			});
 		},
 		updatePassword: function(){
@@ -66,11 +66,11 @@ var vm = new Vue({
 					var data = "password="+vm.password+"&newPassword="+vm.newPassword;
 					$.ajax({
 						type: "POST",
-					    url: "sys/user/password",
+					    url: "/api/sys/user/update",
 					    data: data,
 					    dataType: "json",
 					    success: function(result){
-							if(result.code == 0){
+							if(result.code == 200){
 								layer.close(index);
 								layer.alert('修改成功', function(index){
 									location.reload();
