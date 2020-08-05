@@ -9,7 +9,7 @@ import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysDeptService;
 import com.chang.ccloud.common.utils.DateUtil;
-import com.chang.ccloud.common.utils.DeptLevelUtil;
+import com.chang.ccloud.common.utils.LevelUtil;
 import com.chang.ccloud.validator.BeanValidator;
 import com.google.common.base.Preconditions;
 import org.apache.commons.collections4.CollectionUtils;
@@ -49,7 +49,7 @@ public class SysDeptServiceImpl implements SysDeptService {
         BeanUtils.copyProperties(deptRequestVO,sysDept);
         // 设置部门level字段
         String parentLevel = deptService.getDeptLevel(deptRequestVO.getParentId());
-        String level = DeptLevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
+        String level = LevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
         sysDept.setLevel(level);
         sysDept.setOperateIp(RequestHolder.getCurrentRequest().getRemoteAddr());
         sysDept.setOperator(IpUtil.getUserIP(RequestHolder.getCurrentRequest()));
@@ -71,7 +71,7 @@ public class SysDeptServiceImpl implements SysDeptService {
         SysDept after = new SysDept();
         BeanUtils.copyProperties(deptRequestVO, after);
         String parentLevel = deptService.getDeptLevel(deptRequestVO.getParentId());
-        String level = DeptLevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
+        String level = LevelUtil.getLevel(parentLevel, deptRequestVO.getParentId());
         after.setLevel(level);
         after.setOperateTime(DateUtil.getNowDate());
         after.setOperator(RequestHolder.getCurrentUser().getUsername());
@@ -86,7 +86,7 @@ public class SysDeptServiceImpl implements SysDeptService {
 
         //如果部门级别不一致，则更新子部门
         if(!after.getLevel().equals(before.getLevel())) {
-            String selectLevel = DeptLevelUtil.getLevel(before.getLevel(), before.getId());
+            String selectLevel = LevelUtil.getLevel(before.getLevel(), before.getId());
             List<SysDept> deptList = sysDeptMapper.selectChildDeptByLevel(selectLevel);
             if(CollectionUtils.isNotEmpty(deptList)) {
                 for (SysDept dept : deptList) {

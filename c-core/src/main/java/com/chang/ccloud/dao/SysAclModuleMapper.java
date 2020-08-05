@@ -1,7 +1,11 @@
 package com.chang.ccloud.dao;
 
 
+import com.chang.ccloud.entities.dto.AclModuleLevelDTO;
 import com.chang.ccloud.model.SysAclModule;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface SysAclModuleMapper {
     int deleteByPrimaryKey(Long id);
@@ -15,4 +19,12 @@ public interface SysAclModuleMapper {
     int updateByPrimaryKeySelective(SysAclModule record);
 
     int updateByPrimaryKey(SysAclModule record);
+
+    int checkAclModuleExist(@Param("parentId") Long parentId, @Param("name") String name, @Param("id") Long id);
+
+    List<SysAclModule> selectChildAclModuleByLevel(@Param("level") String level);
+
+    void updateAclModuleLevel(SysAclModule sysAclModule);
+
+    List<AclModuleLevelDTO> selectAllAclModule();
 }

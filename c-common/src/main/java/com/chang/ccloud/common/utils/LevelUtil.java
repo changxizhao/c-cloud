@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
  * @Date 2020/7/5 17:45
  * @Description
  */
-public class DeptLevelUtil {
+public class LevelUtil {
 
     public static final String SEPARATOR = ".";
 

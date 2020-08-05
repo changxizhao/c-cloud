@@ -13,6 +13,20 @@
     <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
     <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="AclModuleDTOMap" type="com.chang.ccloud.model.SysAclModule" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="parent_id" property="parentId" jdbcType="BIGINT" />
+    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="seq" property="seq" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
+    <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
     id, name, parent_id, level, seq, status, remark, operator, operate_time, operate_ip
   </sql>
@@ -149,4 +163,35 @@
       operate_ip = #{operateIp,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="checkAclModuleExist" parameterType="map" resultType="java.lang.Integer">
+    select count(1)
+    from sys_acl_model
+    where name = #{name}
+    <if test="parentId != null">
+      and parent_id = #{parentId}
+    </if>
+    <if test="id != null">
+      and id != #{id}
+    </if>
+  </select>
+
+  <update id="updateAclModuleLevel" parameterType="com.chang.ccloud.model.SysDept" >
+      update sys_acl_model set `level` = #{level} where id = #{id}
+  </update>
+
+  <select id="selectChildAclModuleByLevel" parameterType="com.chang.ccloud.model.SysAclModule" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_acl_model where 1=1
+    <if test="level != null and level != ''">
+      and level like CONCAT('',#{level},'%')
+    </if>
+
+  </select>
+
+  <select id="selectAllAclModule" resultMap="AclModuleDTOMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_acl_model
+  </select>
 </mapper>

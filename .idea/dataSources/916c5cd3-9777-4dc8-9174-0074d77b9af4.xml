@@ -928,11 +928,12 @@
     <table id="234" parent="7" name="sys_acl_model"/>
     <table id="235" parent="7" name="sys_dept"/>
     <table id="236" parent="7" name="sys_log"/>
-    <table id="237" parent="7" name="sys_role"/>
-    <table id="238" parent="7" name="sys_role_acl"/>
-    <table id="239" parent="7" name="sys_user"/>
-    <table id="240" parent="7" name="sys_user_role"/>
-    <column id="241" parent="233" name="id">
+    <table id="237" parent="7" name="sys_menu"/>
+    <table id="238" parent="7" name="sys_role"/>
+    <table id="239" parent="7" name="sys_role_acl"/>
+    <table id="240" parent="7" name="sys_user"/>
+    <table id="241" parent="7" name="sys_user_role"/>
+    <column id="242" parent="233" name="id">
       <Position>1</Position>
       <Comment>主键id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -940,7 +941,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="233" name="code">
+    <column id="243" parent="233" name="code">
       <Position>2</Position>
       <Comment>权限码</Comment>
       <DataType>varchar(255)|0s</DataType>
@@ -948,7 +949,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="233" name="name">
+    <column id="244" parent="233" name="name">
       <Position>3</Position>
       <Comment>权限名称</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -956,7 +957,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="233" name="acl_model_id">
+    <column id="245" parent="233" name="acl_model_id">
       <Position>4</Position>
       <Comment>权限模块id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -964,20 +965,20 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="233" name="url">
+    <column id="246" parent="233" name="url">
       <Position>5</Position>
       <Comment>请求url</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="233" name="type">
+    <column id="247" parent="233" name="type">
       <Position>6</Position>
       <Comment>类型，1菜单，2按钮，3其他</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="233" name="status">
+    <column id="248" parent="233" name="status">
       <Position>7</Position>
       <Comment>状态，1正常 0冻结</Comment>
       <DataType>int(11)|0s</DataType>
@@ -985,7 +986,7 @@
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="233" name="seq">
+    <column id="249" parent="233" name="seq">
       <Position>8</Position>
       <Comment>顺序</Comment>
       <DataType>int(11)|0s</DataType>
@@ -993,14 +994,14 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="233" name="remark">
+    <column id="250" parent="233" name="remark">
       <Position>9</Position>
       <Comment>备注</Comment>
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="233" name="operator">
+    <column id="251" parent="233" name="operator">
       <Position>10</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1008,7 +1009,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="233" name="operate_time">
+    <column id="252" parent="233" name="operate_time">
       <Position>11</Position>
       <Comment>操作时间</Comment>
       <DataType>timestamp|0s</DataType>
@@ -1017,7 +1018,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="252" parent="233" name="operate_ip">
+    <column id="253" parent="233" name="operate_ip">
       <Position>12</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1025,12 +1026,12 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="253" parent="233" name="PRIMARY">
+    <key id="254" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="254" parent="234" name="id">
+    <column id="255" parent="234" name="id">
       <Position>1</Position>
       <Comment>权限模块id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1038,7 +1039,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="234" name="name">
+    <column id="256" parent="234" name="name">
       <Position>2</Position>
       <Comment>权限模块名称</Comment>
       <DataType>varchar(255)|0s</DataType>
@@ -1046,14 +1047,14 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="234" name="parent_id">
+    <column id="257" parent="234" name="parent_id">
       <Position>3</Position>
       <Comment>上级权限模块id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="234" name="level">
+    <column id="258" parent="234" name="level">
       <Position>4</Position>
       <Comment>权限模块层级</Comment>
       <DataType>varchar(255)|0s</DataType>
@@ -1061,7 +1062,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="234" name="seq">
+    <column id="259" parent="234" name="seq">
       <Position>5</Position>
       <Comment>权限模块在当前层级下的顺序</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1069,7 +1070,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="234" name="status">
+    <column id="260" parent="234" name="status">
       <Position>6</Position>
       <Comment>权限模块状态，1正常，0停用</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1077,13 +1078,13 @@
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="234" name="remark">
+    <column id="261" parent="234" name="remark">
       <Position>7</Position>
       <Comment>备注</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="234" name="operator">
+    <column id="262" parent="234" name="operator">
       <Position>8</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1091,7 +1092,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="234" name="operate_time">
+    <column id="263" parent="234" name="operate_time">
       <Position>9</Position>
       <Comment>操作时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -1100,7 +1101,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="263" parent="234" name="operate_ip">
+    <column id="264" parent="234" name="operate_ip">
       <Position>10</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1108,12 +1109,12 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="264" parent="234" name="PRIMARY">
+    <key id="265" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="265" parent="235" name="id">
+    <column id="266" parent="235" name="id">
       <Position>1</Position>
       <Comment>部门id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1121,7 +1122,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="235" name="name">
+    <column id="267" parent="235" name="name">
       <Position>2</Position>
       <Comment>部门名称</Comment>
       <DataType>varchar(255)|0s</DataType>
@@ -1129,14 +1130,14 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="235" name="parent_id">
+    <column id="268" parent="235" name="parent_id">
       <Position>3</Position>
       <Comment>上级部门id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="235" name="level">
+    <column id="269" parent="235" name="level">
       <Position>4</Position>
       <Comment>上级列表</Comment>
       <DataType>varchar(255)|0s</DataType>
@@ -1144,7 +1145,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="235" name="seq">
+    <column id="270" parent="235" name="seq">
       <Position>5</Position>
       <Comment>部门在当前层级下的顺序</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1152,13 +1153,13 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="235" name="remark">
+    <column id="271" parent="235" name="remark">
       <Position>6</Position>
       <Comment>备注</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="235" name="operator">
+    <column id="272" parent="235" name="operator">
       <Position>7</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1166,7 +1167,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="235" name="operate_time">
+    <column id="273" parent="235" name="operate_time">
       <Position>8</Position>
       <Comment>操作时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -1175,7 +1176,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="273" parent="235" name="operate_ip">
+    <column id="274" parent="235" name="operate_ip">
       <Position>9</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1183,45 +1184,45 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="274" parent="235" name="PRIMARY">
+    <key id="275" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="275" parent="236" name="id">
+    <column id="276" parent="236" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="236" name="type">
+    <column id="277" parent="236" name="type">
       <Position>2</Position>
       <Comment>权限更新类型，1部门，2用户，3权限模块，4权限，5角色，6角色用户关系，7角色权限关系</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="236" name="target_id">
+    <column id="278" parent="236" name="target_id">
       <Position>3</Position>
       <Comment>基于type指定的对象id，比如用户、角色、权限的id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="236" name="old_value">
+    <column id="279" parent="236" name="old_value">
       <Position>4</Position>
       <Comment>旧值</Comment>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="236" name="new_value">
+    <column id="280" parent="236" name="new_value">
       <Position>5</Position>
       <Comment>新值</Comment>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="236" name="operator">
+    <column id="281" parent="236" name="operator">
       <Position>6</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1229,7 +1230,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="236" name="operate_time">
+    <column id="282" parent="236" name="operate_time">
       <Position>7</Position>
       <Comment>操作时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -1238,7 +1239,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="282" parent="236" name="operate_ip">
+    <column id="283" parent="236" name="operate_ip">
       <Position>8</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1246,7 +1247,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="236" name="status">
+    <column id="284" parent="236" name="status">
       <Position>9</Position>
       <Comment>当前是否被复原过，0没有，1有</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1254,12 +1255,108 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="284" parent="236" name="PRIMARY">
+    <key id="285" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="285" parent="237" name="id">
+    <column id="286" parent="237" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="287" parent="237" name="name">
+      <Position>2</Position>
+      <Comment>权限名称</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="237" name="code">
+      <Position>3</Position>
+      <Comment>权限码</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="289" parent="237" name="type">
+      <Position>4</Position>
+      <Comment>类型，1菜单，2按钮，3其他</Comment>
+      <DataType>int(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="290" parent="237" name="url">
+      <Position>5</Position>
+      <Comment>请求url</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="291" parent="237" name="parent_id">
+      <Position>6</Position>
+      <Comment>上级id</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="237" name="seq">
+      <Position>7</Position>
+      <Comment>显示顺序</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="237" name="status">
+      <Position>8</Position>
+      <Comment>权限状态，1正常，0停用</Comment>
+      <DataType>int(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="237" name="visible">
+      <Position>9</Position>
+      <Comment>菜单是否可见（0显示 1隐藏）</Comment>
+      <DataType>int(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="237" name="remark">
+      <Position>10</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="237" name="operator">
+      <Position>11</Position>
+      <Comment>操作者</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="237" name="operate_time">
+      <Position>12</Position>
+      <Comment>更新时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <column id="298" parent="237" name="operate_ip">
+      <Position>13</Position>
+      <Comment>操作者ip</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="299" parent="237" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="300" parent="238" name="id">
       <Position>1</Position>
       <Comment>主键id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1267,7 +1364,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="237" name="name">
+    <column id="301" parent="238" name="name">
       <Position>2</Position>
       <Comment>角色名称</Comment>
       <DataType>varchar(255)|0s</DataType>
@@ -1275,7 +1372,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="237" name="type">
+    <column id="302" parent="238" name="type">
       <Position>3</Position>
       <Comment>类型，1管理员角色，2其他</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1283,7 +1380,7 @@
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="237" name="status">
+    <column id="303" parent="238" name="status">
       <Position>4</Position>
       <Comment>状态，1正常，0停用</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1291,13 +1388,13 @@
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="237" name="remark">
+    <column id="304" parent="238" name="remark">
       <Position>5</Position>
       <Comment>备注</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="237" name="operator">
+    <column id="305" parent="238" name="operator">
       <Position>6</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1305,7 +1402,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="237" name="operate_time">
+    <column id="306" parent="238" name="operate_time">
       <Position>7</Position>
       <Comment>操作时间</Comment>
       <DataType>timestamp|0s</DataType>
@@ -1314,7 +1411,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="292" parent="237" name="operate_ip">
+    <column id="307" parent="238" name="operate_ip">
       <Position>8</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1322,141 +1419,34 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="293" parent="237" name="PRIMARY">
+    <key id="308" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="294" parent="238" name="id">
+    <column id="309" parent="239" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="238" name="rold_id">
+    <column id="310" parent="239" name="rold_id">
       <Position>2</Position>
       <Comment>角色id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="238" name="acl_id">
+    <column id="311" parent="239" name="acl_id">
       <Position>3</Position>
       <Comment>权限id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="238" name="operator">
-      <Position>4</Position>
-      <Comment>操作者</Comment>
-      <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="298" parent="238" name="operate_time">
-      <Position>5</Position>
-      <Comment>操作时间</Comment>
-      <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-    </column>
-    <column id="299" parent="238" name="operate_ip">
-      <Position>6</Position>
-      <Comment>操作者ip</Comment>
-      <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="300" parent="238" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="301" parent="239" name="id">
-      <Position>1</Position>
-      <Comment>人员id</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="302" parent="239" name="username">
-      <Position>2</Position>
-      <Comment>用户名</Comment>
-      <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="303" parent="239" name="password">
-      <Position>3</Position>
-      <Comment>密码</Comment>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="304" parent="239" name="nickname">
-      <Position>4</Position>
-      <Comment>别名</Comment>
-      <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="305" parent="239" name="sex">
-      <Position>5</Position>
-      <Comment>性别，0女，1男，2保密</Comment>
-      <DataType>int(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>2</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="306" parent="239" name="telephone">
-      <Position>6</Position>
-      <Comment>手机号</Comment>
-      <DataType>varchar(13)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="307" parent="239" name="avatar">
-      <Position>7</Position>
-      <Comment>头像</Comment>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="308" parent="239" name="mail">
-      <Position>8</Position>
-      <Comment>邮箱</Comment>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="309" parent="239" name="dept_id">
-      <Position>9</Position>
-      <Comment>部门id</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="310" parent="239" name="status">
-      <Position>10</Position>
-      <Comment>用户状态，1正常，0停用，2删除</Comment>
-      <DataType>int(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>1</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="311" parent="239" name="remark">
-      <Position>11</Position>
-      <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
     <column id="312" parent="239" name="operator">
-      <Position>12</Position>
+      <Position>4</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1464,7 +1454,7 @@
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="313" parent="239" name="operate_time">
-      <Position>13</Position>
+      <Position>5</Position>
       <Comment>操作时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
@@ -1473,7 +1463,7 @@
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
     <column id="314" parent="239" name="operate_ip">
-      <Position>14</Position>
+      <Position>6</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1487,26 +1477,133 @@
     </key>
     <column id="316" parent="240" name="id">
       <Position>1</Position>
+      <Comment>人员id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="240" name="user_id">
+    <column id="317" parent="240" name="username">
+      <Position>2</Position>
+      <Comment>用户名</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="318" parent="240" name="password">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="319" parent="240" name="nickname">
+      <Position>4</Position>
+      <Comment>别名</Comment>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="320" parent="240" name="sex">
+      <Position>5</Position>
+      <Comment>性别，0女，1男，2保密</Comment>
+      <DataType>int(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>2</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="321" parent="240" name="telephone">
+      <Position>6</Position>
+      <Comment>手机号</Comment>
+      <DataType>varchar(13)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="322" parent="240" name="avatar">
+      <Position>7</Position>
+      <Comment>头像</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="323" parent="240" name="mail">
+      <Position>8</Position>
+      <Comment>邮箱</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="324" parent="240" name="dept_id">
+      <Position>9</Position>
+      <Comment>部门id</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="325" parent="240" name="status">
+      <Position>10</Position>
+      <Comment>用户状态，1正常，0停用，2删除</Comment>
+      <DataType>int(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="326" parent="240" name="remark">
+      <Position>11</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="327" parent="240" name="operator">
+      <Position>12</Position>
+      <Comment>操作者</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="328" parent="240" name="operate_time">
+      <Position>13</Position>
+      <Comment>操作时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <column id="329" parent="240" name="operate_ip">
+      <Position>14</Position>
+      <Comment>操作者ip</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="330" parent="240" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="331" parent="241" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="332" parent="241" name="user_id">
       <Position>2</Position>
       <Comment>用户id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="240" name="rold_id">
+    <column id="333" parent="241" name="rold_id">
       <Position>3</Position>
       <Comment>角色id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="240" name="operator">
+    <column id="334" parent="241" name="operator">
       <Position>4</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1514,7 +1611,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="240" name="operate_time">
+    <column id="335" parent="241" name="operate_time">
       <Position>5</Position>
       <Comment>操作时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -1523,7 +1620,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="321" parent="240" name="operate_ip">
+    <column id="336" parent="241" name="operate_ip">
       <Position>6</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1531,7 +1628,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="322" parent="240" name="PRIMARY">
+    <key id="337" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

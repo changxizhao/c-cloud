@@ -2,7 +2,7 @@ package com.chang.ccloud.controller;
 
 import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.TableInfo;
-import com.chang.ccloud.common.utils.DeptLevelUtil;
+import com.chang.ccloud.common.utils.LevelUtil;
 import com.chang.ccloud.entities.vo.DeptRequestVO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
@@ -66,7 +66,7 @@ public class SysDeptController {
     public TableInfo deptTable(DeptTableVO deptTableVO) {
         log.info("查询部门列表入参 {}，{}，{}", deptTableVO.getPageNumber(), deptTableVO.getPageSize(), deptTableVO.getId());
         SysDept sysDept = deptService.selectDeptById(deptTableVO.getId());
-        String selectLevel = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), deptTableVO.getId());
+        String selectLevel = LevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), deptTableVO.getId());
         deptTableVO.setLevel(selectLevel);
         PageHelper.startPage(deptTableVO.getPageNumber(),deptTableVO.getPageSize());
         List<DeptTableVO> deptList = deptService.selectDeptTable(deptTableVO);

@@ -101,8 +101,8 @@ var sexFormatter = function (value, row, index) {
 
 function operateFormatter(value, row, index) {
     return [
-        '<button class="btn btn-info" type="button" id="editUser"><i class="fa fa-edit"> 编辑</i></button>&nbsp;&nbsp;&nbsp;',
-        '<button class="btn btn-danger ml-3" type="button" id="deleteUser"><i class="fa fa fa-remove"> 删除</i></button>'
+        '<button class="btn btn-info" type="button" id="editUser" style="margin-right:15px;"><i class="fa fa-edit"> 编辑</i></button>',
+        '<button class="btn btn-danger ml-3" type="button" id="deleteUser" style="margin-right:15px;"><i class="fa fa fa-remove"> 删除</i></button>'
     ].join('');
 
 }

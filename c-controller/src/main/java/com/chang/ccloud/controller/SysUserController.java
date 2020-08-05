@@ -2,7 +2,7 @@ package com.chang.ccloud.controller;
 
 import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.TableInfo;
-import com.chang.ccloud.common.utils.DeptLevelUtil;
+import com.chang.ccloud.common.utils.LevelUtil;
 import com.chang.ccloud.common.utils.JsonConvertUtil;
 import com.chang.ccloud.entities.vo.UserRequestVO;
 import com.chang.ccloud.entities.vo.UserTableVO;
@@ -59,7 +59,7 @@ public class SysUserController {
         log.info("查询用户列表入参 {}，{}", userTableVO.getPageNumber(), userTableVO.getPageSize());
 
         SysDept sysDept = deptService.selectDeptById(userTableVO.getDeptId());
-        String selectLevel = DeptLevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), userTableVO.getDeptId());
+        String selectLevel = LevelUtil.getLevel(sysDept == null ? "" : sysDept.getLevel(), userTableVO.getDeptId());
         userTableVO.setDeptLevel(selectLevel);
 
         PageHelper.startPage(userTableVO.getPageNumber(),userTableVO.getPageSize());

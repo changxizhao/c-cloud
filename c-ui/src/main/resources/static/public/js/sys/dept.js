@@ -83,8 +83,8 @@ var getTableOption = function (level, name) {
 
 function operateFormatter(value, row, index) {
     return [
-        '<button class="btn btn-info" type="button" id="editDept"><i class="fa fa-edit"> 编辑</i></button>&nbsp;&nbsp;&nbsp;',
-        '<button class="btn btn-danger ml-3" type="button" id="deleteDept"><i class="fa fa fa-remove"> 删除</i></button>'
+        '<button class="btn btn-info" type="button" id="editDept" style="margin-right:15px;"><i class="fa fa-edit"> 编辑</i></button>',
+        '<button class="btn btn-danger" type="button" id="deleteDept" style="margin-right:15px;"><i class="fa fa fa-remove"> 删除</i></button>'
     ].join('');
 
 }

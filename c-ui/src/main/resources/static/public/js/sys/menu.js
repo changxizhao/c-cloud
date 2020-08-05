@@ -1,194 +1,205 @@
-$(function(){
-    var option = {
-        url: '../sys/menu/list',
-        pagination: true,	//显示分页条
-        sidePagination: 'server',//服务器端分页
-        showRefresh: true,  //显示刷新按钮
-        search: true,
-        toolbar: '#toolbar',
-        striped : true,     //设置为true会有隔行变色效果
-        //idField: 'menuId',
+// var data = [];
+//
+// var getTableData = function () {
+//     $.getJSON("/api/sys/menu/treegrid?_" + $.now(), function (r) {
+//         data = r.data;
+//         //console.log("r.data = " + r.data[0].id);
+//     });
+// }
+
+Menu = $(function () {
+    Menu.init = function () {
+        $.getJSON("/api/sys/menu/treegrid?_" + $.now(), function (r) {
+            initTable(r.data);
+        });
+    };
+    Menu.init();
+
+});
+
+
+var $table = $('#table');
+var initTable = function (data) {
+    console.log(data);
+    $table.bootstrapTable({
+        classes:'table table-hover table-no-bordered',
+        // url: '/api/sys/menu/treegrid',
+        data: data,
+        idField: 'id',
+        dataType:'jsonp',
         columns: [
-            {
-                field: 'menuId',
-                title: '序号',
-                width: 40,
-                formatter: function(value, row, index) {
-                    var pageSize = $('#table').bootstrapTable('getOptions').pageSize;
-                    var pageNumber = $('#table').bootstrapTable('getOptions').pageNumber;
-                    return pageSize * (pageNumber - 1) + index + 1;
-                }
-            },
-            {checkbox:true},
-            { title: '菜单ID', field: 'menuId'},
-            {field:'name', title:'菜单名称', formatter: function(value,row){
-                    if(row.type === 0){
-                        return value;
-                    }
-                    if(row.type === 1){
-                        return '<span style="margin-left: 40px;">├─ ' + value + '</span>';
-                    }
-                    if(row.type === 2){
-                        return '<span style="margin-left: 80px;">├─ ' + value + '</span>';
-                    }
-                }},
-            { title: '上级菜单', field: 'parentName'},
-            { title: '菜单图标', field: 'icon', formatter: function(value){
-                    return value == null ? '' : '<i class="'+value+' fa-lg"></i>';
-                }},
-            { title: '菜单URL', field: 'url'},
-            { title: '授权标识', field: 'perms'},
-            { title: '类型', field: 'type', formatter: function(value){
-                    if(value === 0){
-                        return '<span class="label label-primary">目录</span>';
-                    }
-                    if(value === 1){
-                        return '<span class="label label-success">菜单</span>';
-                    }
-                    if(value === 2){
-                        return '<span class="label label-warning">按钮</span>';
-                    }
-                }},
-            { title: '排序号', field: 'orderNum'}
-        ]};
-    $('#table').bootstrapTable(option);
-});
-var ztree;
+            //{field: 'id', title: '编号', sortable: true, align: 'center'},
+            { field: 'name',  title: '名称' },
+            // {field: 'pid', title: '所属上级'},
+            { field: 'code', title: '权限标识', align: 'center'  },
+            { field: 'type', title: '类型', align: 'center'  },
+            { field: 'seq', title: '显示顺序', align: 'center', sortable: true },
+            { field: 'status',  title: '状态', align: 'center', formatter: 'statusFormatter'  },
+            { field: 'operate', title: '操作', align: 'center', events : operateEvents, formatter: 'operateFormatter' },
+        ],
 
-var vm = new Vue({
-	el:'#dtapp',
-    data:{
-        showList: true,
-        title: null,
-        menu:{}
-    },
-    methods:{
-        del: function(){
-            var rows = getSelectedRows();
-            if(rows == null){
-                return ;
-            }
-            var id = 'menuId';
-            //提示确认框
-            layer.confirm('您确定要删除所选数据吗？', {
-                btn: ['确定', '取消'] //可以无限个按钮
-            }, function(index, layero){
-                var ids = new Array();
-                //遍历所有选择的行数据，取每条数据对应的ID
-                $.each(rows, function(i, row) {
-                    ids[i] = row[id];
-                });
+        // bootstrap-table-treegrid.js 插件配置 -- start
 
-                $.ajax({
-                    type: "POST",
-                    url: "menu/del",
-                    data: JSON.stringify(ids),
-                    success : function(r) {
-                        if(r.code === 0){
-                            layer.alert('删除成功');
-                            $('#table').bootstrapTable('refresh');
-                        }else{
-                            layer.alert(r.msg);
-                        }
-                    },
-                    error : function() {
-                        layer.alert('服务器没有返回数据，可能服务器忙，请重试');
-                    }
-                });
-            });
-        },
-        add: function(){
-            vm.showList = false;
-            vm.title = "新增";
-            vm.menu = {parentName:null,parentId:0,type:1,orderNum:0};
-            vm.getMenu();
-        },
-        update: function (event) {
-            var id = 'menuId';
-            var menuId = getSelectedRow()[id];
-            if(menuId == null){
-                return ;
-            }
+        //在哪一列展开树形
+        treeShowField: 'name',
+        //指定父id列
+        parentIdField: 'parentId',
 
-            $.get("../sys/menu/info/"+menuId, function(r){
-                vm.showList = false;
-                vm.title = "修改";
-                vm.menu = r.menu;
-
-                vm.getMenu();
-            });
-        },
-        saveOrUpdate: function (event) {
-            var url = vm.menu.menuId == null ? "../sys/menu/save" : "../sys/menu/update";
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: JSON.stringify(vm.menu),
-                success: function(r){
-                    if(r.code === 0){
-                        layer.alert('操作成功', function(index){
-                            layer.close(index);
-                            vm.reload();
-                        });
-                    }else{
-                        layer.alert(r.msg);
-                    }
+        onResetView: function(data) {
+            //console.log('load');
+            $table.treegrid({
+                initialState: 'collapsed',// 所有节点都折叠
+                // initialState: 'expanded',// 所有节点都展开，默认展开
+                treeColumn: 0,
+                // expanderExpandedClass: 'glyphicon glyphicon-minus',  //图标样式
+                // expanderCollapsedClass: 'glyphicon glyphicon-plus',
+                onChange: function() {
+                    $table.bootstrapTable('resetWidth');
                 }
             });
-        },
-        reload: function (event) {
-            vm.showList = true;
-            $("#table").bootstrapTable('refresh');
-        },
-        menuTree: function(){
-            layer.open({
-                type: 1,
-                offset: '50px',
-                skin: 'layui-layer-molv',
-                title: "选择菜单",
-                area: ['300px', '450px'],
-                shade: 0,
-                shadeClose: false,
-                content: jQuery("#menuLayer"),
-                btn: ['确定', '取消'],
-                btn1: function (index) {
-                    var node = ztree.getSelectedNodes();
-                    //选择上级菜单
-                    vm.menu.parentId = node[0].menuId;
-                    vm.menu.parentName = node[0].name;
 
-                    layer.close(index);
-                }
-            });
-        },
-        getMenu: function(menuId){
+            //只展开树形的第一级节点
+            //$table.treegrid('getRootNodes').treegrid('expand');
 
-            var setting = {
-                data: {
-                    simpleData: {
-                        enable: true,
-                        idKey: "menuId",
-                        pIdKey: "parentId",
-                        rootPId: -1
-                    },
-                    key: {
-                        url:"nourl"
-                    }
-                }
-            };
-
-            //加载菜单树
-            $.get("../sys/menu/select", function(r){
-                //设置ztree的数据
-                ztree = $.fn.zTree.init($("#menuTree"), setting, r.menuList);
-
-                //编辑（update）时，打开tree，自动高亮选择的条目
-                var node = ztree.getNodeByParam("menuId", vm.menu.parentId);
-                //选中tree菜单中的对应节点
-                ztree.selectNode(node);
-                //编辑（update）时，根据当前的选中节点，为编辑表单的“上级菜单”回填值
-                vm.menu.parentName = node.name;
-            });
         }
+    });
+};
+
+// 格式化按钮
+function operateFormatter(value, row, index) {
+    return [
+        '<button type="button" class="RoleOfadd btn btn-success" style="margin-right:15px;"><i class="fa fa-plus" ></i>&nbsp;新增</button>',
+        '<button type="button" class="RoleOfedit btn btn-info" style="margin-right:15px;"><i class="fa fa-pencil-square-o" ></i>&nbsp;修改</button>',
+        '<button type="button" class="RoleOfdelete btn btn-danger" style="margin-right:15px;"><i class="fa fa-trash-o" ></i>&nbsp;删除</button>'
+    ].join('');
+
+}
+// 格式化类型
+function typeFormatter(value, row, index) {
+    if (value === 'menu') {  return '菜单';  }
+    if (value === 'button') {  return '按钮'; }
+    if (value === 'api') {  return '接口'; }
+    return '-';
+}
+// 格式化状态
+function statusFormatter(value, row, index) {
+    if (value === 1) {
+        return '正常';
+    } else {
+        return '停用';
     }
-});
+}
+
+//初始化操作按钮的方法
+window.operateEvents = {
+    'click .RoleOfadd': function (e, value, row, index) {
+        add(row.id, row.name);
+    },
+    'click .RoleOfdelete': function (e, value, row, index) {
+        del(row.id);
+    },
+    'click .RoleOfedit': function (e, value, row, index) {
+        update(row);
+    }
+};
+
+/**
+ * 选中父项时，同时选中子项
+ * @param datas 所有的数据
+ * @param row 当前数据
+ * @param id id 字段名
+ * @param pid 父id字段名
+ */
+function selectChilds(datas,row,id,pid,checked) {
+    for(var i in datas){
+        if(datas[i][pid] == row[id]){
+            datas[i].check=checked;
+            selectChilds(datas,datas[i],id,pid,checked);
+        };
+    }
+}
+
+function selectParentChecked(datas,row,id,pid){
+    for(var i in datas){
+        if(datas[i][id] == row[pid]){
+            datas[i].check=true;
+            selectParentChecked(datas,datas[i],id,pid);
+        };
+    }
+}
+
+function test() {
+    var selRows = $table.bootstrapTable("getSelections");
+    if(selRows.length == 0){
+        alert("请至少选择一行");
+        return;
+    }
+
+    var postData = "";
+    $.each(selRows,function(i) {
+        postData +=  this.id;
+        if (i < selRows.length - 1) {
+            postData += "， ";
+        }
+    });
+    alert("你选中行的 id 为："+postData);
+
+}
+
+function add(parentId, parentName) {
+
+    $("#parentId").val(parentId);
+    $("#parentName").val(parentName);
+
+    layer.open({
+        type: 1,
+        skin: 'layui-layer-lan',
+        title: "新增菜单",
+        area: ['550px', '720px'],
+        shadeClose: false,
+        content: jQuery("#add-menu"),
+        btn: ['确定','取消'],
+        btn1: function (index) {
+            $.post("/api/sys/menu/add",$("#add-menu-form").serialize(),function (data) {
+                if(data.code == 200){
+                    layer.close(index);
+                    $('#add-menu-form')[0].reset();
+                    $table.bootstrapTable('destroy');
+                    Menu.init();
+                }else {
+                    layer.alert(data.msg);
+                }
+            },'json');
+        }
+    });
+}
+
+function del(id) {
+    alert("del 方法 , id = " + id);
+}
+function update(row) {
+    $("#parentId").val(row.parentId);
+    $("#parentName").val(parentName);
+
+    layer.open({
+        type: 1,
+        skin: 'layui-layer-lan',
+        title: "新增菜单",
+        area: ['550px', '720px'],
+        shadeClose: false,
+        content: jQuery("#add-menu"),
+        btn: ['确定','取消'],
+        btn1: function (index) {
+            $.post("/api/sys/menu/update",$("#add-menu-form").serialize(),function (data) {
+                if(data.code == 200){
+                    layer.close(index);
+                    $('#add-menu-form')[0].reset();
+                    $table.bootstrapTable('destroy');
+                    Menu.init();
+                }else {
+                    layer.alert(data.msg);
+                }
+            },'json');
+        }
+    });
+}
