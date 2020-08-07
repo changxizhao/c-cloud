@@ -125,4 +125,19 @@
       operate_ip = #{operateIp,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="checkRoleExist" parameterType="com.chang.ccloud.model.SysRole" resultType="java.lang.Integer">
+    select count(1)
+    from sys_role
+    where name = #{name} and type = #{type}
+  </select>
+
+  <select id="selectAllRoles" parameterType="com.chang.ccloud.model.SysRole" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_role where 1=1
+    <if test="name != null and name !=''">
+      and name like CONCAT('',#{name},'%')
+    </if>
+  </select>
 </mapper>

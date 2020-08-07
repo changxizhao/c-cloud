@@ -47,6 +47,18 @@
         "orderNum": 1,
         "open": null,
         "list": null
+      },{
+        "menuId": 4,
+        "parentId": 1,
+        "parentName": null,
+        "name": "角色管理",
+        "url": "sys/role.html",
+        "perms": null,
+        "type": 1,
+        "icon": "fa fa-user",
+        "orderNum": 1,
+        "open": null,
+        "list": null
       }]
     },{
       "menuId": 2,

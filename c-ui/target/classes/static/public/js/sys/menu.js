@@ -1,12 +1,3 @@
-// var data = [];
-//
-// var getTableData = function () {
-//     $.getJSON("/api/sys/menu/treegrid?_" + $.now(), function (r) {
-//         data = r.data;
-//         //console.log("r.data = " + r.data[0].id);
-//     });
-// }
-
 Menu = $(function () {
     Menu.init = function () {
         $.getJSON("/api/sys/menu/treegrid?_" + $.now(), function (r) {
@@ -20,7 +11,6 @@ Menu = $(function () {
 
 var $table = $('#table');
 var initTable = function (data) {
-    console.log(data);
     $table.bootstrapTable({
         classes:'table table-hover table-no-bordered',
         // url: '/api/sys/menu/treegrid',
@@ -164,8 +154,7 @@ function add(parentId, parentName) {
                 if(data.code == 200){
                     layer.close(index);
                     $('#add-menu-form')[0].reset();
-                    $table.bootstrapTable('destroy');
-                    Menu.init();
+                    reloadTable();
                 }else {
                     layer.alert(data.msg);
                 }
@@ -178,8 +167,23 @@ function del(id) {
     alert("del 方法 , id = " + id);
 }
 function update(row) {
+
+    var datas = $table.bootstrapTable('getData');
+    var parentName = getParentName(datas,row,"id","parentId")
+
     $("#parentId").val(row.parentId);
     $("#parentName").val(parentName);
+
+    $("#id").val(row.id);
+    $("#name").val(row.name);
+    $("#code").val(row.code);
+    $("#url").val(row.url);
+    $("#seq").val(row.seq);
+    $("#remark").val(row.remark);
+
+    $("input[name='status'][value="+row.status+"]").attr("checked",true);
+    $("input[name='type'][value="+row.type+"]").attr("checked",true);
+    $("input[name='visible'][value="+row.visible+"]").attr("checked",true);
 
     layer.open({
         type: 1,
@@ -193,13 +197,31 @@ function update(row) {
             $.post("/api/sys/menu/update",$("#add-menu-form").serialize(),function (data) {
                 if(data.code == 200){
                     layer.close(index);
-                    $('#add-menu-form')[0].reset();
-                    $table.bootstrapTable('destroy');
-                    Menu.init();
+                    reloadTable();
                 }else {
                     layer.alert(data.msg);
                 }
             },'json');
+        },
+        end: function () {
+            $('#add-menu-form')[0].reset();
+            $("input[name='status']").attr("checked",false);
+            $("input[name='type']").attr("checked",false);
+            $("input[name='visible']").attr("checked",false);
         }
     });
+}
+
+function getParentName(datas,row,id,pid){
+    for(var i in datas){
+        if(datas[i][id] == row[pid]){
+            return datas[i].name;
+        }
+    }
+    return "";
+}
+
+function reloadTable() {
+    $table.bootstrapTable('destroy');
+    Menu.init();
 }

@@ -104,12 +104,14 @@ function saveDept() {
                 if(data.code == 200){
                     Tree.initTree('treeview5',1);
                     layer.close(index);
-                    $('#add-dept-form')[0].reset();
                     $('#dept-detail-table').bootstrapTable('refresh');
                 }else {
                     layer.alert(data.msg);
                 }
             },'json');
+        },
+        end: function () {
+            $('#add-dept-form')[0].reset();
         }
     });
 }
@@ -135,15 +137,17 @@ function editDept(row) {
         btn1: function (index) {
             $.post("/api/sys/dept/update",$("#add-dept-form").serialize(),function (data) {
                 if(data.code == 200){
-                    //$('#add-dept')[0].reset();
                     Tree.initTree('treeview5',1);
                     layer.close(index);
-                    $('#add-dept-form')[0].reset();
+
                     $('#dept-detail-table').bootstrapTable('refresh');
                 }else {
                     layer.alert(data.msg);
                 }
             },'json');
+        },
+        end: function () {
+            $('#add-dept-form')[0].reset();
         }
     });
 }

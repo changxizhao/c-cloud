@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理</title>
+    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="../public/css/main.css">
+</head>
+<body>
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="box-body">
+
+            <div class="col-xs-3">
+                <input type="text" class="form-control" id="select-role-name" placeholder="输入角色名称进行查询...">
+            </div>
+            <button class="btn btn-success" type="button" onclick="reloadRoleTable()"><i class="fa fa-location-arrow"> 查询</i></button>
+            <button class="btn btn-primary" type="button" onclick="openAddRole()"><i class="fa fa-plus"> 新增</i></button>
+        </div>
+
+        <table id="role-table" class="table-hover table-no-bordered"></table>
+    </div>
+</div>
+
+
+<div id="add-role" style="display: none;">
+    <form class="form-horizontal" id="add-role-form">
+        <div class="form-group">
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="text" class="form-control" style="display: none;"  readonly="readonly" name="id" id="id" />
+                    <div class="col-sm-2 control-label"><label class="must-input">* </label>角色名称：</div>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" name="name" id="name" placeholder="角色名称"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group">
+                    <div class="col-sm-2 control-label"><label class="must-input">* </label>角色类型：</div>
+                    <div class="col-sm-10">
+                        <div class="radio-inline ">
+                            <label class="radio-inline">
+                                <input type="radio" name="type" value="1" />管理员
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="type" value="2" />其他
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group">
+                    <div class="col-sm-2 control-label"><label class="must-input">* </label>角色状态：</div>
+                    <div class="col-sm-10">
+                        <div class="radio-inline ">
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="1" />正常
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="0" />停用
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group">
+                    <div class="col-sm-2 control-label">备    注：</div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="remark" id="remark" placeholder="备注"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/webjars/bootstrap-treeview/1.2.0/dist/bootstrap-treeview.min.js"></script>
+<script src="/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.js"></script>
+<script src="/webjars/bootstrap-table/1.10.1/src/locale/bootstrap-table-zh-CN.js"></script>
+<script src="/webjars/layer/3.0.3/src/layer.js"></script>
+<script src="../public/js/sys/role.js"></script>
+</html>

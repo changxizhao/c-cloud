@@ -121,12 +121,14 @@ var saveUser = function() {
             $.post("/api/sys/user/add",$("#add-user-form").serialize(),function (data) {
                 if(data.code == 200){
                     layer.close(index);
-                    $('#add-user-form')[0].reset();
                     $('#user-detail-table').bootstrapTable('refresh');
                 }else {
                     layer.alert(data.msg);
                 }
             },'json');
+        },
+        end: function () {
+            $('#add-user-form')[0].reset();
         }
     });
 }
@@ -159,7 +161,6 @@ var editUser = function(row) {
         btn1: function (index) {
             $.post("/api/sys/user/update",$("#add-user-form").serialize(),function (data) {
                 if(data.code == 200){
-                    //$('#add-dept')[0].reset();
                     Tree.initTree('treeview5',1);
                     layer.close(index);
                     $('#user-detail-table').bootstrapTable('refresh');
@@ -167,6 +168,9 @@ var editUser = function(row) {
                     layer.alert(data.msg);
                 }
             },'json');
+        },
+        end: function () {
+            $('#add-user-form')[0].reset();
         }
     });
 }

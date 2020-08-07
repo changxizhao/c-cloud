@@ -1,7 +1,9 @@
 package com.chang.ccloud.service.impl;
 
+import com.chang.ccloud.common.constants.IntConstants;
 import com.chang.ccloud.common.utils.DateUtil;
 import com.chang.ccloud.common.utils.IpUtil;
+import com.chang.ccloud.common.utils.Util;
 import com.chang.ccloud.dao.SysMenuMapper;
 import com.chang.ccloud.entities.vo.SysMenuVO;
 import com.chang.ccloud.exception.ParamsException;
@@ -11,6 +13,7 @@ import com.chang.ccloud.service.SysMenuService;
 import com.chang.ccloud.validator.BeanValidator;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,11 +44,16 @@ public class SysMenuServiceImpl implements SysMenuService {
         if(menuService.checkSysMenuExist(sysMenuVO.getParentId(), sysMenuVO.getName())) {
             throw new ParamsException("权限名称已存在");
         }
+        if(Util.equalsTo(IntConstants.MENU.getVal(), sysMenuVO.getType())) {
+            if(StringUtils.isEmpty(sysMenuVO.getUrl()) || sysMenuVO.getVisible() == null) {
+                throw new ParamsException("类型为菜单时,菜单地址和是否隐藏均不能为空");
+            }
+        }
 
         SysMenu sysMenu = new SysMenu();
         BeanUtils.copyProperties(sysMenuVO, sysMenu);
-        sysMenu.setOperator(IpUtil.getUserIP(RequestHolder.getCurrentRequest()));
-        sysMenu.setOperateIp(RequestHolder.getCurrentRequest().getRemoteAddr());
+        sysMenu.setOperator(RequestHolder.getCurrentUser().getUsername());
+        sysMenu.setOperateIp(IpUtil.getUserIP(RequestHolder.getCurrentRequest()));
         sysMenu.setOperateTime(DateUtil.getNowDate());
         menuMapper.insertSelective(sysMenu);
 
@@ -60,11 +68,16 @@ public class SysMenuServiceImpl implements SysMenuService {
                 throw new ParamsException("权限名称已存在");
             }
         }
+        if(Util.equalsTo(sysMenuVO.getType(), IntConstants.MENU.getVal())) {
+            if(sysMenuVO.getVisible() == null || StringUtils.isEmpty(sysMenuVO.getUrl())) {
+                throw new ParamsException("类型为菜单时,菜单地址和是否隐藏均不能为空");
+            }
+        }
 
         SysMenu after = new SysMenu();
         BeanUtils.copyProperties(sysMenuVO, after);
-        after.setOperator(IpUtil.getUserIP(RequestHolder.getCurrentRequest()));
-        after.setOperateIp(RequestHolder.getCurrentRequest().getRemoteAddr());
+        after.setOperateIp(IpUtil.getUserIP(RequestHolder.getCurrentRequest()));
+        after.setOperator(RequestHolder.getCurrentUser().getUsername());
         after.setOperateTime(DateUtil.getNowDate());
         menuMapper.updateByPrimaryKeySelective(after);
 

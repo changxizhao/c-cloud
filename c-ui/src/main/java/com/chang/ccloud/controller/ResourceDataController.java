@@ -21,22 +21,10 @@ public class ResourceDataController {
 
     private static Logger log = LoggerFactory.getLogger(ResourceDataController.class);
 
-    @Value("classpath:static/json/user_info.json")
-    private Resource userInfo;
-
     @Value("classpath:static/json/menu.json")
     private Resource menuList;
 
-    @GetMapping("/getUserData")
-    public String getUserInfo(){
-        try {
-            String result = IOUtils.toString(userInfo.getInputStream(), Charset.forName("UTF-8"));
-            return result;
-        } catch (IOException e) {
-            log.error("",e);
-            return "";
-        }
-    }
+
 
     @GetMapping("/getMenuList")
     public String getMenuList(){
