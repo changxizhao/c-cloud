@@ -1,9 +1,8 @@
 package com.chang.ccloud.service;
 
-import com.chang.ccloud.entities.dto.AclModuleLevelDTO;
+import com.chang.ccloud.entities.dto.SysMenuDTO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
-import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
-import com.chang.ccloud.model.SysDept;
+import com.chang.ccloud.entities.dto.TreeViewDTO;
 
 import java.util.List;
 
@@ -16,8 +15,10 @@ public interface SysTreeService {
 
     List<DeptLevelDTO> deptTree();
 
-    List<DeptTreeViewDTO> toTreeView(List<DeptLevelDTO> list);
+    List<TreeViewDTO> deptToTreeView(List<DeptLevelDTO> list);
 
-    public List<AclModuleLevelDTO> aclModuleTree();
+    List<SysMenuDTO> menuTree();
+
+    List<TreeViewDTO> menuToTreeView(List<SysMenuDTO> list, Integer roleId);
 
 }

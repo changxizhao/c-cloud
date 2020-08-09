@@ -16,6 +16,22 @@
     <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
     <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="MenuDTOMap" type="com.chang.ccloud.entities.dto.SysMenuDTO" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="parent_id" property="parentId" jdbcType="BIGINT" />
+    <result column="seq" property="seq" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="visible" property="visible" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
+    <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Base_Column_List" >
     id, name, code, type, url, parent_id, seq, status, visible, remark, operator, operate_time, 
     operate_ip
@@ -197,4 +213,11 @@
     <include refid="Base_Column_List" />
     from sys_menu
   </select>
+
+  <select id="selectAllMenu" resultMap="MenuDTOMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_menu
+  </select>
+
 </mapper>

@@ -1,5 +1,6 @@
 package com.chang.ccloud.dao;
 
+import com.chang.ccloud.entities.dto.SysMenuDTO;
 import com.chang.ccloud.model.SysMenu;
 import org.apache.ibatis.annotations.Param;
 
@@ -21,4 +22,7 @@ public interface SysMenuMapper {
     Integer checkSysMenuExist(@Param("parentId") Long parentId, @Param("name") String name);
 
     List<SysMenu> selectMenuTreegrid(SysMenu sysMenu);
+
+    List<SysMenuDTO> selectAllMenu();
+
 }

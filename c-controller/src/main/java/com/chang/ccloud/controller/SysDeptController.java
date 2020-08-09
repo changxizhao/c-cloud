@@ -5,7 +5,7 @@ import com.chang.ccloud.common.TableInfo;
 import com.chang.ccloud.common.utils.LevelUtil;
 import com.chang.ccloud.entities.vo.DeptRequestVO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
-import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
+import com.chang.ccloud.entities.dto.TreeViewDTO;
 import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.model.SysDept;
 import com.chang.ccloud.service.SysDeptService;
@@ -57,8 +57,8 @@ public class SysDeptController {
     @GetMapping("/tree")
     public Result deptTree() {
         List<DeptLevelDTO> dtoList = treeService.deptTree();
-        List<DeptTreeViewDTO> deptTreeViewDTOS = treeService.toTreeView(dtoList);
-        return Result.success(deptTreeViewDTOS);
+        List<TreeViewDTO> treeViewDTOS = treeService.deptToTreeView(dtoList);
+        return Result.success(treeViewDTOS);
     }
 
     @ApiOperation(value = "获取部门列表")

@@ -1,7 +1,7 @@
 package com.chang.ccloud.dao;
 
 
-import com.chang.ccloud.entities.dto.AclModuleLevelDTO;
+import com.chang.ccloud.entities.dto.SysMenuDTO;
 import com.chang.ccloud.model.SysAclModule;
 import org.apache.ibatis.annotations.Param;
 
@@ -26,5 +26,5 @@ public interface SysAclModuleMapper {
 
     void updateAclModuleLevel(SysAclModule sysAclModule);
 
-    List<AclModuleLevelDTO> selectAllAclModule();
+    List<SysMenuDTO> selectAllAclModule();
 }

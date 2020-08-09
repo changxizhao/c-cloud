@@ -2,6 +2,9 @@ package com.chang.ccloud.dao;
 
 
 import com.chang.ccloud.model.SysRoleAcl;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface SysRoleAclMapper {
     int deleteByPrimaryKey(Long id);
@@ -15,4 +18,8 @@ public interface SysRoleAclMapper {
     int updateByPrimaryKeySelective(SysRoleAcl record);
 
     int updateByPrimaryKey(SysRoleAcl record);
+
+    List<Long> selectMenuIdListByRoleId(@Param("roleId") long roleId);
+
+    void deleteRoleAclListByRoleID(@Param("roleId") Long roleId);
 }

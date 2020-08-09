@@ -6,7 +6,7 @@ $(function () {
         },
 
         'click #toAuthoriz': function (e, value, row, index) { // 角色授权
-            alert("授权");
+            openMenuTree(row.id);
         },
 
         'click #addUsers': function (e, value, row, index) { // 添加用户
@@ -19,9 +19,42 @@ $(function () {
         }
     };
 
+
     var opt = getTableOption($("#select-role-name").val());
     $('#role-table').bootstrapTable(opt);
+
+
+
 });
+
+var $checkableTree;
+
+var initMenuTreeData = function (tree) {
+
+    $('#menu-tree li').each(function(){
+        var nodeId = $(this).attr('data-nodeid');
+        var node = tree.treeview('getNode', nodeId);
+        if(node.checked) {
+            tree.treeview('checkNode', [ node, { silent: true}]);
+        }
+    })
+
+};
+
+var initMenuTree = function(data) {
+    return $('#menu-tree').treeview({
+        data: data,
+        showIcon: false,
+        showBorder: false,
+        showCheckbox: true/*,
+        onNodeChecked: function (event, node) {
+            alert(node.nodeId + "," + node.tags);
+        },
+        onNodeUnchecked: function (event, node) {
+            alert("unchecked");
+        }*/
+    });
+}
 
 var getTableOption = function (name) {
 
@@ -134,7 +167,6 @@ function doEdit(row) {
         btn1: function (index) {
             $.post("/api/sys/role/update",$("#add-role-form").serialize(),function (data) {
                 if(data.code == 200){
-                    // Tree.initTree('treeview5',1);
                     layer.close(index);
                     $('#role-table').bootstrapTable('refresh');
                 }else {
@@ -144,6 +176,63 @@ function doEdit(row) {
         },
         end: function () {
             $('#add-role-form')[0].reset();
+        }
+    });
+}
+
+function openMenuTree(roleId) {
+
+    $.getJSON("/api/sys/menu/tree?roleId=" + roleId +"&_" + $.now(), function (r) {
+        $checkableTree = initMenuTree(r.data);
+        $checkableTree.treeview('expandAll', {silent: true});
+        initMenuTreeData($checkableTree);
+    });
+
+    layer.open({
+        type: 1,
+        skin: 'layui-layer-lan',
+        title: "角色授权",
+        area: ['300px', '450px'],
+        shadeClose: false,
+        content: jQuery("#open-menu-tree"),
+        btn: ['确定','取消'],
+        btn1: function (index) {
+            var nodes = $checkableTree.treeview("getChecked");
+            var aclIdList = new Array();
+            for(var i = 0; i < nodes.length; i++){
+                var node = nodes[i];
+                aclIdList.push(node.tags.toString());
+            }
+
+            var json = {};
+            json.roleId = roleId;
+            json.aclIdList = aclIdList;
+
+            $.ajax({
+                type: 'post',
+                url:'/api/sys/role/acl/change',
+                contentType:'application/json',
+                data:JSON.stringify(json),
+                dataType:'json',
+                success:function (data) {
+                    if(data.code == 200){
+                        layer.close(index);
+                    }else {
+                        layer.alert(data.msg);
+                    }
+                }
+            })
+
+            /*$.post("/api/sys/role/acl/change",JSON.stringify(json).toString(),function (data) {
+                if(data.code == 200){
+                    layer.close(index);
+                }else {
+                    layer.alert(data.msg);
+                }
+            },'json');*/
+        },
+        end: function () {
+
         }
     });
 }

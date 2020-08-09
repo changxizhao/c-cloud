@@ -3,7 +3,6 @@ package com.chang.ccloud.controller.role;
 import com.chang.ccloud.common.Result;
 import com.chang.ccloud.common.TableInfo;
 import com.chang.ccloud.common.utils.JsonConvertUtil;
-import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.entities.vo.RoleVO;
 import com.chang.ccloud.service.SysRoleService;
 import com.github.pagehelper.PageHelper;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.List;
 
 /**

@@ -7,7 +7,7 @@ public class SysRoleUser {
 
     private Long userId;
 
-    private Long roldId;
+    private Long roleId;
 
     private String operator;
 
@@ -31,12 +31,12 @@ public class SysRoleUser {
         this.userId = userId;
     }
 
-    public Long getRoldId() {
-        return roldId;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public void setRoldId(Long roldId) {
-        this.roldId = roldId;
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 
     public String getOperator() {

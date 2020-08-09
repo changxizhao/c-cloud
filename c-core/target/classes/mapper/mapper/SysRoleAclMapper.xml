@@ -3,14 +3,14 @@
 <mapper namespace="com.chang.ccloud.dao.SysRoleAclMapper" >
   <resultMap id="BaseResultMap" type="com.chang.ccloud.model.SysRoleAcl" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="rold_id" property="roldId" jdbcType="BIGINT" />
+    <result column="role_id" property="roleId" jdbcType="BIGINT" />
     <result column="acl_id" property="aclId" jdbcType="BIGINT" />
     <result column="operator" property="operator" jdbcType="VARCHAR" />
     <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
     <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, rold_id, acl_id, operator, operate_time, operate_ip
+    id, role_id, acl_id, operator, operate_time, operate_ip
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
@@ -23,10 +23,10 @@
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.chang.ccloud.model.SysRoleAcl" >
-    insert into sys_role_acl (id, rold_id, acl_id, 
+    insert into sys_role_acl (id, role_id, acl_id,
       operator, operate_time, operate_ip
       )
-    values (#{id,jdbcType=BIGINT}, #{roldId,jdbcType=BIGINT}, #{aclId,jdbcType=BIGINT}, 
+    values (#{id,jdbcType=BIGINT}, #{roleId,jdbcType=BIGINT}, #{aclId,jdbcType=BIGINT}, 
       #{operator,jdbcType=VARCHAR}, #{operateTime,jdbcType=TIMESTAMP}, #{operateIp,jdbcType=VARCHAR}
       )
   </insert>
@@ -36,8 +36,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="roldId != null" >
-        rold_id,
+      <if test="roleId != null" >
+        role_id,
       </if>
       <if test="aclId != null" >
         acl_id,
@@ -56,8 +56,8 @@
       <if test="id != null" >
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="roldId != null" >
-        #{roldId,jdbcType=BIGINT},
+      <if test="roleId != null" >
+        #{roleId,jdbcType=BIGINT},
       </if>
       <if test="aclId != null" >
         #{aclId,jdbcType=BIGINT},
@@ -76,8 +76,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.chang.ccloud.model.SysRoleAcl" >
     update sys_role_acl
     <set >
-      <if test="roldId != null" >
-        rold_id = #{roldId,jdbcType=BIGINT},
+      <if test="roleId != null" >
+        role_id = #{roleId,jdbcType=BIGINT},
       </if>
       <if test="aclId != null" >
         acl_id = #{aclId,jdbcType=BIGINT},
@@ -96,11 +96,21 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.chang.ccloud.model.SysRoleAcl" >
     update sys_role_acl
-    set rold_id = #{roldId,jdbcType=BIGINT},
+    set role_id = #{roleId,jdbcType=BIGINT},
       acl_id = #{aclId,jdbcType=BIGINT},
       operator = #{operator,jdbcType=VARCHAR},
       operate_time = #{operateTime,jdbcType=TIMESTAMP},
       operate_ip = #{operateIp,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+
+  <select id="selectMenuIdListByRoleId" parameterType="com.chang.ccloud.model.SysRoleAcl" resultType="java.lang.Long">
+    select acl_id from sys_role_acl where role_id = #{roleId}
+  </select>
+
+  <delete id="deleteRoleAclListByRoleID" parameterType="com.chang.ccloud.model.SysRoleAcl">
+    delete from sys_role_acl
+    where role_id = #{roleId}
+  </delete>
 </mapper>

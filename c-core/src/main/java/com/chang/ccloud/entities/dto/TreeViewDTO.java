@@ -9,7 +9,7 @@ import java.util.List;
  * @Date 2020/7/11 21:08
  * @Description
  */
-public class DeptTreeViewDTO {
+public class TreeViewDTO {
 
     private String text;
 
@@ -17,7 +17,9 @@ public class DeptTreeViewDTO {
 
     private List<String> tags = Lists.newArrayList();
 
-    private List<DeptTreeViewDTO> nodes = Lists.newArrayList();
+    private List<TreeViewDTO> nodes = Lists.newArrayList();
+
+    private boolean checked;
 
     public String getText() {
         return text;
@@ -43,11 +45,19 @@ public class DeptTreeViewDTO {
         this.tags = tags;
     }
 
-    public List<DeptTreeViewDTO> getNodes() {
+    public List<TreeViewDTO> getNodes() {
         return nodes;
     }
 
-    public void setNodes(List<DeptTreeViewDTO> nodes) {
+    public void setNodes(List<TreeViewDTO> nodes) {
         this.nodes = nodes;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 }

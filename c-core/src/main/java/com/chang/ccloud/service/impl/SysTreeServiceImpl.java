@@ -3,9 +3,11 @@ package com.chang.ccloud.service.impl;
 import com.chang.ccloud.common.utils.LevelUtil;
 import com.chang.ccloud.dao.SysAclModuleMapper;
 import com.chang.ccloud.dao.SysDeptMapper;
-import com.chang.ccloud.entities.dto.AclModuleLevelDTO;
+import com.chang.ccloud.dao.SysMenuMapper;
+import com.chang.ccloud.entities.dto.SysMenuDTO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
-import com.chang.ccloud.entities.dto.DeptTreeViewDTO;
+import com.chang.ccloud.entities.dto.TreeViewDTO;
+import com.chang.ccloud.service.SysRoleAclService;
 import com.chang.ccloud.service.SysTreeService;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Lists;
@@ -28,7 +30,12 @@ public class SysTreeServiceImpl implements SysTreeService {
     private SysDeptMapper deptMapper;
 
     @Autowired
-    private SysAclModuleMapper aclModuleMapper;
+    private SysRoleAclService roleAclService;
+
+    @Autowired
+    private SysMenuMapper menuMapper;
+
+    public static final String ROOT = "0";
 
     //生成部门树
     @Override
@@ -96,21 +103,18 @@ public class SysTreeServiceImpl implements SysTreeService {
 
 
     @Override
-    public List<DeptTreeViewDTO> toTreeView(List<DeptLevelDTO> list) {
-
+    public List<TreeViewDTO> deptToTreeView(List<DeptLevelDTO> list) {
         if(CollectionUtils.isEmpty(list)) {
             return Lists.newArrayList();
         }
-
-        List<DeptTreeViewDTO> result = new ArrayList<>();
-
+        List<TreeViewDTO> result = new ArrayList<>();
         for (DeptLevelDTO dto : list) {
 
-            DeptTreeViewDTO treeViewDTO = new DeptTreeViewDTO();
+            TreeViewDTO treeViewDTO = new TreeViewDTO();
             treeViewDTO.setText(dto.getName());
             treeViewDTO.setHref("#"+dto.getName());
             treeViewDTO.setTags(Arrays.asList(dto.getId().toString()));
-            treeViewDTO.setNodes(toTreeView(dto.getDeptList()));
+            treeViewDTO.setNodes(deptToTreeView(dto.getDeptList()));
             result.add(treeViewDTO);
         }
         return result;
@@ -119,49 +123,74 @@ public class SysTreeServiceImpl implements SysTreeService {
 
     // 生成权限树形列表
     @Override
-    public List<AclModuleLevelDTO> aclModuleTree() {
-        List<AclModuleLevelDTO> moduleLevelDTOS = aclModuleMapper.selectAllAclModule();
-        return aclModuleListToTree(moduleLevelDTOS);
+    public List<SysMenuDTO> menuTree() {
+        List<SysMenuDTO> menuDTOS = menuMapper.selectAllMenu();
+        return menuListToTree(menuDTOS);
     }
 
-    public List<AclModuleLevelDTO> aclModuleListToTree(List<AclModuleLevelDTO> dtoList) {
+    @Override
+    public List<TreeViewDTO> menuToTreeView(List<SysMenuDTO> list, Integer roleId) {
+
+        // 获取当前角色权限列表 TODO
+        List<Long> roleMenuList = roleAclService.selectMenuIdListByRoleId(roleId);
+
+        if(CollectionUtils.isEmpty(list)) {
+            return Lists.newArrayList();
+        }
+
+        return transformMenuToTreeView(list, roleMenuList);
+    }
+
+
+    public List<TreeViewDTO> transformMenuToTreeView(List<SysMenuDTO> list, List<Long> roleMenuList) {
+
+        if(CollectionUtils.isEmpty(list)) {
+            return Lists.newArrayList();
+        }
+
+        List<TreeViewDTO> result = new ArrayList<>();
+        for (SysMenuDTO dto : list) {
+
+            TreeViewDTO treeViewDTO = new TreeViewDTO();
+            if(CollectionUtils.isNotEmpty(roleMenuList) && roleMenuList.contains(dto.getId())) {
+                treeViewDTO.setChecked(true);
+            }
+            treeViewDTO.setText(dto.getName());
+            treeViewDTO.setHref("#"+dto.getName());
+            treeViewDTO.setTags(Arrays.asList(dto.getId().toString()));
+            treeViewDTO.setNodes(transformMenuToTreeView(dto.getMenuList(), roleMenuList));
+            result.add(treeViewDTO);
+        }
+        return result;
+    }
+
+    public List<SysMenuDTO> menuListToTree(List<SysMenuDTO> dtoList) {
         if(CollectionUtils.isEmpty(dtoList)){
             return Lists.newArrayList();
         }
 
-        Multimap<String, AclModuleLevelDTO> levelDTOMultimap = ArrayListMultimap.create();
-        List<AclModuleLevelDTO> rootList = Lists.newArrayList();
-        for (AclModuleLevelDTO dto : dtoList) {
-            levelDTOMultimap.put(dto.getLevel(), dto);
+        Multimap<String, SysMenuDTO> menuDTOMultimap = ArrayListMultimap.create();
+        List<SysMenuDTO> rootList = Lists.newArrayList();
+        for (SysMenuDTO dto : dtoList) {
+            menuDTOMultimap.put(dto.getParentId().toString(), dto);
             // 取出一级权限模块
-            if(LevelUtil.ROOT.equals(dto.getLevel())) {
+            if(ROOT.equals(dto.getParentId().toString())) {
                 rootList.add(dto);
             }
         }
-
-        Collections.sort(rootList, aclModuleLevelDTOComparator);
-        transformAclModuleTree(rootList, LevelUtil.ROOT, levelDTOMultimap);
+        transformAclModuleTree(rootList, menuDTOMultimap);
         return rootList;
     }
 
-    public void transformAclModuleTree(List<AclModuleLevelDTO> dtoList, String level, Multimap<String, AclModuleLevelDTO> aclMultimap) {
+    public void transformAclModuleTree(List<SysMenuDTO> dtoList, Multimap<String, SysMenuDTO> menuMultimap) {
         for (int i = 0; i < dtoList.size(); i++) {
-            AclModuleLevelDTO dto = dtoList.get(i);
-            String nextLevel = LevelUtil.getLevel(level, dto.getId());
-            List<AclModuleLevelDTO> tempList = (List<AclModuleLevelDTO>)aclMultimap.get(nextLevel);
+            SysMenuDTO dto = dtoList.get(i);
+            List<SysMenuDTO> tempList = (List<SysMenuDTO>)menuMultimap.get(dto.getId().toString());
             if(CollectionUtils.isNotEmpty(tempList)) {
-                Collections.sort(tempList, aclModuleLevelDTOComparator);
-                dto.setAclModuleList(tempList);
-                transformAclModuleTree(tempList, nextLevel, aclMultimap);
+                dto.setMenuList(tempList);
+                transformAclModuleTree(tempList, menuMultimap);
             }
         }
     }
-
-    public Comparator<AclModuleLevelDTO> aclModuleLevelDTOComparator = new Comparator<AclModuleLevelDTO>() {
-        @Override
-        public int compare(AclModuleLevelDTO o1, AclModuleLevelDTO o2) {
-            return o1.getSeq() - o2.getSeq();
-        }
-    };
 
 }

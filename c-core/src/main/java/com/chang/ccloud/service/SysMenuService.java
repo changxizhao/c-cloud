@@ -1,6 +1,7 @@
 package com.chang.ccloud.service;
 
 import com.chang.ccloud.entities.vo.SysMenuVO;
+import com.chang.ccloud.model.SysMenu;
 
 import java.util.List;
 
@@ -18,4 +19,5 @@ public interface SysMenuService {
     boolean checkSysMenuExist(Long parentId, String menuName);
 
     List<SysMenuVO> treegrid(SysMenuVO sysMenuVO);
+
 }

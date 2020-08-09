@@ -5,7 +5,7 @@ import java.util.Date;
 public class SysRoleAcl {
     private Long id;
 
-    private Long roldId;
+    private Long roleId;
 
     private Long aclId;
 
@@ -23,12 +23,12 @@ public class SysRoleAcl {
         this.id = id;
     }
 
-    public Long getRoldId() {
-        return roldId;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public void setRoldId(Long roldId) {
-        this.roldId = roldId;
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 
     public Long getAclId() {

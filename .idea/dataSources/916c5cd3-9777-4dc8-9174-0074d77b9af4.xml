@@ -1431,7 +1431,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="239" name="rold_id">
+    <column id="310" parent="239" name="role_id">
       <Position>2</Position>
       <Comment>角色id</Comment>
       <DataType>bigint(20)|0s</DataType>

@@ -1,7 +1,8 @@
 package com.chang.ccloud.controller.acl;
 
 import com.chang.ccloud.common.Result;
-import com.chang.ccloud.common.utils.JsonConvertUtil;
+import com.chang.ccloud.entities.dto.SysMenuDTO;
+import com.chang.ccloud.entities.dto.TreeViewDTO;
 import com.chang.ccloud.entities.vo.SysMenuVO;
 import com.chang.ccloud.service.SysMenuService;
 import com.chang.ccloud.service.SysTreeService;
@@ -31,25 +32,33 @@ public class SysMenuController {
     @Autowired
     private SysTreeService treeService;
 
-    @ApiOperation(value = "新建权限模块")
+    @ApiOperation(value = "新建权限")
     @PostMapping("/add")
     public Result addDept(SysMenuVO sysMenuVO){
         menuService.addMenu(sysMenuVO);
         return Result.success();
     }
 
-    @ApiOperation(value = "更新权限模块")
+    @ApiOperation(value = "更新权限")
     @PostMapping("/update")
     public Result updateDept(SysMenuVO sysMenuVO){
         menuService.updateMenu(sysMenuVO);
         return Result.success();
     }
 
-    @ApiOperation(value = "获取部门树")
+    @ApiOperation(value = "获取权限树形表")
     @GetMapping("/treegrid")
     public Result deptTree(SysMenuVO sysMenuVO) {
         List<SysMenuVO> treegrid = menuService.treegrid(sysMenuVO);
         return Result.success(treegrid);
+    }
+
+    @ApiOperation(value = "获取角色权限树")
+    @GetMapping("/tree")
+    public Result deptTree(Integer roleId) {
+        List<SysMenuDTO> dtoList = treeService.menuTree();
+        List<TreeViewDTO> treeViewDTOS = treeService.menuToTreeView(dtoList, roleId);
+        return Result.success(treeViewDTOS);
     }
 
 }
