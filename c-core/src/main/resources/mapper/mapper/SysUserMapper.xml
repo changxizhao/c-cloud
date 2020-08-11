@@ -238,4 +238,13 @@
       and u.username like CONCAT('%',#{username},'%')
     </if>
   </select>
+
+  <select id="selectUserListByUserIdList" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" />
+    from sys_user
+    where id in
+    <foreach collection="list" item="id" open="(" close=")" separator=",">
+      #{id}
+    </foreach>
+  </select>
 </mapper>

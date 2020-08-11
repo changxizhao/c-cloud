@@ -10,7 +10,7 @@ $(function () {
         },
 
         'click #addUsers': function (e, value, row, index) { // 添加用户
-            alert("授权");
+            openRoleUser(row.id);
         },
 
         'click #deleteRole': function (e, value, row, index) { // 删除角色
@@ -222,17 +222,137 @@ function openMenuTree(roleId) {
                     }
                 }
             })
+        },
+        end: function () {
 
-            /*$.post("/api/sys/role/acl/change",JSON.stringify(json).toString(),function (data) {
-                if(data.code == 200){
-                    layer.close(index);
-                }else {
-                    layer.alert(data.msg);
+        }
+    });
+};
+
+var getUsersTableOption = function (deptId, username, nickname) {
+
+    var option = {
+        classes:'table table-hover table-no-bordered',
+        url: '/api/sys/user/table',
+        pagination: true,	//显示分页条
+        datatype: 'json',
+        sidePagination: 'server',//服务器端分页
+        //showRefresh: true,  //显示刷新按钮
+        search: false,
+        pageSize: 5,
+        pageList: [5, 10, 20, 50],
+        striped : true,     //设置为true会有隔行变色效果
+        //idField: 'menuId',
+        queryParams: function () {
+            var param = {
+                pageNumber : this.pageNumber,
+                pageSize : this.pageSize,
+                deptId: deptId,
+                username: username,
+                nickname: nickname
+
+            };
+            return param;
+        },
+        onDblClickRow: function (item, $element) {
+            selectUser(item.nickname, item.id);
+        },
+        columns: [
+            { title:'姓名', field:'nickname', align: "center", cursor: 'pointer'},
+            { title: '所属部门', field: 'deptName',align: 'center'},
+            { title: '状态', field: 'status',align: 'center', formatter: statusFormatter}
+        ]
+    };
+
+    return option;
+}
+
+
+
+
+function openRoleUser(roleId) {
+
+    var opt = getUsersTableOption('0');
+    $('#user-table').bootstrapTable(opt);
+
+    getSelectedUsers(roleId);
+
+    layer.open({
+        type: 1,
+        skin: 'layui-layer-lan',
+        title: "添加用户",
+        area: ['800px', '500px'],
+        shadeClose: false,
+        content: jQuery("#add-user-layer"),
+        btn: ['确定','取消'],
+        btn1: function (index) {
+            var userIdList = new Array();
+            $('#role-users span').each(function(){
+                userIdList.push($(this).children('input').val());
+            });
+
+            var json = {};
+            json.roleId = roleId;
+            json.userIdList = userIdList;
+            //alert(JSON.stringify(json));
+
+            $.ajax({
+                type: 'post',
+                url:'/api/sys/role/user/change',
+                contentType:'application/json',
+                data:JSON.stringify(json),
+                dataType:'json',
+                success:function (data) {
+                    if(data.code == 200){
+                        layer.close(index);
+                    }else {
+                        layer.alert(data.msg);
+                    }
                 }
-            },'json');*/
+            });
         },
         end: function () {
 
         }
     });
 }
+
+function getSelectedUsers(roleId) {
+    $.getJSON("/api/sys/role/user/roleUser/" + roleId, function (r) {
+        initSelectedUser(r.data);
+    });
+}
+
+function initSelectedUser(users) {
+    $("#role-users").html('');
+    $.each(users, function(index, user) {
+        var html = "<span class='user-label' id='role-user-" + user.id + "'>" + user.nickname + "<i class='remove fa fa-fw fa-remove'></i><input value='" + user.id + "' style='display: none;'/></span>";
+        $("#role-users").append(html);
+    });
+}
+
+function selectUser(text, value) {
+
+    var hasItem = false;
+    $('#role-users span').each(function(){
+        var itemText = $(this).text();
+        var itemValue = $(this).children('input').val();
+
+        if(itemText == text && itemValue == value) {
+            hasItem = true;
+            return;
+        }
+    })
+    if(hasItem) {
+        layer.alert("请勿重复添加人员");
+        return;
+    }
+
+    var html = "<span class='user-label' id='role-user-" + value + "'>" + text + "<i class='remove fa fa-fw fa-remove'></i><input value='" + value + "' style='display: none;'/></span>";
+    $("#role-users").append(html);
+}
+
+$("#role-users").on('click', 'i', function () {
+    var itemValue = $(this).parent().children('input').val();
+    $("#role-user-" + itemValue).remove();
+})

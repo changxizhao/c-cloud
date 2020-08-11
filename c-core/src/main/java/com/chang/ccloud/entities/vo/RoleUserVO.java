@@ -5,15 +5,15 @@ import java.util.List;
 
 /**
  * @Author changxizhao
- * @Date 2020/8/9 11:23
+ * @Date 2020/8/11 8:55
  * @Description
  */
-public class RoleAclVO {
+public class RoleUserVO {
 
     @NotNull(message = "角色ID不能为空")
     private Long roleId;
 
-    private List<Long> aclIdList;
+    private List<Long> userIdList;
 
     public Long getRoleId() {
         return roleId;
@@ -23,11 +23,11 @@ public class RoleAclVO {
         this.roleId = roleId;
     }
 
-    public List<Long> getAclIdList() {
-        return aclIdList;
+    public List<Long> getUserIdList() {
+        return userIdList;
     }
 
-    public void setAclIdList(List<Long> aclIdList) {
-        this.aclIdList = aclIdList;
+    public void setUserIdList(List<Long> userIdList) {
+        this.userIdList = userIdList;
     }
 }

@@ -22,4 +22,6 @@ public interface SysUserMapper {
     SysUser selectUserByUsername(@Param("username") String username);
 
     List<UserTableVO> selectUserTable(UserTableVO userTableVO);
+
+    List<SysUser> selectUserListByUserIdList(List<Long> idList);
 }
