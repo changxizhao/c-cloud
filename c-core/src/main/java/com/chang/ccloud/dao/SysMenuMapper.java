@@ -23,8 +23,10 @@ public interface SysMenuMapper {
 
     List<SysMenu> selectMenuTreegrid(SysMenu sysMenu);
 
-    List<SysMenuDTO> selectAllMenu();
+    List<SysMenuDTO> selectAllMenu(SysMenu sysMenu);
 
     int selectCountMenuByParentId(@Param("parentId") long parentId);
+
+    List<SysMenuDTO> selectMenuByIdList(@Param("idList") List<Long> idList);
 
 }

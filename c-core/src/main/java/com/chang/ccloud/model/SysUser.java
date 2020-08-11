@@ -23,6 +23,8 @@ public class SysUser {
 
     private Integer status;
 
+    private Integer isAdmin;
+
     private String remark;
 
     private String operator;
@@ -141,5 +143,13 @@ public class SysUser {
 
     public void setOperateIp(String operateIp) {
         this.operateIp = operateIp == null ? null : operateIp.trim();
+    }
+
+    public Integer getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Integer isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }

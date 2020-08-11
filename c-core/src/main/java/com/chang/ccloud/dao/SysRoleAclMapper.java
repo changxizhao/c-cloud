@@ -21,6 +21,8 @@ public interface SysRoleAclMapper {
 
     List<Long> selectMenuIdListByRoleId(@Param("roleId") long roleId);
 
+    List<Long> selectMenuIdListByRoleIdList(@Param("roleIdList") List<Long> roleIdList);
+
     void deleteRoleAclListByRoleID(@Param("roleId") Long roleId);
 
     int selectCountRoleAclByAclId(@Param("aclId") long aclId);

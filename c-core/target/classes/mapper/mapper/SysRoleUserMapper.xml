@@ -117,4 +117,8 @@
     delete from sys_role_user
     where user_id = #{userId}
   </delete>
+
+  <select id="selectUserRoleIdsByUserId" parameterType="com.chang.ccloud.model.SysRoleUser" resultType="java.lang.Long">
+    select role_id from sys_role_user where user_id = #{userId}
+  </select>
 </mapper>

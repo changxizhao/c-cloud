@@ -214,10 +214,22 @@
     from sys_menu
   </select>
 
-  <select id="selectAllMenu" resultMap="MenuDTOMap">
+  <select id="selectAllMenu" parameterType="com.chang.ccloud.model.SysMenu" resultMap="MenuDTOMap">
     select
     <include refid="Base_Column_List" />
-    from sys_menu
+    from sys_menu where 1=1
+    <if test="type != null" >
+      and type = #{type}
+    </if>
+  </select>
+
+  <select id="selectMenuByIdList" resultMap="MenuDTOMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_menu where type = 0 and id in
+    <foreach collection="idList" item="id" open="(" close=")" separator=",">
+      #{id}
+    </foreach>
   </select>
 
   <select id="selectCountMenuByParentId" parameterType="com.chang.ccloud.model.SysMenu" resultType="java.lang.Integer">

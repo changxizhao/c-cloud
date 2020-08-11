@@ -35,7 +35,7 @@ public class UserLoginController {
         SysUser sysUser = userService.login(username, password);
         request.getSession().setAttribute("user", sysUser);
         request.setAttribute("username", sysUser.getUsername());
-        return Result.success(sysUser);
+        return Result.success();
     }
 
     @ApiOperation(value = "用户登录")

@@ -24,4 +24,6 @@ public interface SysRoleUserMapper {
     List<Long> selectUserIdListByRoleId(@Param("roleId") Long roleId);
 
     void deleteRoleUserByUserId(@Param("userId") long id);
+
+    List<Long> selectUserRoleIdsByUserId(@Param("userId") long userId);
 }

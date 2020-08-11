@@ -1597,22 +1597,30 @@
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="241" name="remark">
+    <column id="333" parent="241" name="is_admin">
       <Position>11</Position>
+      <Comment>1是，0否</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="334" parent="241" name="remark">
+      <Position>12</Position>
       <Comment>备注</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="241" name="operator">
-      <Position>12</Position>
+    <column id="335" parent="241" name="operator">
+      <Position>13</Position>
       <Comment>操作者</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="241" name="operate_time">
-      <Position>13</Position>
+    <column id="336" parent="241" name="operate_time">
+      <Position>14</Position>
       <Comment>操作时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
@@ -1620,15 +1628,15 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="336" parent="241" name="operate_ip">
-      <Position>14</Position>
+    <column id="337" parent="241" name="operate_ip">
+      <Position>15</Position>
       <Comment>操作者ip</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="337" parent="241" name="PRIMARY">
+    <key id="338" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

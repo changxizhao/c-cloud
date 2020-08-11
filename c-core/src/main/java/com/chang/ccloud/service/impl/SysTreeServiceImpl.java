@@ -7,6 +7,7 @@ import com.chang.ccloud.dao.SysMenuMapper;
 import com.chang.ccloud.entities.dto.SysMenuDTO;
 import com.chang.ccloud.entities.dto.DeptLevelDTO;
 import com.chang.ccloud.entities.dto.TreeViewDTO;
+import com.chang.ccloud.model.SysMenu;
 import com.chang.ccloud.service.SysRoleAclService;
 import com.chang.ccloud.service.SysTreeService;
 import com.google.common.collect.ArrayListMultimap;
@@ -124,7 +125,21 @@ public class SysTreeServiceImpl implements SysTreeService {
     // 生成权限树形列表
     @Override
     public List<SysMenuDTO> menuTree() {
-        List<SysMenuDTO> menuDTOS = menuMapper.selectAllMenu();
+//        List<SysMenuDTO> menuDTOS = menuMapper.selectAllMenu();
+        return menuTree(new SysMenu());
+    }
+
+    // 生成权限树形列表
+    @Override
+    public List<SysMenuDTO> menuTree(SysMenu sysMenu) {
+        List<SysMenuDTO> menuDTOS = menuMapper.selectAllMenu(sysMenu);
+        return menuListToTree(menuDTOS);
+    }
+
+    // 生成权限树形列表
+    @Override
+    public List<SysMenuDTO> menuTree(List<Long> idList) {
+        List<SysMenuDTO> menuDTOS = menuMapper.selectMenuByIdList(idList);
         return menuListToTree(menuDTOS);
     }
 
