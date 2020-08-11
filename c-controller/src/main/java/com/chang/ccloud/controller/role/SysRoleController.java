@@ -57,4 +57,11 @@ public class SysRoleController {
         return TableInfo.tableInfo(page);
     }
 
+    @ApiOperation(value = "删除角色")
+    @PostMapping("/delete")
+    public Result del(Long id) {
+        roleService.deleteRoleById(id);
+        return Result.success();
+    }
+
 }

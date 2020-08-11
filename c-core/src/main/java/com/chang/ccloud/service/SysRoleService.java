@@ -17,4 +17,5 @@ public interface SysRoleService {
 
     List<RoleVO> selectAllRoles(RoleVO roleVO);
 
+    void deleteRoleById(Long id);
 }

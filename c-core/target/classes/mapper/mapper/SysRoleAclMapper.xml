@@ -113,4 +113,8 @@
     delete from sys_role_acl
     where role_id = #{roleId}
   </delete>
+
+  <select id="selectCountRoleAclByAclId" parameterType="com.chang.ccloud.model.SysRoleAcl" resultType="java.lang.Integer">
+    select count(id) from sys_role_acl where acl_id = #{aclId}
+  </select>
 </mapper>

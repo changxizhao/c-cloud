@@ -6,9 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="6ad934de-f9de-4f63-a093-dae2f523131f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/role/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/role/SysRoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/acl/SysMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-controller/target/classes/com/chang/ccloud/controller/acl/SysMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/dao/SysMenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/dao/SysMenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/dao/SysRoleAclMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/dao/SysRoleAclMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/SysMenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/SysMenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/SysTreeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/SysTreeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysMenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/com/chang/ccloud/service/impl/SysTreeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/mapper/mapper/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/mapper/mapper/SysMenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-core/target/classes/mapper/mapper/SysRoleAclMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/c-core/target/classes/mapper/mapper/SysRoleAclMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/role.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/c-ui/target/classes/static/public/js/sys/menu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,6 +64,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="rbac-server: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rbac-server" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rbac-server: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="sys_role_acl: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -62,99 +80,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleUserController.java">
+        <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+            <state relative-caret-position="152">
+              <caret line="365" column="59" selection-start-line="365" selection-start-column="59" selection-end-line="365" selection-end-column="59" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="171" column="7" lean-forward="true" selection-start-line="162" selection-start-column="4" selection-end-line="171" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="e#110#116#0" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="e#119#125#0" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="e#115#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/role.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="653">
+              <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysRoleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
+        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="41" column="111" selection-start-line="41" selection-start-column="109" selection-end-line="41" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="77" column="25" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="143" column="13" lean-forward="true" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
-              <folding>
-                <element signature="e#5082#5083#0" expanded="true" />
-                <element signature="e#5141#5142#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysUserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysUserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="250" column="33" selection-start-line="250" selection-start-column="14" selection-end-line="250" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysDeptMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="719">
-              <caret line="220" column="34" selection-start-line="220" selection-start-column="34" selection-end-line="220" selection-end-column="34" />
+            <state relative-caret-position="145">
+              <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -173,13 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectUserByUsername</find>
-      <find>BaseResultMap</find>
-      <find>Integer</find>
-      <find>roldId</find>
-      <find>rold_id</find>
-      <find>getChecked</find>
-      <find>api/sys/menu</find>
       <find>selectMenuIdListByRoleId</find>
       <find>add-user-layer</find>
       <find>addUsers</find>
@@ -203,6 +192,13 @@
       <find>sysDeptMapper</find>
       <find>selectCountByParentId</find>
       <find>deleteDept</find>
+      <find>selectCountMenuByParentId</find>
+      <find>存在子菜单、权限，不允许删除</find>
+      <find>RoleOfdelete</find>
+      <find>存在子陪同，不允许删除</find>
+      <find>deleteRole</find>
+      <find>upda</find>
+      <find>角色已授权。不允许删除</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -217,35 +213,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/menu.html" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/SysMenuVO.java" />
         <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/RoleVO.java" />
         <option value="$PROJECT_DIR$/c-ui/src/main/java/com/chang/ccloud/controller/ResourceDataController.java" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/json/menu.json" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysRoleService.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysRoleMapper.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysRoleMapper.xml" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/dto/SysMenuDTO.java" />
         <option value="$PROJECT_DIR$/c-manager/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/dto/TreeViewDTO.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysMenuMapper.xml" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysMenuMapper.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysMenuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysMenuService.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysTreeService.java" />
-        <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/acl/SysMenuController.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/model/SysRoleAcl.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/model/SysRoleUser.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysRoleAclService.java" />
         <option value="$PROJECT_DIR$/c-common/src/main/java/com/chang/ccloud/common/utils/Util.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysRoleAclMapper.java" />
         <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleAclController.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleAclServiceImpl.java" />
-        <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysRoleAclMapper.xml" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysTreeServiceImpl.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/UserRequestVO.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/RoleAclVO.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/RoleUserVO.java" />
@@ -256,18 +240,30 @@
         <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysRoleUserMapper.xml" />
         <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleUserController.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/role.js" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/role.html" />
-        <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleController.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysDeptService.java" />
         <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysDeptMapper.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysDeptMapper.xml" />
         <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysUserMapper.java" />
         <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysUserMapper.xml" />
-        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html" />
         <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysTreeService.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysTreeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysMenuService.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysMenuMapper.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysRoleAclMapper.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysRoleAclMapper.xml" />
+        <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/acl/SysMenuController.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysMenuMapper.xml" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysMenuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/menu.js" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysRoleService.java" />
+        <option value="$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/role.js" />
+        <option value="$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleController.java" />
+        <option value="$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -419,6 +415,19 @@
               <item name="chang" type="462c0819:PsiDirectoryNode" />
               <item name="ccloud" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="acl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chang" type="462c0819:PsiDirectoryNode" />
+              <item name="ccloud" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="role" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -455,6 +464,39 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="c-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="c-cloud" type="b2602c69:ProjectViewProjectNode" />
@@ -573,7 +615,7 @@
       <workItem from="1596850031479" duration="18146000" />
       <workItem from="1596936444776" duration="11266000" />
       <workItem from="1597063032854" duration="10720000" />
-      <workItem from="1597106482662" duration="7015000" />
+      <workItem from="1597106482662" duration="9739000" />
     </task>
     <task id="LOCAL-00001" summary="权限管理系统：创建；环境配置；核心文件；工具类">
       <created>1593876626472</created>
@@ -750,7 +792,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597112049465</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="权限管理系统：删除部门页面交互">
+      <created>1597114151621</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1597114151621</updated>
+    </task>
+    <task id="LOCAL-00027" summary="权限管理系统：删除菜单/权限">
+      <created>1597116029849</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1597116029849</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -786,7 +842,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341256000" />
+    <option name="totallyTimeSpent" value="343980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -802,7 +858,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.30178174" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49839056" visible="true" weight="0.18819599" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49839056" visible="true" weight="0.44988865" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4142539" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -839,7 +895,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.30178174" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49839056" weight="0.43986636" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49839056" weight="0.3207127" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4142539" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -933,7 +989,9 @@
     <MESSAGE value="权限管理系统：角色授权" />
     <MESSAGE value="权限管理系统：角色添加用户" />
     <MESSAGE value="权限管理系统：删除部门" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：删除部门" />
+    <MESSAGE value="权限管理系统：删除部门页面交互" />
+    <MESSAGE value="权限管理系统：删除菜单/权限" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理系统：删除菜单/权限" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -956,84 +1014,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/SysMenuVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-common/src/main/java/com/chang/ccloud/common/utils/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysRoleAclMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/bower/bootstrap-treeview/1.2.0/bootstrap-treeview-1.2.0.jar!/META-INF/resources/webjars/bootstrap-treeview/1.2.0/src/js/bootstrap-treeview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="110" column="22" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/deptTree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/jquery/2.2.4/jquery-2.2.4.jar!/META-INF/resources/webjars/jquery/2.2.4/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="8812" column="45" selection-start-line="8812" selection-start-column="42" selection-end-line="8812" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://916c5cd3-9777-4dc8-9174-0074d77b9af4/schema/rbac-server/table/sys_role_acl">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="4" column="81134" selection-start-line="4" selection-start-column="81134" selection-end-line="4" selection-end-column="81134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/font-awesome/4.7.0/font-awesome-4.7.0.jar!/META-INF/resources/webjars/font-awesome/4.7.0/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/bower/bootstrap-table/1.10.1/bootstrap-table-1.10.1.jar!/META-INF/resources/webjars/bootstrap-table/1.10.1/dist/bootstrap-table.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1894#2192#2" expanded="true" />
-            <element signature="e#2247#2490#2" expanded="true" />
-            <element signature="e#2546#2785#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/users.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1072,23 +1052,6 @@
     <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/css/role.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/acl/SysMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysTreeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/entities/vo/RoleAclVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -1117,23 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
           <caret line="31" column="31" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysRoleAclMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="114" column="11" lean-forward="true" selection-start-line="107" selection-start-column="2" selection-end-line="114" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleAclServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1273,41 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/role.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="287" column="32" lean-forward="true" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1357,14 +1268,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="143" column="13" lean-forward="true" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
-          <folding>
-            <element signature="e#5082#5083#0" expanded="true" />
-            <element signature="e#5141#5142#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="479">
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="41" column="111" selection-start-line="41" selection-start-column="109" selection-end-line="41" selection-end-column="111" />
         </state>
       </provider>
     </entry>
@@ -1375,17 +1289,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/SysDeptController.java">
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleAclServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="77" column="25" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="25" />
+        <state relative-caret-position="336">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysTreeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysTreeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="131" column="71" selection-start-line="131" selection-start-column="71" selection-end-line="131" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysMenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysRoleAclMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysRoleAclMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="117" column="62" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="157" column="31" lean-forward="true" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/dept.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        <state relative-caret-position="456">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -1393,10 +1352,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/depts.html">
+    <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/acl/SysMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="41" column="111" selection-start-line="41" selection-start-column="109" selection-end-line="41" selection-end-column="111" />
+        <state relative-caret-position="215">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/dao/SysMenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/resources/mapper/mapper/SysMenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="222" column="54" selection-start-line="222" selection-start-column="41" selection-end-line="222" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysMenuServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="118" column="45" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysDeptServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="153" column="44" selection-start-line="153" selection-start-column="44" selection-end-line="153" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/SysRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/sys/role.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="171" column="7" lean-forward="true" selection-start-line="162" selection-start-column="4" selection-end-line="171" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="e#110#116#0" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="e#119#125#0" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="e#115#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-ui/src/main/resources/static/public/js/sys/role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="365" column="59" selection-start-line="365" selection-start-column="59" selection-end-line="365" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-controller/src/main/java/com/chang/ccloud/controller/role/SysRoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-core/src/main/java/com/chang/ccloud/service/impl/SysRoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
         </state>
       </provider>
     </entry>

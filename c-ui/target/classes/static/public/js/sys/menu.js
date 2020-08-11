@@ -36,13 +36,9 @@ var initTable = function (data) {
         parentIdField: 'parentId',
 
         onResetView: function(data) {
-            //console.log('load');
             $table.treegrid({
                 initialState: 'collapsed',// 所有节点都折叠
-                // initialState: 'expanded',// 所有节点都展开，默认展开
                 treeColumn: 0,
-                // expanderExpandedClass: 'glyphicon glyphicon-minus',  //图标样式
-                // expanderCollapsedClass: 'glyphicon glyphicon-plus',
                 onChange: function() {
                     $table.bootstrapTable('resetWidth');
                 }
@@ -86,7 +82,7 @@ window.operateEvents = {
         add(row.id, row.name);
     },
     'click .RoleOfdelete': function (e, value, row, index) {
-        del(row.id);
+        del(row.id, row.name);
     },
     'click .RoleOfedit': function (e, value, row, index) {
         update(row);
@@ -163,8 +159,17 @@ function add(parentId, parentName) {
     });
 }
 
-function del(id) {
-    alert("del 方法 , id = " + id);
+function del(id, name) {
+    layer.confirm("确认删除菜单/权限【" + name + "】吗？", {btn: ['确定', '取消'], title: "提示"}, function (i) {
+        $.post("/api/sys/menu/delete",{id: id},function (data) {
+            if(data.code == 200){
+                layer.close(i);
+                reloadTable();
+            }else {
+                layer.alert(data.msg);
+            }
+        },'json');
+    });
 }
 function update(row) {
 

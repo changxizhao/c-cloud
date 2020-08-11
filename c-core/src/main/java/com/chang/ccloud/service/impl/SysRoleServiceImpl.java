@@ -4,10 +4,13 @@ import com.chang.ccloud.common.utils.DateUtil;
 import com.chang.ccloud.common.utils.IpUtil;
 import com.chang.ccloud.dao.SysRoleMapper;
 import com.chang.ccloud.entities.vo.RoleVO;
+import com.chang.ccloud.entities.vo.UserVO;
 import com.chang.ccloud.exception.ParamsException;
 import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysRole;
+import com.chang.ccloud.service.SysRoleAclService;
 import com.chang.ccloud.service.SysRoleService;
+import com.chang.ccloud.service.SysRoleUserService;
 import com.chang.ccloud.validator.BeanValidator;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
@@ -29,6 +32,12 @@ public class SysRoleServiceImpl implements SysRoleService {
 
     @Autowired
     private SysRoleMapper roleMapper;
+
+    @Autowired
+    private SysRoleAclService roleAclService;
+
+    @Autowired
+    private SysRoleUserService roleUserService;
 
 
     @Override
@@ -77,6 +86,21 @@ public class SysRoleServiceImpl implements SysRoleService {
             voList.add(vo);
         }
         return voList;
+    }
+
+    @Override
+    public void deleteRoleById(Long id) {
+        SysRole role = roleMapper.selectByPrimaryKey(id);
+        Preconditions.checkNotNull(role, "角色不存在");
+        List<UserVO> userVOList = roleUserService.selectUserIdListByRoleId(id);
+        if(CollectionUtils.isNotEmpty(userVOList)) {
+            throw new ParamsException("角色已分配用户。不允许删除");
+        }
+        List<Long> menuIdList = roleAclService.selectMenuIdListByRoleId(id);
+        if(CollectionUtils.isNotEmpty(menuIdList)) {
+            throw new ParamsException("角色已授权，不允许删除");
+        }
+        roleMapper.deleteByPrimaryKey(id);
     }
 
     private boolean checkRoleExist(RoleVO roleVO) {

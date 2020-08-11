@@ -14,7 +14,7 @@ $(function () {
         },
 
         'click #deleteRole': function (e, value, row, index) { // 删除角色
-            alert("删除");
+            delRole(row.id, row.name);
 
         }
     };
@@ -356,3 +356,17 @@ $("#role-users").on('click', 'i', function () {
     var itemValue = $(this).parent().children('input').val();
     $("#role-user-" + itemValue).remove();
 })
+
+
+function delRole(id, name) {
+    layer.confirm("确认删除角色【" + name + "】吗？", {btn: ['确定', '取消'], title: "提示"}, function (i) {
+        $.post("/api/sys/role/delete",{id: id},function (data) {
+            if(data.code == 200){
+                layer.close(i);
+                $('#role-table').bootstrapTable('refresh');
+            }else {
+                layer.alert(data.msg);
+            }
+        },'json');
+    });
+}
