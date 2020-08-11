@@ -19,6 +19,6 @@ public interface SysTreeService {
 
     List<SysMenuDTO> menuTree();
 
-    List<TreeViewDTO> menuToTreeView(List<SysMenuDTO> list, Integer roleId);
+    List<TreeViewDTO> menuToTreeView(List<SysMenuDTO> list, long roleId);
 
 }

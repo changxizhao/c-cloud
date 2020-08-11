@@ -5,12 +5,14 @@ import com.chang.ccloud.common.utils.DateUtil;
 import com.chang.ccloud.common.utils.IpUtil;
 import com.chang.ccloud.common.utils.Util;
 import com.chang.ccloud.dao.SysMenuMapper;
+import com.chang.ccloud.dao.SysRoleAclMapper;
 import com.chang.ccloud.entities.vo.SysMenuVO;
 import com.chang.ccloud.exception.ParamsException;
 import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysMenu;
 import com.chang.ccloud.service.SysMenuService;
 import com.chang.ccloud.validator.BeanValidator;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -34,6 +36,9 @@ public class SysMenuServiceImpl implements SysMenuService {
 
     @Autowired
     private SysMenuService menuService;
+
+    @Autowired
+    private SysRoleAclMapper roleAclMapper;
 
     @Override
     public void addMenu(SysMenuVO sysMenuVO) {
@@ -103,6 +108,21 @@ public class SysMenuServiceImpl implements SysMenuService {
             voList.add(vo);
         }
         return voList;
+    }
+
+    @Override
+    public void deleteMenuById(long id) {
+        SysMenu sysMenu = menuMapper.selectByPrimaryKey(id);
+        Preconditions.checkNotNull(sysMenu, "菜单/权限不存在");
+        // 校验是否有子菜单/权限
+        if(menuMapper.selectCountMenuByParentId(id) > 0) {
+            throw new ParamsException("存在子菜单/权限，不允许删除");
+        }
+        // 校验是否授权了角色
+        if(roleAclMapper.selectCountRoleAclByAclId(id) > 0) {
+            throw new ParamsException("已授权角色，不允许删除");
+        }
+        menuMapper.deleteByPrimaryKey(id);
     }
 
 }

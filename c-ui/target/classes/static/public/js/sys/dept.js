@@ -7,8 +7,17 @@ Dept = $(function(){
         },
 
         'click #deleteDept': function (e, value, row, index) { // 删除部门
-            layer.alert("删除部门 ：" + row.name);
-            //$("#upload").modal('show');
+            layer.confirm("确认删除部门【" + row.name + "】吗？", {btn: ['确定', '取消'], title: "提示"}, function (i) {
+                $.post("/api/sys/dept/delete",{id: row.id},function (data) {
+                    if(data.code == 200){
+                        layer.close(i);
+                        Tree.initTree('treeview5',1);
+                        $('#dept-detail-table').bootstrapTable('refresh');
+                    }else {
+                        layer.alert(data.msg);
+                    }
+                },'json');
+            });
         }
     };
 
@@ -152,14 +161,14 @@ function editDept(row) {
     });
 }
 
-function batchDeleteDepts() {
-    var idList = $('#dept-detail-table').bootstrapTable("getAllSelections");
-    if(idList.length <= 0) {
-        layer.alert("请至少选择一条数据");
-        return false;
-    }
-
-    var msg = JSON.stringify( idList );
-    layer.alert(msg);
-}
+// function batchDeleteDepts() {
+//     var idList = $('#dept-detail-table').bootstrapTable("getAllSelections");
+//     if(idList.length <= 0) {
+//         layer.alert("请至少选择一条数据");
+//         return false;
+//     }
+//
+//     var msg = JSON.stringify( idList );
+//     layer.alert(msg);
+// }
 

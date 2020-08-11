@@ -220,4 +220,8 @@
     from sys_menu
   </select>
 
+  <select id="selectCountMenuByParentId" parameterType="com.chang.ccloud.model.SysMenu" resultType="java.lang.Integer">
+    select count(id) from sys_menu where parent_id = #{parentId}
+  </select>
+
 </mapper>

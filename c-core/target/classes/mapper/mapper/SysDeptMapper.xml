@@ -217,4 +217,8 @@
     </if>
 
   </select>
+
+  <select id="selectCountByParentId" parameterType="com.chang.ccloud.model.SysDept" resultType="java.lang.Integer">
+    select count(id) from sys_dept where parent_id = #{id}
+  </select>
 </mapper>

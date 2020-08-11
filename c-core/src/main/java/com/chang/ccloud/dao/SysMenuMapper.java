@@ -25,4 +25,6 @@ public interface SysMenuMapper {
 
     List<SysMenuDTO> selectAllMenu();
 
+    int selectCountMenuByParentId(@Param("parentId") long parentId);
+
 }

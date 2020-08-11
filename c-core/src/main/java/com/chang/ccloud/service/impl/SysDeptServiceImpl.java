@@ -151,7 +151,7 @@ public class SysDeptServiceImpl implements SysDeptService {
         SysDept sysDept = sysDeptMapper.selectByPrimaryKey(id);
         Preconditions.checkNotNull(sysDept, "部门不存在");
         if(sysDeptMapper.selectCountByParentId(id) > 0) {
-            throw new ParamsException("存在子陪同，不允许删除");
+            throw new ParamsException("存在子部门，不允许删除");
         }
         if(userMapper.selectCountByDeptId(id) > 0) {
             throw new ParamsException("部门存在用户，不允许删除");

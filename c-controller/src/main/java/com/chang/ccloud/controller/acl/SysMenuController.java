@@ -55,10 +55,17 @@ public class SysMenuController {
 
     @ApiOperation(value = "获取角色权限树")
     @GetMapping("/tree")
-    public Result deptTree(Integer roleId) {
+    public Result deptTree(Long roleId) {
         List<SysMenuDTO> dtoList = treeService.menuTree();
         List<TreeViewDTO> treeViewDTOS = treeService.menuToTreeView(dtoList, roleId);
         return Result.success(treeViewDTOS);
+    }
+
+    @ApiOperation(value = "删除权限")
+    @PostMapping("/delete")
+    public Result del(Long id) {
+        menuService.deleteMenuById(id);
+        return Result.success();
     }
 
 }

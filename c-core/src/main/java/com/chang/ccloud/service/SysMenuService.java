@@ -20,4 +20,6 @@ public interface SysMenuService {
 
     List<SysMenuVO> treegrid(SysMenuVO sysMenuVO);
 
+    void deleteMenuById(long id);
+
 }

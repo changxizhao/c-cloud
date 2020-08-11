@@ -129,7 +129,7 @@ public class SysTreeServiceImpl implements SysTreeService {
     }
 
     @Override
-    public List<TreeViewDTO> menuToTreeView(List<SysMenuDTO> list, Integer roleId) {
+    public List<TreeViewDTO> menuToTreeView(List<SysMenuDTO> list, long roleId) {
 
         List<Long> roleMenuList = roleAclService.selectMenuIdListByRoleId(roleId);
         if(CollectionUtils.isEmpty(list)) {
