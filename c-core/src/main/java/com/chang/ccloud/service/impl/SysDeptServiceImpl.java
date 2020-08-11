@@ -2,6 +2,7 @@ package com.chang.ccloud.service.impl;
 
 import com.chang.ccloud.common.utils.IpUtil;
 import com.chang.ccloud.dao.SysDeptMapper;
+import com.chang.ccloud.dao.SysUserMapper;
 import com.chang.ccloud.entities.vo.DeptRequestVO;
 import com.chang.ccloud.entities.vo.DeptTableVO;
 import com.chang.ccloud.exception.ParamsException;
@@ -33,6 +34,9 @@ public class SysDeptServiceImpl implements SysDeptService {
 
     @Autowired
     private SysDeptMapper sysDeptMapper;
+
+    @Autowired
+    private SysUserMapper userMapper;
 
     @Override
     public void addDept(DeptRequestVO deptRequestVO) {
@@ -140,5 +144,18 @@ public class SysDeptServiceImpl implements SysDeptService {
     @Override
     public SysDept selectDeptById(Long id) {
         return sysDeptMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public void deleteDept(Long id) {
+        SysDept sysDept = sysDeptMapper.selectByPrimaryKey(id);
+        Preconditions.checkNotNull(sysDept, "部门不存在");
+        if(sysDeptMapper.selectCountByParentId(id) > 0) {
+            throw new ParamsException("存在子陪同，不允许删除");
+        }
+        if(userMapper.selectCountByDeptId(id) > 0) {
+            throw new ParamsException("部门存在用户，不允许删除");
+        }
+        sysDeptMapper.deleteByPrimaryKey(id);
     }
 }

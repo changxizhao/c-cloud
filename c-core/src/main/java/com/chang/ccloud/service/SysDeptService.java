@@ -24,4 +24,6 @@ public interface SysDeptService {
     List<DeptTableVO> selectDeptTable(DeptTableVO deptTableVO);
 
     SysDept selectDeptById(Long id);
+
+    void deleteDept(Long id);
 }

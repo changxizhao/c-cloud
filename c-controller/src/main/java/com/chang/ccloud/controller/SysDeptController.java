@@ -74,4 +74,11 @@ public class SysDeptController {
         return TableInfo.tableInfo(page);
     }
 
+    @ApiOperation(value = "删除部门")
+    @PostMapping("/delete")
+    public Result del(Long id) {
+        deptService.deleteDept(id);
+        return Result.success();
+    }
+
 }

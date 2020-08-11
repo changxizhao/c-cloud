@@ -21,7 +21,6 @@ public interface SysDeptMapper {
 
     int updateByPrimaryKey(SysDept record);
 
-//    List<SysDept> selectAllDepts();
     List<DeptLevelDTO> selectAllDepts();
 
     List<SysDept> selectChildDeptByLevel(@Param("level") String level);
@@ -32,5 +31,5 @@ public interface SysDeptMapper {
 
     List<DeptTableVO> selectDeptTable(DeptTableVO deptTableVO);
 
-//    List<SysDept> selectChildDeptByLevel(@Param("id") Long id, @Param("level") String level);
+    int selectCountByParentId(@Param("id") Long id);
 }

@@ -7,6 +7,7 @@ import com.chang.ccloud.entities.vo.RoleVO;
 import com.chang.ccloud.service.SysRoleService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,7 @@ import java.util.List;
  * @Date 2020/8/7 16:47
  * @Description
  */
+@Api(tags = "角色相关接口")
 @RestController
 @RequestMapping("/api/sys/role")
 public class SysRoleController {

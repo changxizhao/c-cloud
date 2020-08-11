@@ -24,4 +24,6 @@ public interface SysUserMapper {
     List<UserTableVO> selectUserTable(UserTableVO userTableVO);
 
     List<SysUser> selectUserListByUserIdList(List<Long> idList);
+
+    int selectCountByDeptId(@Param("deptId") Long deptId);
 }
