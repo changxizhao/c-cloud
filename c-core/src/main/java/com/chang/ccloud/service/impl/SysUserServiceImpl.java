@@ -8,6 +8,7 @@ import com.chang.ccloud.entities.vo.UserTableVO;
 import com.chang.ccloud.exception.ParamsException;
 import com.chang.ccloud.holder.RequestHolder;
 import com.chang.ccloud.model.SysUser;
+import com.chang.ccloud.service.SysRoleUserService;
 import com.chang.ccloud.service.SysUserService;
 import com.chang.ccloud.validator.BeanValidator;
 import com.google.common.base.Preconditions;
@@ -19,6 +20,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.mail.internet.MimeMessage;
 import java.util.List;
@@ -35,6 +37,9 @@ public class SysUserServiceImpl implements SysUserService {
 
     @Autowired
     private SysUserMapper sysUserMapper;
+
+    @Autowired
+    private SysRoleUserService roleUserService;
 
     @Override
     public void addUser(UserRequestVO userRequestVO) {
@@ -92,6 +97,19 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public List<UserTableVO> selectUserTable(UserTableVO userTableVO) {
         return sysUserMapper.selectUserTable(userTableVO);
+    }
+
+    @Override
+    public void deleteUserById(long id) {
+        SysUser sysUser = sysUserMapper.selectByPrimaryKey(id);
+        Preconditions.checkNotNull(sysUser, "用户不存在");
+        doDeleteUserWithUserRole(id);
+    }
+
+    @Transactional
+    public void doDeleteUserWithUserRole(long id) {
+        roleUserService.deleteRoleByUserId(id);
+        sysUserMapper.deleteByPrimaryKey(id);
     }
 
 }

@@ -71,6 +71,11 @@ public class SysRoleUserServiceImpl implements SysRoleUserService {
         doChangeRoleUser(roleUserVO);
     }
 
+    @Override
+    public void deleteRoleByUserId(long id) {
+        roleUserMapper.deleteRoleUserByUserId(id);
+    }
+
     @Transactional
     public void doChangeRoleUser(RoleUserVO roleUserVO) {
         roleUserMapper.deleteRoleUserListByRoleID(roleUserVO.getRoleId());

@@ -14,4 +14,6 @@ public interface SysRoleUserService {
     List<UserVO> selectUserIdListByRoleId(long roleId);
 
     void changeRoleUser(RoleUserVO roleUserVO);
+
+    void deleteRoleByUserId(long id);
 }

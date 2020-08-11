@@ -258,7 +258,8 @@ var getUsersTableOption = function (deptId, username, nickname) {
             selectUser(item.nickname, item.id);
         },
         columns: [
-            { title:'姓名', field:'nickname', align: "center", cursor: 'pointer'},
+            {title: '账户名', field: 'username', align: "center"},
+            { title:'姓名', field:'nickname', align: "center"},
             { title: '所属部门', field: 'deptName',align: 'center'},
             { title: '状态', field: 'status',align: 'center', formatter: statusFormatter}
         ]

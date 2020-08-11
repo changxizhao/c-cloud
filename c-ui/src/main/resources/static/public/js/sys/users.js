@@ -8,7 +8,7 @@ $(function(){
         },
 
         'click #deleteUser': function (e, value, row, index) { // 删除部门
-            layer.alert("删除用户 ：" + row.username);
+            delUser(row.id, row.username);
             //$("#upload").modal('show');
         }
     };
@@ -176,13 +176,16 @@ var editUser = function(row) {
 }
 
 
-var batchDeleteUsers = function() {
-    var idList = $('#user-detail-table').bootstrapTable("getAllSelections");
-    if(idList.length <= 0) {
-        layer.alert("请至少选择一条数据");
-        return false;
-    }
-
-    var msg = JSON.stringify( idList );
-    layer.alert(msg);
+var delUser = function(id, name) {
+    layer.confirm("确认删除用户【" + name + "】吗？", {btn: ['确定', '取消'], title: "提示"}, function (i) {
+        $.post("/api/sys/user/delete",{id: id},function (data) {
+            if(data.code == 200){
+                Tree.initTree('treeview5',1);
+                layer.close(i);
+                $('#user-detail-table').bootstrapTable('refresh');
+            }else {
+                layer.alert(data.msg);
+            }
+        },'json');
+    });
 }

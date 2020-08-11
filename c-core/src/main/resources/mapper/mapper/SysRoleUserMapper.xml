@@ -112,4 +112,9 @@
     delete from sys_role_user
     where role_id = #{roleId}
   </delete>
+
+  <delete id="deleteRoleUserByUserId" parameterType="com.chang.ccloud.model.SysRoleUser">
+    delete from sys_role_user
+    where user_id = #{userId}
+  </delete>
 </mapper>

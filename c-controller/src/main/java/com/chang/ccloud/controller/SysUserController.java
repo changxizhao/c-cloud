@@ -67,4 +67,11 @@ public class SysUserController {
         PageInfo<UserTableVO> page=new PageInfo<>(usersList);
         return TableInfo.tableInfo(page);
     }
+
+    @ApiOperation(value = "删除用户")
+    @PostMapping("/delete")
+    public Result delete(Long id){
+        userService.deleteUserById(id);
+        return Result.success();
+    }
 }
