@@ -6,6 +6,11 @@ import com.chang.ccloud.model.SysUser;
 import com.chang.ccloud.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +30,8 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/user")
 public class UserLoginController {
+
+    private static Logger log = LoggerFactory.getLogger(UserLoginController.class);
 
     @Autowired
     private UserService userService;

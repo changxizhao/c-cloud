@@ -24,4 +24,6 @@ public interface SysUserService {
     List<UserTableVO> selectUserTable(UserTableVO userTableVO);
 
     void deleteUserById(@Param("id") long id);
+
+    SysUser selectSysUserByUsername(String username);
 }

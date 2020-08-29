@@ -9,6 +9,7 @@ import com.chang.ccloud.entities.vo.RoleUserVO;
 import com.chang.ccloud.entities.vo.UserTableVO;
 import com.chang.ccloud.entities.vo.UserVO;
 import com.chang.ccloud.holder.RequestHolder;
+import com.chang.ccloud.model.SysRole;
 import com.chang.ccloud.model.SysRoleAcl;
 import com.chang.ccloud.model.SysRoleUser;
 import com.chang.ccloud.model.SysUser;
@@ -74,6 +75,11 @@ public class SysRoleUserServiceImpl implements SysRoleUserService {
     @Override
     public void deleteRoleByUserId(long id) {
         roleUserMapper.deleteRoleUserByUserId(id);
+    }
+
+    @Override
+    public List<Long> selectRoleListByUserId(long userId) {
+        return roleUserMapper.selectUserRoleIdsByUserId(userId);
     }
 
     @Transactional

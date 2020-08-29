@@ -2,6 +2,8 @@ package com.chang.ccloud.service;
 
 import com.chang.ccloud.entities.vo.RoleUserVO;
 import com.chang.ccloud.entities.vo.UserVO;
+import com.chang.ccloud.model.SysRole;
+
 import java.util.List;
 
 /**
@@ -16,4 +18,6 @@ public interface SysRoleUserService {
     void changeRoleUser(RoleUserVO roleUserVO);
 
     void deleteRoleByUserId(long id);
+
+    List<Long> selectRoleListByUserId(long userId);
 }

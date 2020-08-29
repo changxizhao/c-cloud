@@ -252,4 +252,5 @@
   <select id="selectCountByDeptId" parameterType="com.chang.ccloud.model.SysUser" resultType="java.lang.Integer">
     select count(id) from sys_user where dept_id = #{deptId}
   </select>
+
 </mapper>
